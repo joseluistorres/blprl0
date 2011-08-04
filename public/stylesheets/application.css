@@ -1,0 +1,110 @@
+/* line 4, ../../app/stylesheets/application.scss */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+  font-family: verdana;
+  font-size: 14px;
+}
+
+/* line 12, ../../app/stylesheets/application.scss */
+#header {
+  background-color: #03507B;
+  font-family: verdana;
+  font-size: 14px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding-bottom: 0;
+  padding-left: 20px;
+  padding-right: 14px;
+  padding-top: 0;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #256188;
+  background-image: none;
+  background-origin: padding-box;
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  height: 45px;
+}
+
+/* line 38, ../../app/stylesheets/application.scss */
+#main {
+  padding-top: 0;
+  padding-bottom: 5px;
+  background-color: #FFF;
+  min-height: 470px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 47, ../../app/stylesheets/application.scss */
+body h1 {
+  color: #ff9900;
+  font-size: 25pt;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+/************************ TASKS *******************************/
+/* line 54, ../../app/stylesheets/application.scss */
+form.new_task {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-image: -moz-linear-gradient(center bottom, #d4661e, #f17e32 98%);
+  border-bottom-color: #B36815;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color-ltr-source: physical;
+  border-left-color-rtl-source: physical;
+  border-left-color-value: #B36815;
+  border-left-style-ltr-source: physical;
+  border-left-style-rtl-source: physical;
+  border-left-style-value: solid;
+  border-left-width-ltr-source: physical;
+  border-left-width-rtl-source: physical;
+  border-left-width-value: 1px;
+  border-right-color-ltr-source: physical;
+  border-right-color-rtl-source: physical;
+  border-right-color-value: #B36815;
+  border-right-style-ltr-source: physical;
+  border-right-style-rtl-source: physical;
+  border-right-style-value: solid;
+  border-right-width-ltr-source: physical;
+  border-right-width-rtl-source: physical;
+  border-right-width-value: 1px;
+  border-top-color: #B36815;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  float: left;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  width: 96%;
+}
+
+/* line 99, ../../app/stylesheets/application.scss */
+textarea.required {
+  border-color: red;
+}
+
+/* line 103, ../../app/stylesheets/application.scss */
+textarea.watermark {
+  color: #C0C0C0;
+  font-size: 35px;
+  font-family: Arial;
+}
+
+/* line 109, ../../app/stylesheets/application.scss */
+.todoDescription {
+  font-size: 14px;
+}

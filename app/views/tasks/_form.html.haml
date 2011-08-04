@@ -1,0 +1,39 @@
+= form_for(@task) do |f|
+  - if @task.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@task.errors.count, "error")
+        prohibited this task from being saved:
+
+      %ul
+        = @task.errors.full_messages.each do |msg|
+          %li
+            = msg
+      
+
+  .field
+    %br
+    = f.text_area :description, :class => 'todoDescription', :style => 'height:300px;width:100%;'
+  
+  .field
+    = f.label :created_by
+    %br
+    = f.text_field :created_by
+  
+  .field
+    = f.label :assign_to 
+    %br
+    = f.text_field :assign_to
+  
+  .field
+    = f.label :due_date 
+    %br
+    = f.date_select :due_date
+  
+  .field
+    = f.label :weight 
+    %br
+    = f.text_field :weight
+  
+  .actions
+    = f.submit

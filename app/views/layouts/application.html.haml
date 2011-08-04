@@ -1,0 +1,22 @@
+%html
+%head
+  %title
+    Blackpearl v0.1
+  = javascript_include_tag 'http://code.jquery.com/jquery-1.6.2.min.js'
+  = javascript_include_tag 'js/jquery-ui-1.8.14.custom.min.js'
+  = javascript_include_tag 'requiredfield.js'
+  = javascript_include_tag 'application', 'rails'
+  = csrf_meta_tag
+  = stylesheet_link_tag 'application.css', :media => 'screen, projection'
+  = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+  = stylesheet_link_tag 'print.css', :media => 'print'
+  = include_tiny_mce_if_needed
+  /[if IE]
+    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+  = stylesheet_link_tag :all
+
+%body
+  #header
+  #main
+    #container{:style => 'margin:10px;'}
+      = yield

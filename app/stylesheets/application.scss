@@ -1,0 +1,111 @@
+$main-color: #03507B;
+$header-font-color: #FF9900;
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #FFF;
+	font-family: verdana;
+	font-size: 14px;
+}
+
+#header {
+	background-color: #03507B;
+	//color: #FFF;
+	//padding: 4px 100px;
+	//border-bottom: solid 5px darken($main-color, 10%);
+	font-family: verdana;
+	font-size: 14px;
+	
+	overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-right: 14px;
+    padding-top: 0;
+
+	background-attachment: scroll;
+	background-clip: border-box;
+    background-color: #256188;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    height: 45px;
+}
+
+#main {
+	padding-top: 0;
+	padding-bottom: 5px;
+	background-color: #FFF;
+	min-height: 470px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+body h1 {
+  color: $header-font-color;
+  font-size: 25pt;
+  font-weight: bold;
+  font-family: Arial;
+}
+/************************ TASKS *******************************/
+form.new_task {
+	    -moz-border-bottom-colors: none;
+	    -moz-border-image: none;
+	    -moz-border-left-colors: none;
+	    -moz-border-right-colors: none;
+	    -moz-border-top-colors: none;
+	    background-image: -moz-linear-gradient(center bottom , #D4661E, #F17E32 98%);
+	    border-bottom-color: #B36815;
+	    border-bottom-left-radius: 2px;
+	    border-bottom-right-radius: 2px;
+	    border-bottom-style: solid;
+	    border-bottom-width: 1px;
+	    border-left-color-ltr-source: physical;
+	    border-left-color-rtl-source: physical;
+	    border-left-color-value: #B36815;
+	    border-left-style-ltr-source: physical;
+	    border-left-style-rtl-source: physical;
+	    border-left-style-value: solid;
+	    border-left-width-ltr-source: physical;
+	    border-left-width-rtl-source: physical;
+	    border-left-width-value: 1px;
+	    border-right-color-ltr-source: physical;
+	    border-right-color-rtl-source: physical;
+	    border-right-color-value: #B36815;
+	    border-right-style-ltr-source: physical;
+	    border-right-style-rtl-source: physical;
+	    border-right-style-value: solid;
+	    border-right-width-ltr-source: physical;
+	    border-right-width-rtl-source: physical;
+	    border-right-width-value: 1px;
+	    border-top-color: #B36815;
+	    border-top-left-radius: 2px;
+	    border-top-right-radius: 2px;
+	    border-top-style: solid;
+	    border-top-width: 1px;
+	    float: left;
+	    padding-bottom: 4px;
+	    padding-left: 4px;
+	    padding-right: 4px;
+	    padding-top: 4px;
+	    width: 96%;
+	
+
+}
+
+textarea.required {
+    border-color: red;
+}
+
+textarea.watermark {
+    color: #C0C0C0;
+    font-size:35px;
+	font-family: Arial;
+}
+
+.todoDescription {
+	font-size:14px;
+}
