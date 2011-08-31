@@ -106,5 +106,6 @@ textarea.watermark {
 
 /* line 109, ../../app/stylesheets/application.scss */
 .todoDescription {
+  font-family: Arial;
   font-size: 14px;
 }

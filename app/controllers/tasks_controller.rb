@@ -41,7 +41,21 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.xml
   def create
-    @task = Task.new(params[:task])
+    @task = Task.new()#params[:task])
+    description = params[:task][:description]
+    arr = []
+    arr1 = []
+    arr2 = []
+    arr3 = []
+    alltasks = description.split(/\r\n/)
+    alltasks.each do |task|
+      arr << task.scan(/@[\w-]+/)
+      arr1 << task.scan(/#[\w-]+/)
+      arr2 << task.gsub(/@[\w-]+/, '')
+      arr3 << task.scan(/\[(.*)\]+/)
+    end
+    logger.debug "=================tester: #{arr3[0].inspect} ==================="
+    logger.debug "=================testing1: #{arr.inspect}==testing2:#{arr1.inspect}==testing3:#{arr2.inspect}==testing4:#{arr3.inspect}============"
 
     respond_to do |format|
       if @task.save
