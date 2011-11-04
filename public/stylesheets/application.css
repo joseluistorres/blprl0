@@ -1,111 +1,1309 @@
-/* line 4, ../../app/stylesheets/application.scss */
+/************************* style.css ********************************************/
+/* Getting the new tags to behave */
+/* line 6, ../../app/stylesheets/application.scss */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {
+  display: block;
+}
+
+/* line 7, ../../app/stylesheets/application.scss */
+mark, rp, rt, ruby, summary, time {
+  display: inline;
+}
+
+/* Global properties ======================================================== */
+/* line 10, ../../app/stylesheets/application.scss */
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #FFF;
-  font-family: verdana;
-  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  color: #98999e;
+  min-width: 1000px;
 }
 
-/* line 12, ../../app/stylesheets/application.scss */
-#header {
-  background-color: #03507B;
-  font-family: verdana;
-  font-size: 14px;
-  overflow-x: visible;
-  overflow-y: visible;
-  padding-bottom: 0;
-  padding-left: 20px;
-  padding-right: 14px;
-  padding-top: 0;
-  background-attachment: scroll;
-  background-clip: border-box;
-  background-color: #256188;
-  background-image: none;
-  background-origin: padding-box;
-  background-position: 0 0;
-  background-repeat: repeat;
-  background-size: auto auto;
-  height: 45px;
+/* line 18, ../../app/stylesheets/application.scss */
+html, body {
+  height: 100%;
 }
 
-/* line 38, ../../app/stylesheets/application.scss */
+/* line 21, ../../app/stylesheets/application.scss */
+p {
+  padding-bottom: 21px;
+}
+
+/* line 23, ../../app/stylesheets/application.scss */
+a {
+  color: #16b5ff;
+  outline: none;
+}
+
+/* line 27, ../../app/stylesheets/application.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* Global Structure ============================================================= */
+/* line 32, ../../app/stylesheets/application.scss */
 #main {
-  padding-top: 0;
-  padding-bottom: 5px;
-  background-color: #FFF;
-  min-height: 470px;
-  padding-left: 0;
-  padding-right: 0;
+  margin: 0 auto;
+  position: relative;
+  width: 980px;
 }
 
+/* Header */
+/* Content */
+/* Footer */
 /* line 47, ../../app/stylesheets/application.scss */
-body h1 {
-  color: #ff9900;
-  font-size: 25pt;
-  font-weight: bold;
-  font-family: Arial;
+footer {
+  height: 97px;
 }
 
-/************************ TASKS *******************************/
-/* line 54, ../../app/stylesheets/application.scss */
-form.new_task {
-  -moz-border-bottom-colors: none;
-  -moz-border-image: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  background-image: -moz-linear-gradient(center bottom, #d4661e, #f17e32 98%);
-  border-bottom-color: #B36815;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-left-color-ltr-source: physical;
-  border-left-color-rtl-source: physical;
-  border-left-color-value: #B36815;
-  border-left-style-ltr-source: physical;
-  border-left-style-rtl-source: physical;
-  border-left-style-value: solid;
-  border-left-width-ltr-source: physical;
-  border-left-width-rtl-source: physical;
-  border-left-width-value: 1px;
-  border-right-color-ltr-source: physical;
-  border-right-color-rtl-source: physical;
-  border-right-color-value: #B36815;
-  border-right-style-ltr-source: physical;
-  border-right-style-rtl-source: physical;
-  border-right-style-value: solid;
-  border-right-width-ltr-source: physical;
-  border-right-width-rtl-source: physical;
-  border-right-width-value: 1px;
-  border-top-color: #B36815;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  border-top-style: solid;
-  border-top-width: 1px;
+/* Left & Right alignment */
+/* line 52, ../../app/stylesheets/application.scss */
+.fleft {
   float: left;
-  padding-bottom: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-top: 4px;
-  width: 96%;
+}
+
+/* line 53, ../../app/stylesheets/application.scss */
+.fright {
+  float: right;
+}
+
+/* line 54, ../../app/stylesheets/application.scss */
+.clear {
+  clear: both;
+}
+
+/* line 56, ../../app/stylesheets/application.scss */
+.col-1, .col-2, .col-3 {
+  float: left;
+}
+
+/* line 58, ../../app/stylesheets/application.scss */
+.alignright {
+  text-align: right;
+}
+
+/* line 59, ../../app/stylesheets/application.scss */
+.aligncenter {
+  text-align: center;
+}
+
+/* line 61, ../../app/stylesheets/application.scss */
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*----- form defaults -----*/
+/* line 66, ../../app/stylesheets/application.scss */
+input, select, textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  vertical-align: middle;
+  font-weight: normal;
+}
+
+/*----- other -----*/
+/* line 74, ../../app/stylesheets/application.scss */
+.img-indent {
+  margin: 0 20px 0 0;
+  float: left;
+}
+
+/* line 78, ../../app/stylesheets/application.scss */
+.extra-wrap {
+  width: 100%;
+}
+
+/* line 81, ../../app/stylesheets/application.scss */
+.extra-wrap1 {
+  overflow: hidden;
+}
+
+/* line 84, ../../app/stylesheets/application.scss */
+h1 {
+  display: inline-block;
+  margin-top: 25px;
+  float: left;
+}
+
+/* line 86, ../../app/stylesheets/application.scss */
+h1 a {
+  text-indent: -5000px;
+  background: url("/images/logo.png") 0 0 no-repeat;
+  width: 268px;
+  height: 55px;
+  display: block;
+}
+
+/* line 94, ../../app/stylesheets/application.scss */
+h2 {
+  font-size: 30px;
+  line-height: 1.2307em;
+  color: #fff;
+  font-weight: normal;
+}
+
+/* line 95, ../../app/stylesheets/application.scss */
+.h2-bot {
+  padding-bottom: 18px;
+}
+
+/* line 96, ../../app/stylesheets/application.scss */
+.h2-bot1 {
+  padding-bottom: 28px;
+}
+
+/* line 97, ../../app/stylesheets/application.scss */
+.h2-bot2 {
+  padding-bottom: 24px;
+}
+
+/* line 98, ../../app/stylesheets/application.scss */
+.h2-top {
+  padding-top: 47px;
 }
 
 /* line 99, ../../app/stylesheets/application.scss */
-textarea.required {
-  border-color: red;
+.h2-top1 {
+  padding-top: 27px;
+}
+
+/* line 101, ../../app/stylesheets/application.scss */
+h3 {
+  font-size: 30px;
+  line-height: 1.2307em;
+  color: #fff;
+  font-weight: normal;
+  padding: 155px 0px 0px 28px;
+  letter-spacing: -1px;
 }
 
 /* line 103, ../../app/stylesheets/application.scss */
-textarea.watermark {
-  color: #C0C0C0;
+h4 {
+  font-size: 72px;
+  line-height: 1.2307em;
+  color: #fff;
+  font-weight: normal;
+  padding: 0px 0px 0px 28px;
+  letter-spacing: -1px;
+  margin-top: -23px;
+}
+
+/* line 106, ../../app/stylesheets/application.scss */
+nav {
+  padding: 34px 0px 0px 0px;
+  position: relative;
+  z-index: 999;
+  float: right;
+}
+
+/* line 107, ../../app/stylesheets/application.scss */
+.sf-menu {
+  margin-right: -1px;
+}
+
+/* line 108, ../../app/stylesheets/application.scss */
+.sf-menu li {
+  float: left;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.2307em;
+  padding: 0px 0px 0px 0px;
+  background: url("/images/list-bg.png") 0 10px no-repeat;
+  display: inline-block;
+}
+
+/* line 119, ../../app/stylesheets/application.scss */
+.sf-menu .last {
+  background: none;
+}
+
+/* line 120, ../../app/stylesheets/application.scss */
+.sf-menu a {
+  display: block;
+  position: relative;
+  color: #21beff;
+  text-decoration: none;
+  padding: 10px 20px 12px 19px;
+}
+
+/* line 129, ../../app/stylesheets/application.scss */
+.sf-menu li li {
+  padding: 0;
+  font-size: 12px;
+  text-align: left;
+  line-height: 36px;
+  padding: 0 0 0 0px;
+  background: url("/images/li-bg.gif") 0 bottom no-repeat;
+}
+
+/* line 139, ../../app/stylesheets/application.scss */
+.sf-menu li li a {
+  padding: 0 0 0 20px;
+  display: inline-block;
+  text-decoration: none;
+  width: 169px;
+  color: #21beff;
+  background: none;
+}
+
+/* line 149, ../../app/stylesheets/application.scss */
+.sf-menu li li a:hover {
+  color: #fff;
+  background: none;
+}
+
+/* line 150, ../../app/stylesheets/application.scss */
+.sf-menu ul {
+  position: absolute;
+  top: -999em;
+  width: 145px;
+  display: none;
+  background: url("/images/a-bg.png") 0 0 repeat;
+  padding: 0px 0px 0px 0px;
+}
+
+/* line 159, ../../app/stylesheets/application.scss */
+.sf-menu ul ul {
+  position: absolute;
+  top: -999em;
+  width: 145px;
+  display: none;
+  background: url("/images/a-bg.png") 0 0 repeat;
+  padding: 0px 0px 0px 0px;
+}
+
+/* line 169, ../../app/stylesheets/application.scss */
+.sf-menu li li li {
+  padding: 0;
+  font-size: 12px;
+  text-align: left;
+  line-height: 36px;
+  padding: 0 0 0 0px;
+  background: url("/images/li-bg.gif") 0 bottom no-repeat;
+}
+
+/* line 179, ../../app/stylesheets/application.scss */
+.sf-menu li li li a {
+  padding: 0 0 0 0px;
+  display: inline-block;
+  text-decoration: none;
+  width: 169px;
+  color: #21beff;
+  background: none;
+  padding-left: 20px;
+}
+
+/* line 191, ../../app/stylesheets/application.scss */
+.sf-menu li li li a:hover {
+  color: #fff;
+  background: none;
+}
+
+/* line 192, ../../app/stylesheets/application.scss */
+.sf-menu ul li {
+  width: 100%;
+}
+
+/* line 197, ../../app/stylesheets/application.scss */
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+  left: 0;
+  top: 39px;
+  /* match top ul list item height */
+  z-index: 99;
+}
+
+/* line 204, ../../app/stylesheets/application.scss */
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+  top: -999em;
+}
+
+/* line 209, ../../app/stylesheets/application.scss */
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+  left: 148px;
+  /* match ul width */
+  top: 0px;
+}
+
+/* line 215, ../../app/stylesheets/application.scss */
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+  top: -999em;
+}
+
+/* line 219, ../../app/stylesheets/application.scss */
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+  left: 10em;
+  /* match ul width */
+  top: 00px;
+}
+
+/* line 225, ../../app/stylesheets/application.scss */
+.sf-menu > li.sfHover > a,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a.active {
+  color: #fff;
+  background: none !important;
+}
+
+/* line 228, ../../app/stylesheets/application.scss */
+.sf-menu > li:hover {
+  background: url("/images/a-bg.png") 0 0 repeat;
+}
+
+/* line 233, ../../app/stylesheets/application.scss */
+.sf-menu > li.menu-activ > a:hover {
+  background: url("/images/a-bg.png") 0 0 repeat;
+}
+
+/* line 234, ../../app/stylesheets/application.scss */
+.sf-menu > li.menu-activ.sfHover > a {
+  background: url("/images/a-bg.png") 0 0 repeat;
+}
+
+/* line 237, ../../app/stylesheets/application.scss */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 241, ../../app/stylesheets/application.scss */
+.slider {
+  width: 920px;
+  height: 440px;
+  position: relative;
+}
+
+/* line 247, ../../app/stylesheets/application.scss */
+.items {
+  display: none;
+}
+
+/* line 250, ../../app/stylesheets/application.scss */
+.play.paused {
+  color: #f00;
+}
+
+/* line 253, ../../app/stylesheets/application.scss */
+.banner {
+  background: none;
+  width: 358px;
+  min-height: 368px;
+  position: absolute;
+  left: 0px;
+  top: 72px;
+  z-index: 99;
+  padding: 0;
+}
+
+/* line 264, ../../app/stylesheets/application.scss */
+.pagination {
+  position: absolute;
+  width: 100px;
+  height: 21px;
+  padding: 0 0 0 0px;
+  bottom: 20px;
+  right: 40px;
+  z-index: 999;
+}
+
+/* line 274, ../../app/stylesheets/application.scss */
+.pagination li {
+  display: inline;
+  float: left;
+  font-size: 0px;
+  line-height: 0px;
+  margin-left: 4px;
+  background: #fff;
+  width: 21px;
+  height: 21px;
+}
+
+/* line 278, ../../app/stylesheets/application.scss */
+.pagination li a {
+  color: #c7c7c7;
+  text-decoration: none;
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+}
+
+/* line 281, ../../app/stylesheets/application.scss */
+.pagination .last {
+  background: none;
+}
+
+/* line 282, ../../app/stylesheets/application.scss */
+.pagination li a:hover {
+  color: #fff;
+  background: #009ae2;
+}
+
+/* line 283, ../../app/stylesheets/application.scss */
+.pagination li.current a {
+  margin: 0;
+  cursor: default;
+  background: #009ae2;
+}
+
+/* line 289, ../../app/stylesheets/application.scss */
+.controls {
+  position: absolute;
+  bottom: -31px;
+  left: 0px;
+  z-index: 600;
+  width: 300px;
+  height: 82px;
+}
+
+/* line 298, ../../app/stylesheets/application.scss */
+.controls a.prev {
+  display: block;
+  height: 41px;
+  width: 22px;
+  text-indent: -5000px;
+  background: url("/images/button1.png") 0 0px no-repeat;
+  position: absolute;
+  top: 0;
+  left: 438px;
+  cursor: pointer;
+}
+
+/* line 309, ../../app/stylesheets/application.scss */
+.controls a.prev:hover {
+  background: url("/images/button1.png") 0 -41px no-repeat;
+}
+
+/* line 313, ../../app/stylesheets/application.scss */
+.controls a.next {
+  display: block;
+  height: 41px;
+  width: 22px;
+  text-indent: -5000px;
+  background: url("/images/button2.png") 0 0px no-repeat;
+  position: absolute;
+  top: 0;
+  left: 480px;
+  cursor: pointer;
+}
+
+/* line 325, ../../app/stylesheets/application.scss */
+.controls a.next:hover {
+  background: url("/images/button2.png") 0 -41px no-repeat;
+}
+
+/* line 329, ../../app/stylesheets/application.scss */
+.bg5 {
+  background: url("/images/bg5.jpg") 0 0 no-repeat;
+  height: 511px;
+  width: 940px;
+}
+
+/* line 330, ../../app/stylesheets/application.scss */
+.bg5 .padding {
+  padding: 10px 0px 0px 10px;
+}
+
+/*===== header =====*/
+/* line 335, ../../app/stylesheets/application.scss */
+.row1 {
+  height: 35px;
+  position: relative;
+  z-index: 11;
+}
+
+/* line 336, ../../app/stylesheets/application.scss */
+.row2 {
+  height: 108px;
+  position: relative;
+  z-index: 12;
+}
+
+/* line 337, ../../app/stylesheets/application.scss */
+.row3 {
+  height: 511px;
+}
+
+/* line 339, ../../app/stylesheets/application.scss */
+.bg {
+  background: url("/images/bg.jpg") center 0 no-repeat;
+  min-height: 100%;
+}
+
+/* line 341, ../../app/stylesheets/application.scss */
+.list {
+  float: right;
+  margin: 1px 4px 0px 0px;
+}
+
+/* line 342, ../../app/stylesheets/application.scss */
+.list li {
+  float: left;
+  font-size: 11px;
+  line-height: 30px;
+  background: url("/images/list-bg.png") right 6px no-repeat;
+  padding: 0px 15px 0px 15px;
+}
+
+/* line 343, ../../app/stylesheets/application.scss */
+.list a {
+  color: #929b9e;
+  text-decoration: none;
+}
+
+/* line 344, ../../app/stylesheets/application.scss */
+.list a:hover {
+  color: #fff;
+}
+
+/* line 346, ../../app/stylesheets/application.scss */
+.list .last {
+  background: none;
+}
+
+/* line 348, ../../app/stylesheets/application.scss */
+.bg1 {
+  background: url("/images/bg1.png") 0 0 no-repeat;
+  height: 511px;
+  width: 940px;
+}
+
+/* line 350, ../../app/stylesheets/application.scss */
+.box {
+  background: url("/images/box-bg.png") 0 0 repeat;
+  min-height: 405px;
+  width: 294px;
+}
+
+/* line 351, ../../app/stylesheets/application.scss */
+.box .padding {
+  padding: 10px 20px 0px 19px;
+}
+
+/* line 353, ../../app/stylesheets/application.scss */
+.indent {
+  padding-top: 30px;
+}
+
+/* line 354, ../../app/stylesheets/application.scss */
+.indent1 {
+  padding-top: 32px;
+}
+
+/* line 355, ../../app/stylesheets/application.scss */
+.indent2 {
+  padding-top: 28px;
+}
+
+/* line 356, ../../app/stylesheets/application.scss */
+.indent3 {
+  padding-top: 43px;
+}
+
+/* line 358, ../../app/stylesheets/application.scss */
+.img-pad {
+  padding: 10px 0px 10px 10px;
+}
+
+/* line 360, ../../app/stylesheets/application.scss */
+.img-bot {
+  margin-bottom: 7px;
+}
+
+/* line 362, ../../app/stylesheets/application.scss */
+.indent-bottom {
+  padding-bottom: 30px;
+}
+
+/* line 363, ../../app/stylesheets/application.scss */
+.indent-bottom1 {
+  padding-bottom: 50px;
+}
+
+/* line 364, ../../app/stylesheets/application.scss */
+.indent-bottom2 {
+  padding-bottom: 42px;
+}
+
+/* line 365, ../../app/stylesheets/application.scss */
+.indent-bottom3 {
+  padding-bottom: 48px;
+}
+
+/* line 367, ../../app/stylesheets/application.scss */
+.pad-top {
+  padding-top: 30px;
+}
+
+/* line 369, ../../app/stylesheets/application.scss */
+.bg3 {
+  background: url("/images/bg3.png") 0 0 no-repeat;
+  height: 368px;
+  width: 358px;
+}
+
+/* line 371, ../../app/stylesheets/application.scss */
+.pad {
+  padding: 82px 0px 0px 10px;
+}
+
+/* line 373, ../../app/stylesheets/application.scss */
+.text2 {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  padding: 1px 0px 0px 29px;
+}
+
+/* line 375, ../../app/stylesheets/application.scss */
+.button {
+  background: url("/images/button.png") 0 0 no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 25px;
+  width: 87px;
+  padding: 3px 0px 0px 9px;
+  margin: 15px 0px 0px 30px;
+  display: block;
+}
+
+/* line 377, ../../app/stylesheets/application.scss */
+.button:hover {
+  color: #17b9fd;
+}
+
+/* line 379, ../../app/stylesheets/application.scss */
+.button1 {
+  background: url("/images/button1.png") 0 0 no-repeat;
+  height: 41px;
+  width: 22px;
+  position: absolute;
+  left: 438px;
+  bottom: 10px;
+}
+
+/* line 380, ../../app/stylesheets/application.scss */
+.button1:hover {
+  background: url("/images/button1.png") 0 -41px no-repeat;
+}
+
+/* line 382, ../../app/stylesheets/application.scss */
+.button2 {
+  background: url("/images/button2.png") 0 0 no-repeat;
+  height: 41px;
+  width: 22px;
+  position: absolute;
+  left: 480px;
+  bottom: 10px;
+}
+
+/* line 383, ../../app/stylesheets/application.scss */
+.button2:hover {
+  background: url("/images/button2.png") 0 -41px no-repeat;
+}
+
+/* line 385, ../../app/stylesheets/application.scss */
+.list4 {
+  float: right;
+  margin: 20px 20px 0px 0px;
+}
+
+/* line 386, ../../app/stylesheets/application.scss */
+.list4 li {
+  float: left;
+  font-size: 14px;
+  line-height: 15px;
+  background: #0e90e3;
+  margin-left: 1px;
+}
+
+/* line 387, ../../app/stylesheets/application.scss */
+.list4 a {
+  color: #c7c7c7;
+  text-decoration: none;
+  padding: 3px 6px 3px 7px;
+  display: inline-block;
+}
+
+/* line 388, ../../app/stylesheets/application.scss */
+.list4 a:hover {
+  color: #fff;
+  background: #009ae2;
+}
+
+/*===== content =====*/
+/* line 393, ../../app/stylesheets/application.scss */
+.color {
+  color: #7a7c87;
+}
+
+/* line 395, ../../app/stylesheets/application.scss */
+.link1 {
+  background: url("/images/link1-bg.png") 0 0 no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  height: 24px;
+  width: 78px;
+  padding: 4px 0px 0px 10px;
+}
+
+/* line 396, ../../app/stylesheets/application.scss */
+.link1:hover {
+  color: #000;
+}
+
+/* line 398, ../../app/stylesheets/application.scss */
+.link2 {
+  background: url("/images/link2-bg.png") 0 0 no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  color: #17b5ff;
+  font-size: 11px;
+  text-transform: uppercase;
+  height: 24px;
+  width: 78px;
+  padding: 4px 0px 0px 10px;
+}
+
+/* line 399, ../../app/stylesheets/application.scss */
+.link2:hover {
+  color: #fff;
+}
+
+/* line 401, ../../app/stylesheets/application.scss */
+.link1-pad {
+  margin: 27px 0px 0px 167px;
+}
+
+/* line 402, ../../app/stylesheets/application.scss */
+.link2-pad {
+  margin: 14px 0px 0px 332px;
+}
+
+/* line 403, ../../app/stylesheets/application.scss */
+.link2-pad1 {
+  margin: 25px 0px 0px 372px;
+}
+
+/* line 404, ../../app/stylesheets/application.scss */
+.link2-pad2 {
+  margin: 9px 0px 0px 532px;
+}
+
+/* line 406, ../../app/stylesheets/application.scss */
+.box-left {
+  margin-left: 3px;
+}
+
+/* line 407, ../../app/stylesheets/application.scss */
+.box-left1 {
+  margin-left: 6px;
+}
+
+/* line 409, ../../app/stylesheets/application.scss */
+.list1 li {
+  font-size: 14px;
+  line-height: 28px;
+  background: url("/images/list-bg.gif") 0 9px no-repeat;
+  padding-left: 19px;
+}
+
+/* line 410, ../../app/stylesheets/application.scss */
+.list1 a {
+  color: #16b5ff;
+  text-decoration: none;
+}
+
+/* line 411, ../../app/stylesheets/application.scss */
+.list1 a:hover {
+  text-decoration: underline;
+}
+
+/* line 413, ../../app/stylesheets/application.scss */
+.list1-top {
+  padding-top: 24px;
+}
+
+/* line 415, ../../app/stylesheets/application.scss */
+.border {
+  background: url("/images/border.png") 0 0 repeat-x;
+  height: 1px;
+  width: 940px;
+}
+
+/* line 417, ../../app/stylesheets/application.scss */
+.border1 {
+  background: url("/images/border1.png") 0 0 repeat-x;
+  height: 1px;
+  width: 268px;
+}
+
+/* line 418, ../../app/stylesheets/application.scss */
+.border-pad {
+  margin: 21px 0px 27px 0px;
+}
+
+/* line 421, ../../app/stylesheets/application.scss */
+.page2-bg {
+  background: url("/images/page2-bg.png") 0 0 no-repeat;
+  height: 78px;
+  width: 33px;
   font-size: 35px;
+  line-height: 1.2307em;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 0px 0px 18px;
+}
+
+/* line 423, ../../app/stylesheets/application.scss */
+.text {
+  margin-top: -2px;
+}
+
+/* line 424, ../../app/stylesheets/application.scss */
+.text a {
+  color: #16b5ff;
+  text-decoration: none;
+}
+
+/* line 425, ../../app/stylesheets/application.scss */
+.text a:hover {
+  text-decoration: underline;
+}
+
+/* line 427, ../../app/stylesheets/application.scss */
+.box-2 {
+  background: url("/images/box-2.gif") 0 0 no-repeat;
+  height: 166px;
+  width: 269px;
+  margin: 32px 0px 0px 0px;
+}
+
+/* line 428, ../../app/stylesheets/application.scss */
+.box-2 .padding {
+  padding: 28px 10px 0px 35px;
+}
+
+/* line 430, ../../app/stylesheets/application.scss */
+.name {
+  font-size: 14px;
+  line-height: 19px;
+  color: #16b5ff;
+  text-align: right;
+  padding: 0px 32px 0px 0px;
+  margin-top: -2px;
+}
+
+/* line 432, ../../app/stylesheets/application.scss */
+.color1 {
+  color: #16b5ff;
+}
+
+/* line 434, ../../app/stylesheets/application.scss */
+.list2 li {
+  float: left;
+  width: 174px;
+  background: url("/images/list2-bg.png") 0 0 repeat;
+  padding: 10px 10px 12px 10px;
+  margin-right: 19px;
+}
+
+/* line 435, ../../app/stylesheets/application.scss */
+.list2 strong {
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+
+/* line 437, ../../app/stylesheets/application.scss */
+.list2 .last {
+  margin-right: 0px;
+}
+
+/* line 439, ../../app/stylesheets/application.scss */
+.list2-top {
+  padding-top: 30px;
+}
+
+/* line 440, ../../app/stylesheets/application.scss */
+.list2-top1 {
+  padding-top: 19px;
+}
+
+/* line 442, ../../app/stylesheets/application.scss */
+.list3 li {
+  font-size: 20px;
+  line-height: 1.2307em;
+  background: #19181c;
+  margin-bottom: 3px;
+  height: 47px;
+  width: 268px;
+}
+
+/* line 443, ../../app/stylesheets/application.scss */
+.list3 a {
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 0px 11px 22px;
+  width: 246px;
+  display: inline-block;
+}
+
+/* line 444, ../../app/stylesheets/application.scss */
+.list3 a:hover {
+  background: #16b5ff;
+}
+
+/* line 446, ../../app/stylesheets/application.scss */
+.list3-top {
+  padding-top: 30px;
+}
+
+/* line 448, ../../app/stylesheets/application.scss */
+.text1 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* line 449, ../../app/stylesheets/application.scss */
+.text1 span {
+  color: #16b5ff;
+  text-transform: uppercase;
+}
+
+/* line 450, ../../app/stylesheets/application.scss */
+.text1 strong {
+  color: #fff;
+  font-weight: normal;
+}
+
+/* line 452, ../../app/stylesheets/application.scss */
+.text-top1 {
+  padding-top: 28px;
+}
+
+/* line 453, ../../app/stylesheets/application.scss */
+.text-top2 {
+  padding-top: 25px;
+}
+
+/* line 455, ../../app/stylesheets/application.scss */
+.pad-left {
+  padding-left: 24px;
+}
+
+/* line 457, ../../app/stylesheets/application.scss */
+iframe {
+  height: 300px;
+  width: 268px;
+  margin: 30px 0px 25px 0px;
+}
+
+/* line 459, ../../app/stylesheets/application.scss */
+dt {
+  color: #16b5ff;
+}
+
+/* line 460, ../../app/stylesheets/application.scss */
+dl span {
+  float: left;
+  width: 83px;
+}
+
+/* line 461, ../../app/stylesheets/application.scss */
+dd a {
+  color: #16b5ff;
+  text-decoration: none;
+  margin-left: 3px;
+}
+
+/* line 462, ../../app/stylesheets/application.scss */
+dd a:hover {
+  text-decoration: underline;
+}
+
+/* line 464, ../../app/stylesheets/application.scss */
+.dd-top {
+  padding-top: 21px;
+}
+
+/*===== footer =====*/
+/* line 470, ../../app/stylesheets/application.scss */
+.box-1 {
+  background: url("/images/box-1.png") 0 0 repeat;
+  height: 40px;
+  width: 940px;
+}
+
+/* line 472, ../../app/stylesheets/application.scss */
+.foot-text {
+  color: #656772;
+  padding: 9px 19px 0px 0px;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: right;
+}
+
+/* line 473, ../../app/stylesheets/application.scss */
+.foot-text a {
+  color: #656772;
+  text-decoration: none;
+}
+
+/* line 474, ../../app/stylesheets/application.scss */
+.foot-text a:hover {
+  text-decoration: underline;
+}
+
+/* line 476, ../../app/stylesheets/application.scss */
+.foot-text span {
+  padding: 0px 6px 0px 6px;
+}
+
+/*----- forms -----*/
+/* line 478, ../../app/stylesheets/application.scss */
+#contact-form {
+  vertical-align: top;
+  padding-top: 30px;
+}
+
+/* line 482, ../../app/stylesheets/application.scss */
+#contact-form fieldset {
+  border: none;
+}
+
+/* line 485, ../../app/stylesheets/application.scss */
+#contact-form .rowElem {
+  display: block;
+  position: relative;
+  min-height: 45px;
+  overflow: hidden;
+}
+
+/* line 491, ../../app/stylesheets/application.scss */
+#contact-form .textarea-box {
+  position: relative;
+}
+
+/* line 494, ../../app/stylesheets/application.scss */
+#contact-form input {
+  width: 337px;
+  padding: 9px 0px 10px 13px;
+  background: #17171b;
+  border: 1px dotted #31343b;
+  line-height: 1.2307em;
+  font-size: 1em;
+  display: block;
+  color: #98999e;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 506, ../../app/stylesheets/application.scss */
+#contact-form .link3 {
+  float: right;
+  margin: 27px 2px 0px 0px;
+}
+
+/* line 507, ../../app/stylesheets/application.scss */
+#contact-form .link3 a {
+  background: url("/images/link3-bg.png") 0 0 no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  height: 28px;
+  width: 100px;
+  padding: 4px 0px 0px 10px;
+  margin-left: 20px;
+}
+
+/* line 511, ../../app/stylesheets/application.scss */
+#contact-form .link3 a:hover {
+  color: #000;
+}
+
+/* line 513, ../../app/stylesheets/application.scss */
+#contact-form .color {
+  color: #fff;
+}
+
+/* line 516, ../../app/stylesheets/application.scss */
+#contact-form textarea {
+  font-size: 1em;
+  line-height: 1.2307em;
+  width: 607px;
+  height: 221px;
+  padding: 7px 0px 10px 13px;
+  background: #17171b;
+  border: 1px dotted #31343b;
+  line-height: 1.2307em;
+  display: block;
+  color: #98999e;
+  overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 531, ../../app/stylesheets/application.scss */
+#contact-form label {
+  padding: 0px 0 2px 5px;
+  display: inline-block;
+  font-size: 13px;
+  display: none;
+}
+
+/* line 537, ../../app/stylesheets/application.scss */
+#contact-form .rowElem label {
+  font-size: 11px;
+  right: 5px;
+  top: 0;
+}
+
+/* line 543, ../../app/stylesheets/application.scss */
+#contact-form .textarea-box label {
+  padding: 0px 0 2px 5px;
+  font-size: 11px;
+}
+
+/* line 547, ../../app/stylesheets/application.scss */
+#contact-form .error {
+  color: red;
+}
+
+/* line 551, ../../app/stylesheets/application.scss */
+div#contact_form .download-box {
+  margin: 0px 30px 0 0;
+  padding-top: 24px;
+}
+
+/* line 555, ../../app/stylesheets/application.scss */
+#back {
+  background: url("/images/link3-bg.png") 0 0 no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  height: 28px;
+  width: 100px;
+  padding: 4px 0px 0px 10px;
+  cursor: pointer;
+}
+
+/* line 559, ../../app/stylesheets/application.scss */
+#back:hover {
+  color: #000;
+}
+
+/*==========================================*/
+/* Project specifics =========================================================== */
+/* line 565, ../../app/stylesheets/application.scss */
+a.buttonSubmit {
+  background: transparent url("/images/nue-btn-orange.png") right 0 no-repeat;
+  height: 51px;
+  float: right;
+  overflow: visible;
+  padding: 0 2px 0 0;
+  position: relative;
+  color: #444;
+  border-radius: 4px 4px 4px 4px;
+  text-decoration: none;
+}
+
+/* line 578, ../../app/stylesheets/application.scss */
+a.buttonSubmit span {
+  background: transparent url("/images/nue-btn-orange.png") no-repeat;
+  background-position: 0 -56px;
+  display: block;
+  height: 21px;
+  line-height: 21px;
+  padding: 15px 10px 15px 15px;
+  position: relative;
+  white-space: nowrap;
+  font-family: Arial;
+  color: #FFF;
+  font-size: 18px;
+  text-decoration: none;
+  text-shadow: 0 -2px 0 #d86a11;
+}
+
+/* line 594, ../../app/stylesheets/application.scss */
+a.buttonSubmit:hover span {
+  text-decoration: underline;
+}
+
+/* line 598, ../../app/stylesheets/application.scss */
+div.popup {
+  opacity: 1;
+  overflow: hidden;
+  width: 380px;
+}
+
+/* line 604, ../../app/stylesheets/application.scss */
+input.watermark {
+  color: #C0C0C0;
+  font-size: 22px;
   font-family: Arial;
 }
 
-/* line 109, ../../app/stylesheets/application.scss */
-.todoDescription {
-  font-family: Arial;
-  font-size: 14px;
+/* line 610, ../../app/stylesheets/application.scss */
+span.beta {
+  color: #009;
+}
+
+/* line 614, ../../app/stylesheets/application.scss */
+div.loginFrm {
+  padding-left: 225px;
+  padding-top: 130px;
+}
+
+/* line 619, ../../app/stylesheets/application.scss */
+div.insideLoginFrm {
+  background-color: #CCC;
+  width: 450px;
+  height: 200px;
+  padding-top: 30px;
+  padding-left: 50px;
+}
+
+/* line 627, ../../app/stylesheets/application.scss */
+label.loginFrm {
+  font-size: 24px;
+  line-height: 45px;
+}
+
+/* line 632, ../../app/stylesheets/application.scss */
+input.loginFrm {
+  width: 270px;
+  height: 45px;
+}
+
+/* line 637, ../../app/stylesheets/application.scss */
+label.loginemail {
+  padding-right: 55px;
+}
+
+/* line 641, ../../app/stylesheets/application.scss */
+label.loginpass {
+  padding-right: 10px;
+}
+
+/* line 645, ../../app/stylesheets/application.scss */
+.hide {
+  display: none;
+}
+
+/* line 649, ../../app/stylesheets/application.scss */
+a.loginSubmitBtn {
+  margin-right: 60px;
 }

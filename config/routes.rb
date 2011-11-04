@@ -1,4 +1,9 @@
 Blackpearl::Application.routes.draw do
+  match "/home" => 'pages#home'
+  match "/features" => 'pages#features'
+  match "/pricing" => 'pages#pricing'
+  match "/about" => 'pages#about'
+  
   resources :tasks
 
   resources :weeks
@@ -52,7 +57,7 @@ Blackpearl::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "tasks#new"
+  root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 

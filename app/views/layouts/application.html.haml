@@ -1,22 +1,208 @@
-%html
-%head
-  %title
-    Blackpearl v0.1
-  = javascript_include_tag 'http://code.jquery.com/jquery-1.6.2.min.js'
-  = javascript_include_tag 'js/jquery-ui-1.8.14.custom.min.js'
-  = javascript_include_tag 'requiredfield.js'
-  = javascript_include_tag 'application', 'rails'
-  = csrf_meta_tag
-  = stylesheet_link_tag 'application.css', :media => 'screen, projection'
-  = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
-  = stylesheet_link_tag 'print.css', :media => 'print'
-  = include_tiny_mce_if_needed
-  /[if IE]
-    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
-  = stylesheet_link_tag :all
+!!!
+%html{:lang => 'en'}
+  %head
+    %title
+      vulcanik - Beta
+    %meta{:charset => 'utf-8'}
+    -#= javascript_include_tag 'http://code.jquery.com/jquery-1.6.2.min.js'
+    = stylesheet_link_tag "reset.css", :media => "screen"
+    = stylesheet_link_tag 'application.css', :media => 'screen'
+    = stylesheet_link_tag "grid.css", :media => "screen"
+    = stylesheet_link_tag "jquery.fancybox-1.3.4.css", :media => "screen"
+    
+    = javascript_include_tag "js/html5.js"
+    = javascript_include_tag "js/jquery-1.6.min.js"
+    
+    = javascript_include_tag "js/cufon-yui.js"
+    = javascript_include_tag "js/cufon-replace.js"
+    = javascript_include_tag "js/Alido_400.font.js"
+    = javascript_include_tag "js/hoverIntent.js"
+    = javascript_include_tag "js/superfish.js"
+    = javascript_include_tag "js/jquery.easing.1.3.js"
+    = javascript_include_tag 'js/jquery-ui-1.8.14.custom.min.js'
+    = javascript_include_tag 'js/requiredfield.js'
+    = javascript_include_tag "js/tms-0.3.js"
+    = javascript_include_tag "js/tms_presets.js"
+    = javascript_include_tag "js/fancybox/jquery.fancybox-1.3.4.pack.js"
+    = javascript_include_tag 'application' , 'rails'
+    = javascript_include_tag "js/blackpearl.js"
+    = render :partial => '/layouts/all_metrics'
+    = csrf_meta_tag
+    
+    /[if IE]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
 
-%body
-  #header
-  #main
-    #container{:style => 'margin:10px;'}
-      = yield
+  %body{:id => "page1"}
+    -#---------------------- HEADER -------------------------------
+    .bg
+      %header
+        .row1
+          .container_12
+            .wrapper
+              %ul.list
+                %li
+                  = link_to "Login", '#', :id => 'login_link', :style => "color:#0F0;font-weight:bold;font-size:14px;"
+                %li
+                  = link_to "Register", '#register', :id => 'onregister', :style => "color:#C30;font-weight:bold;font-size:14px;"
+                %li.last
+                  = link_to "Help", '#', :class => 'click_register'
+        .row2
+          .container_12
+            .extra_wrap
+              %h1
+                = link_to "&nbsp;", 'index.html'
+              %nav
+                %ul.sf-menu
+                  %li.last
+                    = link_to "Home", 'index.html', :class => 'active'
+                  %li
+                    = link_to "Features", '#', :class => 'click_register'
+                  %li.menu-activ
+                    = link_to "Pricing", '#', :class => 'click_register'
+                  %li
+                    = link_to "About", '#', :class => 'click_register'
+                  %li
+                    = link_to "Login", '#', :class => 'click_register'
+              .clear
+        .row3
+          .container_12
+            .bg5
+              .padding
+                .loginFrm.hide
+                  .insideLoginFrm
+                    - form_tag('http://far.away.com/form', :authenticity_token => false) do
+                      %fieldset
+                        = label_tag 'emailaddress', 'email', :class => 'loginFrm loginemail'
+                        = text_field_tag 'emailaddress', nil, :class => 'loginFrm'
+                        %br
+                        %br
+                        = label_tag 'password', 'password', :class => 'loginFrm loginpass'
+                        = password_field_tag 'pasword', nil, :class => 'loginFrm'
+                        %br
+                        %br
+                        %a{:href => '#', :class => 'buttonSubmit loginSubmitBtn'}
+                          %span
+                            Login
+                        
+                .slider
+                  %ul.items
+                    %li
+                      = image_tag 'slide-1.jpg', :alt => ''
+                      .banner
+                        .bg3
+                          %h3
+                            create your
+                          %h4
+                            account
+                          .text2
+                            start performing
+                            %br
+                            stop trying.
+                          = link_to "read more", '#', :class => 'button click_register'
+                    %li
+                      = image_tag 'slide-2.jpg', :alt => ''
+                      .banner
+                        .bg3
+                          %h3
+                            type your
+                          %h4
+                            minute
+                          .text2
+                            stay focused
+                            %br
+                            set your actions items
+                          = link_to "read more", '#', :class => 'button click_register'
+                    %li
+                      = image_tag 'slide-3.jpg', :alt => ''
+                      .banner
+                        .bg3
+                          %h3
+                            your
+                          %h4
+                            tasks
+                          .text2
+                            will BE created
+                            %br
+                            AUTOMATICALLY
+                          = link_to "read more", '#', :class => 'button click_register'
+                    %li
+                      = image_tag 'slide-4.jpg', :alt => ''
+                      .banner
+                        .bg3
+                          %h3
+                            the best way to
+                          %h4
+                            succeed
+                          .text2
+                            Set your goals,
+                            %br
+                            measure your progress
+                          = link_to "read more", '#', :class => 'button click_register'
+                %ul.pagination
+                  %li
+                    %a{:href => '#'}
+                  %li
+                    %a{:href => '#'}
+                  %li
+                    %a{:href => '#'}
+                  %li
+                    %a{:href => '#'}
+                .controls
+                  %a.prev{:href => '#'}
+                    prev
+                  %a.next{:href => '#'}
+                    next
+      -#-------------------content ------------------
+      %section#content
+        .indent-bottom
+          .container_12
+            .wrapper.indent
+              .grid_6.alpha
+                %h2.h2-bot1
+                  Be successful, it's easy!
+                %div{:style => 'display:block;background-color:#FC0;padding:20px;'}
+                  #register.popup
+                    #contact_form
+                      - form_tag('register.php') do
+                        %fieldset
+                          %span.beta
+                            Looking for a better way to organize tasks?  Join our beta by entering your email below.
+                          %br
+                          = text_field_tag 'email', nil, :style => 'height:45px;width:270px;', :width => '255'
+                          %a{:href => '#', :class => 'buttonSubmit'}
+                            %span
+                              Sign Up
+                          = label_tag 'email', 'This field is required.', :id =>'email_error', :class => 'error'
+                %br
+                Our sets of products are asy to adopt. None likes to learn a new tool, you don't have to, try it.
+                %br
+                = link_to 'read more', '#', :class => 'link2 link2-pad click_register'
+              .grid_6
+                %h2
+                  Vulcanik Services:
+                  .wrapper
+                    .grid_3.alpha
+                      %ul.list1.list1-top
+                        %li
+                          = link_to 'Blog', 'http://vulcanik.com/whynot/'
+                        %li
+                          = link_to 'About Us', '#', :class => 'click_register'
+                        %li
+                          = link_to 'Privacy Policy', '#', :class => 'click_register'
+                        %li
+                          = link_to 'Contact Us', '#', :class => 'click_register'
+                        %li
+                          = link_to 'We\'re hiring', '#', :class => 'click_register'
+      -# ------------------- footer------------------
+      %footer
+        .container_12
+          .box-1
+            .foot-text
+              Vulcanik &copy; 2011 All rights reserved
+              %span
+                |
+              = link_to 'Privacy Policy', '#'
+            .LINK
+        
+    :javascript
+      Cufon.now();

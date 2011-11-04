@@ -15,20 +15,5 @@
     %br
     = f.text_area :description, :class => 'todoDescription', :style => 'height:300px;width:100%;'
     
-  .field
-    = f.label :assign_to 
-    %br
-    = f.text_field :assign_to
-  
-  .field
-    = f.label :due_date 
-    %br
-    = f.date_select :due_date
-  
-  .field
-    = f.label :weight 
-    %br
-    = f.text_field :weight
-  
   .actions
-    = f.submit
+    = f.submit :class => 'submitSaveIt', :value => ''
