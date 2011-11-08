@@ -69,20 +69,7 @@
             .bg5
               .padding
                 .loginFrm.hide
-                  .insideLoginFrm
-                    - form_tag('http://far.away.com/form', :authenticity_token => false) do
-                      %fieldset
-                        = label_tag 'emailaddress', 'email', :class => 'loginFrm loginemail'
-                        = text_field_tag 'emailaddress', nil, :class => 'loginFrm'
-                        %br
-                        %br
-                        = label_tag 'password', 'password', :class => 'loginFrm loginpass'
-                        = password_field_tag 'pasword', nil, :class => 'loginFrm'
-                        %br
-                        %br
-                        %a{:href => '#', :class => 'buttonSubmit loginSubmitBtn'}
-                          %span
-                            Login
+                  = render 'user_sessions/new'
                         
                 .slider
                   %ul.items

@@ -26,6 +26,9 @@ gem 'haml'
 gem 'compass', ">= 0.11.5"
 gem 'tiny_mce'
 gem 'jquery-rails'
+#gem 'authlogic'
+gem 'rails3-generators'
+gem 'devise'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

@@ -1,4 +1,5 @@
 Blackpearl::Application.routes.draw do
+  
   match "/home" => 'pages#home'
   match "/features" => 'pages#features'
   match "/pricing" => 'pages#pricing'
@@ -7,6 +8,7 @@ Blackpearl::Application.routes.draw do
   resources :tasks
 
   resources :weeks
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

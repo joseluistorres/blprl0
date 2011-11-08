@@ -1,7 +1,7 @@
 $(function() {
   $('.error').hide();
   
-
+/*
   $(".buttonSubmit").click(function() {
 		// validate and process form
 		// first hide any error messages
@@ -35,6 +35,26 @@ $(function() {
       }
      });
     return false;
-	});
+	});*/
+	
+	$('a.submit').live('click', function() {
+      var form = $(this).parents('form:first');
+
+      if ($(this).attr('href') != "#")
+      {
+        form.attr('action', $(this).attr('href'));
+      }
+
+      method = $(this).is('.delete') ? 'delete' : $(this).is('.post') ? 'post' : $(this).is('.put') ? 'put' : ''
+      if (method != '')
+      {
+              form.find('[name=_method]').val(method);
+      }
+
+      window.setTimeout(function() {
+              form.submit();
+      }, 500);
+      return false;
+    });
 });
 
