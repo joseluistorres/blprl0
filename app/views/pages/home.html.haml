@@ -1,0 +1,71 @@
+.loginFrm.hide
+  = render 'devise/sessions/new'
+        
+.slider
+  %ul.items
+    %li
+      = image_tag 'slide-1.jpg', :alt => ''
+      .banner
+        .bg3
+          %h3
+            create your
+          %h4
+            account
+          .text2
+            start performing
+            %br
+            stop trying.
+          = link_to "read more", '#', :class => 'button click_register'
+    %li
+      = image_tag 'slide-2.jpg', :alt => ''
+      .banner
+        .bg3
+          %h3
+            type your
+          %h4
+            minute
+          .text2
+            stay focused
+            %br
+            set your actions items
+          = link_to "read more", '#', :class => 'button click_register'
+    %li
+      = image_tag 'slide-3.jpg', :alt => ''
+      .banner
+        .bg3
+          %h3
+            your
+          %h4
+            tasks
+          .text2
+            will BE created
+            %br
+            AUTOMATICALLY
+          = link_to "read more", '#', :class => 'button click_register'
+    %li
+      = image_tag 'slide-4.jpg', :alt => ''
+      .banner
+        .bg3
+          %h3
+            the best way to
+          %h4
+            succeed
+          .text2
+            Set your goals,
+            %br
+            measure your progress
+          = link_to "read more", '#', :class => 'button click_register'
+%ul.pagination
+  %li
+    %a{:href => '#'}
+  %li
+    %a{:href => '#'}
+  %li
+    %a{:href => '#'}
+  %li
+    %a{:href => '#'}
+.controls
+  %a.prev{:href => '#'}
+    prev
+  %a.next{:href => '#'}
+    next

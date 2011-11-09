@@ -39,8 +39,8 @@ $(function() {
 	
 	$('a.submit').live('click', function() {
       var form = $(this).parents('form:first');
-
-      if ($(this).attr('href') != "#")
+alert('test123');
+      /*if ($(this).attr('href') != "#")
       {
         form.attr('action', $(this).attr('href'));
       }
@@ -50,7 +50,7 @@ $(function() {
       {
               form.find('[name=_method]').val(method);
       }
-
+*/
       window.setTimeout(function() {
               form.submit();
       }, 500);

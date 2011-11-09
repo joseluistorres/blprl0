@@ -1,0 +1,20 @@
+.insideLoginFrm
+  - form_for "user", :url => user_session_path do |f|
+    %fieldset
+      = label_tag 'emailaddress', 'email', :class => 'loginFrm loginemail'
+      = f.email_field :email, :class => 'loginFrm'
+      %br
+      %br
+      = label_tag 'password', 'password', :class => 'loginFrm loginpass'
+      = f.password_field :password, :class => 'loginFrm'
+      %br
+      %br
+      %a{:href => '#', :class => 'buttonSubmit loginSubmitBtn submit'}
+        %span
+          Login
+      = f.submit "Sign in"
+  -#= render :partial => "devise/shared/links"
+
+-# if devise_mapping.rememberable? && 1==2
+  -#= f.check_box :remember_me 
+  -#= f.label :remember_me
