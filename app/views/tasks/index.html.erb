@@ -15,8 +15,8 @@
 <% @tasks.each do |task| %>
   <tr>
     <td><%= task.description %></td>
-    <td><%= task.created_by %></td>
-    <td><%= task.assign_to %></td>
+    <td><%= task.user_id %></td>
+    <td><%= task.assigned_to %></td>
     <td><%= task.due_date %></td>
     <td><%= task.weight %></td>
     <td><%= link_to 'Show', task %></td>

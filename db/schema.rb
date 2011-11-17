@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111108232903) do
+ActiveRecord::Schema.define(:version => 20111114224650) do
 
   create_table "labels", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(:version => 20111108232903) do
     t.datetime "updated_at"
   end
 
+  create_table "minutes", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "roles", :force => true do |t|
     t.integer  "user_id"
     t.string   "type"
@@ -34,13 +42,16 @@ ActiveRecord::Schema.define(:version => 20111108232903) do
   end
 
   create_table "tasks", :force => true do |t|
+    t.integer  "minute_id"
+    t.string   "name"
     t.text     "description"
-    t.integer  "created_by"
-    t.integer  "assign_to"
+    t.integer  "user_id"
+    t.integer  "assigned_to"
     t.date     "due_date"
     t.float    "weight"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "assigned_name"
   end
 
   create_table "users", :force => true do |t|

@@ -1,6 +1,20 @@
-.loginFrm.hide
-  = render 'devise/sessions/new'
-        
+= javascript_include_tag "js/tms-0.3.js"
+= javascript_include_tag "js/tms_presets.js"
+:javascript
+  $(document).ready(function() {
+    $('.slider')._TMS({
+      prevBu:'.prev',
+      nextBu:'.next',
+      playBu:'.play',
+      duration:1000,
+      easing:'easeOutQuad',
+      preset:'simplefade',
+      pagination:'.pagination',
+      slideshow:6000,
+      numStatus:false,
+      banners:'fromBottom1',// fromLeft, fromRight, fromTop, fromBottom
+      waitBannerAnimation:false});
+    });
 .slider
   %ul.items
     %li

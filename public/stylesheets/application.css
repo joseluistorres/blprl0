@@ -1271,7 +1271,7 @@ div.loginFrm {
 div.insideLoginFrm {
   background-color: #CCC;
   width: 450px;
-  height: 200px;
+  height: 230px;
   padding-top: 30px;
   padding-left: 50px;
 }
@@ -1306,4 +1306,272 @@ label.loginpass {
 /* line 649, ../../app/stylesheets/application.scss */
 a.loginSubmitBtn {
   margin-right: 60px;
+}
+
+/****** notice *******/
+/* line 654, ../../app/stylesheets/application.scss */
+div.notice {
+  color: #16b5ff;
+  text-align: center;
+}
+
+/* line 659, ../../app/stylesheets/application.scss */
+div.alert {
+  color: #CC0000;
+  text-align: center;
+}
+
+/********************* minutes styles *******************************/
+/* line 664, ../../app/stylesheets/application.scss */
+textarea.watermark {
+  color: #C0C0C0;
+  font-size: 18px;
+  font-family: Arial;
+}
+
+/* line 670, ../../app/stylesheets/application.scss */
+.todoDescription {
+  font-family: Arial;
+  font-size: 14px;
+  color: #003399;
+}
+
+/* line 676, ../../app/stylesheets/application.scss */
+.titleMinute {
+  font-family: Arial;
+  font-size: 20px;
+  color: #003399;
+}
+
+/* line 682, ../../app/stylesheets/application.scss */
+div#egDiv {
+  color: #00FF00;
+}
+/* line 684, ../../app/stylesheets/application.scss */
+div#egDiv span {
+  color: #FF0000;
+}
+
+/****************** Buttons forms *************************************/
+/* line 689, ../../app/stylesheets/application.scss */
+input.submitSaveIt {
+  background: transparent url("/images/create_it.png") no-repeat;
+  width: 123px;
+  height: 35px;
+  border-radius: 30px 30px 30px 30px;
+  border-style: none none solid;
+  border_width: medium medium 1px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 3px 6px rgba(131, 141, 148, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.57) inset, 0 0 7px 0 rgba(254, 179, 0, 0.75) inset;
+}
+
+/* line 699, ../../app/stylesheets/application.scss */
+input.submitUpdateIt {
+  background: transparent url("/images/update_it.png") no-repeat;
+  width: 123px;
+  height: 35px;
+  border-radius: 30px 30px 30px 30px;
+  border-style: none none solid;
+  border_width: medium medium 1px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 3px 6px rgba(131, 141, 148, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.57) inset, 0 0 7px 0 rgba(254, 179, 0, 0.75) inset;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+/* line 712, ../../app/stylesheets/application.scss */
+.content_inside_container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 960px;
+}
+
+/* line 718, ../../app/stylesheets/application.scss */
+.subheader {
+  background: url("/images/bg5.jpg") no-repeat scroll 0 0 transparent;
+}
+
+/* line 722, ../../app/stylesheets/application.scss */
+.field_with_errors {
+  display: inline;
+}
+
+/******************************** TASKS **********************************/
+/* line 727, ../../app/stylesheets/application.scss */
+.headerMinute {
+  background-color: #F2F2F2;
+  border-radius: 3px 3px 3px 3px;
+  border-top: 1px solid #E2E2E2;
+  color: #333333 !important;
+  font-size: 13px !important;
+  font-weight: bold;
+  margin-bottom: 5px !important;
+  padding: 6px !important;
+  width: 97%;
+}
+
+/* line 739, ../../app/stylesheets/application.scss */
+.previewTask {
+  background-color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 960px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+/* line 749, ../../app/stylesheets/application.scss */
+#innerDiv {
+  overflow: hidden;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+/* line 754, ../../app/stylesheets/application.scss */
+#item_checkbox {
+  float: left;
+  width: 30px;
+  display: inline;
+}
+
+/* line 760, ../../app/stylesheets/application.scss */
+#item_task {
+  width: 800px;
+}
+
+/* line 764, ../../app/stylesheets/application.scss */
+a.dateBubble {
+  float: right;
+  color: #FFF;
+  font-size: 12px;
+  text-decoration: none;
+}
+/* line 770, ../../app/stylesheets/application.scss */
+a.dateBubble span {
+  padding: 3px;
+  background-color: #00CCFF;
+  border-radius: 2px 2px 2px 2px;
+  border-style: none none solid;
+  border_width: medium medium 1px;
+}
+/* line 777, ../../app/stylesheets/application.scss */
+a.dateBubble:hover {
+  /*.actions {
+    display: block;
+  }*/
+}
+
+/* line 784, ../../app/stylesheets/application.scss */
+a.personBubble {
+  float: right;
+  color: #000;
+  font-size: 12px;
+  text-decoration: none;
+}
+/* line 790, ../../app/stylesheets/application.scss */
+a.personBubble span {
+  padding: 5px;
+  background-color: #E0ECFF;
+  border-radius: 5px 5px 5px 5px;
+  border-style: none none solid;
+  border_width: medium medium 1px;
+  margin-right: 150px;
+}
+/* line 797, ../../app/stylesheets/application.scss */
+a.personBubble span:hover {
+  background-color: #C3D9FF;
+}
+/* line 801, ../../app/stylesheets/application.scss */
+a.personBubble:hover {
+  /*.actions {
+    display: block;
+  }*/
+}
+
+/* line 809, ../../app/stylesheets/application.scss */
+.task_content {
+  width: 500px;
+}
+
+/* line 813, ../../app/stylesheets/application.scss */
+div#tools {
+  display: inline;
+}
+/* line 815, ../../app/stylesheets/application.scss */
+div#tools a {
+  background: none;
+  height: 12px;
+  text-indent: 1px;
+  float: right;
+  width: auto;
+  display: block;
+}
+
+/******************************** MINUTES **********************************/
+/* line 827, ../../app/stylesheets/application.scss */
+.previewMinute {
+  background-color: #FFF;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+/* line 834, ../../app/stylesheets/application.scss */
+.headerMinuteList {
+  background-color: #666666;
+  border-radius: 3px 3px 3px 3px;
+  border-top: 1px solid #E2E2E2;
+  color: #FFF !important;
+  font-size: 20px !important;
+  font-weight: bold;
+  margin-bottom: 5px !important;
+  padding: 6px !important;
+  width: 97%;
+}
+
+/* line 846, ../../app/stylesheets/application.scss */
+a.titleBubble {
+  color: #FFF;
+  font-size: 12px;
+  text-decoration: none;
+}
+/* line 853, ../../app/stylesheets/application.scss */
+a.titleBubble span {
+  padding: 3px;
+  background-color: #00CCFF;
+  border-radius: 2px 2px 2px 2px;
+  border-style: none none solid;
+  border_width: medium medium 1px;
+}
+/* line 860, ../../app/stylesheets/application.scss */
+a.titleBubble:hover {
+  /*.actions {
+    display: block;
+  }*/
+}
+
+/* line 867, ../../app/stylesheets/application.scss */
+#minute_container {
+  float: left;
+  width: 100%;
+}
+
+/* line 871, ../../app/stylesheets/application.scss */
+#image_minute {
+  width: 50px;
+  display: block;
+  height: 50px;
+  float: left;
+}
+
+/* line 878, ../../app/stylesheets/application.scss */
+#data_minute {
+  width: 300px;
+  display: block;
+  float: left;
+}
+
+/* line 884, ../../app/stylesheets/application.scss */
+ul.list_data {
+  padding-left: 2px;
 }

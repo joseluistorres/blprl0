@@ -1,0 +1,35 @@
+%div.previewMinute.content_inside_container
+  %h1.headerMinuteList
+    = 'Your Minutes:'
+  %div#tools{:style => 'float:right;padding-right:25px;'}
+    = link_to 'Create a new Minute', new_minute_path
+  .clear
+  %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:360px;height:400px;float:right;border:1px solid black;'}
+  %div{:style => 'float:left;width:60%;'}
+    - last_minute = nil
+    %ul
+      - @minutes.each do |minute|
+        - if last_minute.blank? or (minute.created_at.to_date!=last_minute.created_at.to_date)
+          %li
+            %h1.headerMinute
+              = minute.created_at.strftime("%A, %b %d")
+        %li
+          %div#minute_container{:style => ''}
+            %div#image_minute
+              = image_tag 'minute_pic.png'
+            %div#data_minute
+              %ul.list_data_minute
+                %li
+                  %div
+                    %a{:href => '#', :class => 'titleBubble'}
+                      %span{:style => ''}
+                        = minute.name
+                %li
+                  %div#minute_text
+                    = truncate(minute.content, :length => 70)
+
+        - last_minute = minute
+
+//   <td><%= link_to 'Show', minute %></td>
+//    <td><%= link_to 'Edit', edit_minute_path(minute) %></td>
+//   <td><%= link_to 'Destroy', minute, :confirm => 'Are you sure?', :method => :delete %></td>

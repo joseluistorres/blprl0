@@ -1,7 +1,6 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 $(document).ready(function() {
-	
 	var descriptionOptions = {
 	    watermarkText: "Enter the action items here, e.g: \nEvaluate tools for startups @Joseluis #Tools [19-Sep-2011]\nRun a few tests in staging @Rebecca #Tests [Tomorrow]",
 	    functionValidate: function(value) {
@@ -26,6 +25,18 @@ $(document).ready(function() {
 	    liveCheck: false
 	};
 
+	var minuteTitleOptions = {
+	    watermarkText: "Untitled Minute",
+	    functionValidate: function(value) {
+	        if (parseInt(value) < 18) {
+	            return false;
+	        }
+	        return true;
+	    },
+	    dataType: "number",
+	    liveCheck: false
+	};
+	
 	function showUpExample(){
 		$("#egDiv").show();
 	
@@ -36,31 +47,21 @@ $(document).ready(function() {
 	
 	}
 
-	$("#task_description").requiredfield(descriptionOptions);
+	$("#minute_content").requiredfield(descriptionOptions);
+	$("#minute_name").requiredfield(minuteTitleOptions);
 	$("#passwrd").requiredfield(passwordOptions);
 
-	$('#task_description').live('focus keyup', function() {
-		showUpExample();
+	$('#minute_content').live('focus keyup', function() {
+		//showUpExample();
 	});
 
-	$('#task_description').live('blur', function() {
-		hideExample();
+	$('#minute_content').live('blur', function() {
+		//hideExample();
 	});
 
    /**********************************************************/
 
-	$('.slider')._TMS({
-		prevBu:'.prev',
-		nextBu:'.next',
-		playBu:'.play',
-		duration:1000,
-		easing:'easeOutQuad',
-		preset:'simplefade',
-		pagination:'.pagination',
-		slideshow:6000,
-		numStatus:false,
-		banners:'fromBottom1',// fromLeft, fromRight, fromTop, fromBottom
-		waitBannerAnimation:false});
+	
  
    $("#onregister").fancybox({
 	  'titlePosition'		: 'inside',
@@ -89,12 +90,4 @@ $(document).ready(function() {
 		return false;
     });
 	
-	$("a#login_link").live('click', function() {
-		$("div.slider").hide();
-		$("ul.pagination").hide();
-		$("div.controls").hide();
-		$("div.loginFrm").show();
-		 $("#emailaddress").focus();
-		return false;
-    });
 });

@@ -1,0 +1,32 @@
+= form_for(@minute) do |f|
+  .field
+    = f.text_field :name, :class => 'titleMinute', :style => 'width:495px;'
+  .field{:style => 'float:left;width:100%'}
+    %br
+    = f.text_area :content, :class => 'todoDescription', :style => 'height:300px;width:500px;'
+    %div#tip_text{:style => 'width:410px;float:right;'}
+      - if @minute.errors.any?
+        #error_explanation{:style => 'width:100%;border:1px solid #FF0000;'}
+          %ul
+            - @minute.errors.full_messages.each do |msg|
+              %li
+                = msg
+      %div#egDiv{:style => 'font-size:16px;'}
+        Type your minute in this format to create tasks on the fly
+      %span{:style => 'font-size:16px;color:#FFFFFF;'}
+        To add action items type them in this format:
+        %br
+        Description @user_assigned #category [due date]
+        %br
+        %br
+        Cleaning the code to avoid debugging messages @gael #code [15-Nov-2011]
+        %span{:style => 'color:#FF0000;font-size:12px;'}
+          [Press ENTER at the end of each action item]
+  .clear
+  .actions
+    - if f.object.new_record?
+      = f.submit :class => 'submitSaveIt', :value => '', :style => 'cursor:pointer;margin-left:380px;margin-top:15px;'
+    - else
+      = 'Would you like to regenerate tasks from this minute?'
+      = check_box_tag 'regenerateTasks'
+      = f.submit :class => 'submitUpdateIt', :value => ''

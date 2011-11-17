@@ -619,7 +619,7 @@ div.loginFrm {
 div.insideLoginFrm {
 	background-color:#CCC;
 	width:450px;
-	height:200px;
+	height:230px;
 	padding-top:30px;
 	padding-left:50px;
 }
@@ -648,4 +648,239 @@ label.loginpass {
 
 a.loginSubmitBtn {
 	margin-right:60px;
+}
+
+/****** notice *******/
+div.notice{
+	color:#16b5ff;
+	text-align:center;
+}
+ 
+div.alert{
+	color:#CC0000;
+	text-align:center;
+}
+/********************* minutes styles *******************************/
+textarea.watermark {
+    color: #C0C0C0;
+    font-size:18px;
+font-family: Arial;
+}
+
+.todoDescription {
+  font-family: Arial;
+  font-size:14px;
+  color: #003399;
+}
+
+.titleMinute {
+  font-family: Arial;
+  font-size:20px;
+  color: #003399;
+}
+
+div#egDiv{
+	color: #00FF00;
+	span{
+		color: #FF0000;
+	}
+}
+/****************** Buttons forms *************************************/
+input.submitSaveIt{
+	background: transparent url('/images/create_it.png') no-repeat;
+	width:123px;
+	height:35px;
+	border-radius:30px 30px 30px 30px;
+	border-style: none none solid;
+	border_width: medium medium 1px;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 3px 6px rgba(131, 141, 148, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.57) inset, 0 0 7px 0 rgba(254, 179, 0, 0.75) inset;
+}
+
+input.submitUpdateIt{
+	background: transparent url('/images/update_it.png') no-repeat;
+	width:123px;
+	height:35px;
+	border-radius:30px 30px 30px 30px;
+	border-style: none none solid;
+	border_width: medium medium 1px;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 3px 6px rgba(131, 141, 148, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.57) inset, 0 0 7px 0 rgba(254, 179, 0, 0.75) inset;
+	cursor:pointer;
+	margin-left:30px;
+	margin-top:15px;
+}
+
+.content_inside_container {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 960px;
+}
+.subheader {
+	background: url('/images/bg5.jpg') no-repeat scroll 0 0 transparent;
+}
+
+.field_with_errors { 
+	display: inline; 
+}
+
+/******************************** TASKS **********************************/
+.headerMinute {
+    background-color: #F2F2F2;
+    border-radius: 3px 3px 3px 3px;
+    border-top: 1px solid #E2E2E2;
+    color: #333333 !important;
+    font-size: 13px !important;
+    font-weight: bold;
+    margin-bottom: 5px !important;
+    padding: 6px !important;
+    width:97%;
+}
+
+.previewTask{
+	background-color:#FFF;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 960px;
+	padding-bottom:20px;
+	padding-left:10px;
+}
+
+#innerDiv{
+	overflow: hidden;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+#item_checkbox{
+	float:left;
+	width:30px;
+	display:inline;
+}
+
+#item_task{
+	width:800px;
+}
+
+a.dateBubble{
+	float:right;
+	color: #FFF;
+	font-size: 12px;
+	text-decoration:none;
+	
+	span{
+		padding:3px;
+		background-color: #00CCFF;
+		border-radius:2px 2px 2px 2px;
+		border-style: none none solid;
+		border_width: medium medium 1px;
+	}
+	&:hover {
+      /*.actions {
+        display: block;
+      }*/
+    }
+}
+
+a.personBubble{
+	float:right;
+	color: #000;
+	font-size: 12px;
+	text-decoration:none;
+	
+	span{
+		padding:5px;
+		background-color: #E0ECFF;
+		border-radius:5px 5px 5px 5px;
+		border-style: none none solid;
+		border_width: medium medium 1px;
+		margin-right:150px;
+		&:hover {
+			background-color: #C3D9FF;
+		}
+	}
+	&:hover {
+	 //	background-color: #C3D9FF;
+      /*.actions {
+        display: block;
+      }*/
+    }
+}
+
+.task_content{
+	width:500px;
+}
+
+div#tools{
+	display:inline;
+	a {
+		background:none;
+		height: 12px;
+	    text-indent: 1px;
+	    float:right;
+	    width: auto;
+	    display:block;
+	}
+
+}
+
+/******************************** MINUTES **********************************/
+.previewMinute{
+	background-color:#FFF;
+	padding-bottom:20px;
+	padding-left:10px;
+	overflow:hidden;
+}
+
+.headerMinuteList {
+    background-color: #666666;
+    border-radius: 3px 3px 3px 3px;
+    border-top: 1px solid #E2E2E2;
+    color: #FFF !important;
+    font-size: 20px !important;
+    font-weight: bold;
+    margin-bottom: 5px !important;
+    padding: 6px !important;
+    width:97%;
+}
+
+a.titleBubble{
+	//float:left;
+	//padding-left:50px;
+	color: #FFF;
+	font-size: 12px;
+	text-decoration:none;
+	
+	span{
+		padding:3px;
+		background-color: #00CCFF;
+		border-radius:2px 2px 2px 2px;
+		border-style: none none solid;
+		border_width: medium medium 1px;
+	}
+	&:hover {
+      /*.actions {
+        display: block;
+      }*/
+    }
+}
+
+#minute_container {
+	float:left;
+	width:100%;
+}
+#image_minute {
+	width:50px;
+	display:block;
+	height:50px;
+	float:left;
+}
+
+#data_minute {
+	width:300px;
+	display:block;
+	float:left;
+}
+
+ul.list_data{
+	padding-left:2px
 }
