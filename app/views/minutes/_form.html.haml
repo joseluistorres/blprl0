@@ -28,5 +28,5 @@
       = f.submit :class => 'submitSaveIt', :value => '', :style => 'cursor:pointer;margin-left:380px;margin-top:15px;'
     - else
       = 'Would you like to regenerate tasks from this minute?'
-      = check_box_tag 'regenerateTasks'
+      = check_box_tag 'regenerateTasks', 1, true
       = f.submit :class => 'submitUpdateIt', :value => ''

@@ -90,4 +90,17 @@ $(document).ready(function() {
 		return false;
     });
 	
+	$('input.loginFrm').live('keyup', function(event){
+    	if(event.keyCode == '13'){
+		    var user_email = $(this);
+		    var current_form = $("form#loginFrm");
+		    if (user_email.val()!=''){
+				current_form.submit();
+		    }
+	   
+	    }
+	  return false;
+	});
+	
+	
 });

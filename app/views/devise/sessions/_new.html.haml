@@ -3,7 +3,7 @@
     = notice
   %div.alert
     = alert
-  - form_for "user", :url => user_session_path do |f|
+  - form_for "user", :html => {:id => 'loginFrm'}, :url => user_session_path do |f|
     %fieldset
       = label_tag 'emailaddress', 'email', :class => 'loginFrm loginemail'
       = f.email_field :email, :class => 'loginFrm'

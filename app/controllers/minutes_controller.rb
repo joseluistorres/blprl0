@@ -3,7 +3,7 @@ class MinutesController < ApplicationController
   # GET /minutes
   # GET /minutes.xml
   def index
-    @minutes = Minute.find(:all, :conditions => {:user_id => current_user}, :order => 'minutes.id DESC', :limit => 5)
+    @minutes = Minute.find(:all, :conditions => {:user_id => current_user}, :order => 'minutes.id DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -47,44 +47,8 @@ class MinutesController < ApplicationController
     respond_to do |format|
       if @minute.save
         # once the minute it's saved then we'll create any tasks
-        @tasks = []
-        description = params[:minute][:content]
+        @tasks = @minute.get_tasks_from_description(params[:minute][:content], current_user)
         
-        alltasks = description.split(/\r\n/)
-        alltasks.each do |task|
-          person_assigned = task.scan(/@[\w-]+/)
-          if !person_assigned[0].blank?
-            person_assigned = person_assigned[0].gsub(/[^0-9A-Za-z]/, '')
-          else
-            person_assigned = ''
-          end
-          #logger.debug "====================testing1:#{person_assigned.inspect}========"
-          label_task = task.scan(/#[\w-]+/)
-          if !label_task[0].blank?
-            label_task = label_task[0].gsub(/[^0-9A-Za-z]/, '')
-          else
-            label_task = ''
-          end
-          #logger.debug "====================testing2:#{label_task.inspect}========"
-          task_description = task.gsub(/@[\w-]+/, '')
-          
-          due_date = task.scan(/\[(.*)\]+/)
-          logger.debug "==================testing3:#{due_date.inspect}==========="
-          
-          if !due_date[0].blank? && !due_date[0][0].blank?
-            due_date = Chronic.parse(due_date[0][0].gsub(/[^0-9A-Za-z]/, ' '))
-          else
-            due_date = Time.new
-          end
-          logger.debug "==================testing4:#{due_date.inspect}=============="
-          
-          if !task_description.blank?
-            @tasks << Task.new(:minute_id => @minute.id,:description => task_description, :user_id => current_user, :assigned_name => person_assigned, :due_date => due_date)
-          end
-          #@task = Task.create!(:minute_id => @minute.id,:description => task_description, :user_id => current_user, :assigned_to => 0, :due_date => due_date)
-          
-        end
-        #logger.debug "=================Testing3:#{@tasks.inspect}========================"
         if @tasks.count>=1
           format.html { render :action => 'create'}
           return
@@ -102,10 +66,19 @@ class MinutesController < ApplicationController
   # PUT /minutes/1
   # PUT /minutes/1.xml
   def update
+    # checar params[:regenerateTasks]
     @minute = Minute.find(params[:id])
 
     respond_to do |format|
       if @minute.update_attributes(params[:minute])
+        if params[:regenerateTasks]=="1"
+          @tasks = @minute.get_tasks_from_description(params[:minute][:content], current_user)
+        
+          if @tasks.count>=1
+            format.html { render :action => 'update', :notice => 'Minute was successfully updated.'}
+            return
+          end
+        end
         format.html { redirect_to(@minute, :notice => 'Minute was successfully updated.') }
         format.xml  { head :ok }
       else
