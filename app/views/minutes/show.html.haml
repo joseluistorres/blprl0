@@ -1,0 +1,21 @@
+%div.previewMinute.content_inside_container
+  %h1.headerMinuteList
+    = 'Single View:'
+  %div#tools{:style => 'float:right;padding-right:25px;'}
+    = link_to 'Edit Minute', edit_minute_path(@minute)
+  .clear
+  %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:360px;height:400px;float:right;border:1px solid black;'}
+  %div{:style => 'float:left;width:60%;'}
+    %ul
+      %li
+        %h1.headerMinute
+          = @minute.name
+      %li
+        %div#minute_container{:style => ''}
+          %div#image_minute
+            = image_tag 'minute_pic.png'
+          %div#data_minute
+            %ul.list_data_minute
+              %li
+                %div#minute_text
+                  = simple_format(@minute.content)
