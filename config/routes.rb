@@ -1,7 +1,9 @@
 Blackpearl::Application.routes.draw do
   
-  resources :minutes
-
+  #resources :minutes
+  resources :minutes do
+    resources :tasks
+  end
   devise_for :users do
     get "sign_in", :to => "devise/sessions#new"
     get "sign_out", :to => "devise/sessions#destroy"

@@ -101,6 +101,12 @@ $(document).ready(function() {
 	    }
 	  return false;
 	});
-	
-	
+	// showContent
+   	$('a.showMinuteContent').live('click', function(e) {
+	    e.preventDefault();
+	    var link = $(this);
+        showMinuteContent(link.attr('data_minute'));
+	    
+	    return true;
+	  });
 });

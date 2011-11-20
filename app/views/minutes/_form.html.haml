@@ -6,7 +6,7 @@
     = f.text_area :content, :class => 'todoDescription', :style => 'height:300px;width:500px;'
     %div#tip_text{:style => 'width:410px;float:right;'}
       - if @minute.errors.any?
-        #error_explanation{:style => 'width:100%;border:1px solid #FF0000;'}
+        #error_explanation
           %ul
             - @minute.errors.full_messages.each do |msg|
               %li
@@ -23,7 +23,7 @@
         %span{:style => 'color:#FF0000;font-size:12px;'}
           [Press ENTER at the end of each action item]
   .clear
-  .actions
+  .actions_buttons
     - if f.object.new_record?
       = f.submit :class => 'submitSaveIt', :value => '', :style => 'cursor:pointer;margin-left:380px;margin-top:15px;'
     - else

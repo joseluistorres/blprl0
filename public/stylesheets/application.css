@@ -1517,6 +1517,11 @@ div#tools a {
 }
 
 /* line 834, ../../app/stylesheets/application.scss */
+div.actions {
+  float: right;
+}
+
+/* line 838, ../../app/stylesheets/application.scss */
 .headerMinuteList {
   background-color: #666666;
   border-radius: 3px 3px 3px 3px;
@@ -1529,13 +1534,20 @@ div#tools a {
   width: 97%;
 }
 
-/* line 846, ../../app/stylesheets/application.scss */
+/* line 850, ../../app/stylesheets/application.scss */
+h1.headerMinuteList {
+  display: inline-block;
+  margin-top: 5px;
+  float: left;
+}
+
+/* line 856, ../../app/stylesheets/application.scss */
 a.titleBubble {
   color: #FFF;
   font-size: 12px;
   text-decoration: none;
 }
-/* line 853, ../../app/stylesheets/application.scss */
+/* line 863, ../../app/stylesheets/application.scss */
 a.titleBubble span {
   padding: 3px;
   background-color: #00CCFF;
@@ -1543,20 +1555,14 @@ a.titleBubble span {
   border-style: none none solid;
   border_width: medium medium 1px;
 }
-/* line 860, ../../app/stylesheets/application.scss */
-a.titleBubble:hover {
-  /*.actions {
-    display: block;
-  }*/
-}
 
-/* line 867, ../../app/stylesheets/application.scss */
+/* line 873, ../../app/stylesheets/application.scss */
 #minute_container {
   float: left;
   width: 100%;
 }
 
-/* line 871, ../../app/stylesheets/application.scss */
+/* line 877, ../../app/stylesheets/application.scss */
 #image_minute {
   width: 50px;
   display: block;
@@ -1564,14 +1570,94 @@ a.titleBubble:hover {
   float: left;
 }
 
-/* line 878, ../../app/stylesheets/application.scss */
+/* line 884, ../../app/stylesheets/application.scss */
 #data_minute {
-  width: 300px;
+  width: 90%;
   display: block;
   float: left;
 }
 
-/* line 884, ../../app/stylesheets/application.scss */
+/* line 890, ../../app/stylesheets/application.scss */
 ul.list_data {
   padding-left: 2px;
+}
+/* line 893, ../../app/stylesheets/application.scss */
+ul.list_data li div.actions {
+  display: none;
+}
+/* line 898, ../../app/stylesheets/application.scss */
+ul.list_data li:hover div.actions {
+  display: block;
+}
+
+/* line 910, ../../app/stylesheets/application.scss */
+span.image-wrapper {
+  display: block;
+}
+/* line 913, ../../app/stylesheets/application.scss */
+span.image-wrapper i {
+  display: block;
+  height: 18px;
+  width: 18px;
+}
+/* line 918, ../../app/stylesheets/application.scss */
+span.image-wrapper i.showit {
+  background: url("/images/right_arrow.png") no-repeat scroll 0 0 transparent;
+}
+/* line 920, ../../app/stylesheets/application.scss */
+span.image-wrapper i.showit:hover {
+  background: url("/images/right_arrow_gray.png") no-repeat scroll 0 0 transparent;
+}
+/* line 924, ../../app/stylesheets/application.scss */
+span.image-wrapper i.editit {
+  background: url("/images/edit_minute.png") no-repeat scroll 0 0 transparent;
+}
+/* line 926, ../../app/stylesheets/application.scss */
+span.image-wrapper i.editit:hover {
+  background: url("/images/edit_minute_hover.png") no-repeat scroll 0 0 transparent;
+}
+
+/* line 933, ../../app/stylesheets/application.scss */
+ul.minute_actions {
+  display: inline;
+  list-style: none outside none;
+  list-style-type: none;
+}
+/* line 937, ../../app/stylesheets/application.scss */
+ul.minute_actions li {
+  display: inline-block;
+}
+
+/* line 942, ../../app/stylesheets/application.scss */
+div.task_number {
+  float: right;
+  width: 30px;
+  text-align: center;
+  font-size: 25px;
+}
+/* line 948, ../../app/stylesheets/application.scss */
+div.task_number a {
+  color: #FF6600;
+  text-decoration: none;
+}
+/* line 953, ../../app/stylesheets/application.scss */
+div.task_number a.add_task_minute {
+  color: #FF6600;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* line 960, ../../app/stylesheets/application.scss */
+div.minute_text {
+  border-bottom: 1px solid #EEEEEE;
+  padding-bottom: 3px;
+}
+
+/* line 965, ../../app/stylesheets/application.scss */
+div#error_explanation {
+  background-color: #FFCC00;
+  border: 1px solid #FF0000;
+  color: #000000;
+  padding: 3px;
+  width: 390px;
 }

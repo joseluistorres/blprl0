@@ -42,6 +42,7 @@ class MinutesController < ApplicationController
   # POST /minutes.xml
   def create
     params[:minute][:content] = '' if params[:minute][:content]=="Enter the action items here, e.g: \r\nEvaluate tools for startups @Joseluis #Tools [19-Sep-2011]\r\nRun a few tests in staging @Rebecca #Tests [Tomorrow]"
+    params[:minute][:name] = '' if params[:minute][:name]=="Untitled Minute"
     @minute = Minute.new(params[:minute].merge!({:user_id => current_user}))
 
     respond_to do |format|

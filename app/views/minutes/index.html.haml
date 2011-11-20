@@ -4,11 +4,12 @@
   %div#tools{:style => 'float:right;padding-right:25px;'}
     = link_to 'Create a new Minute', new_minute_path
   .clear
-  %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:360px;height:400px;float:right;border:1px solid black;'}
+  %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:340px;height:400px;float:right;border:1px solid black;padding:10px;display:none;'}
   %div{:style => 'float:left;width:60%;'}
     - last_minute = nil
-    %ul
+    %ul.list_data
       - @minutes.each do |minute|
+        - div_content = "hide_content_#{minute.id.to_s}"
         - if last_minute.blank? or (minute.created_at.to_date!=last_minute.created_at.to_date)
           %li
             %h1.headerMinute
@@ -20,14 +21,35 @@
             %div#data_minute
               %ul.list_data_minute
                 %li
+                  .task_number{:style => ''}
+                    - if minute.tasks.count!=0
+                      %a{:href => '#', :class => 'task_counter'}
+                        = minute.tasks.count
+                    - else
+                      %a{:href => new_minute_task_path(minute), :class => 'add_task_minute'}
+                        Add Task
+                  .actions{:style=>'width:40px;height:19px;'}
+                    %ul.minute_actions
+                      %li
+                        %a{:href => edit_minute_path(minute), :class => ''}
+                          %span.image-wrapper
+                            %i.editit
+                      %li
+                        %a{:href => "#",:data_minute =>"#{div_content}", :class => 'showMinuteContent'}
+                          %span.image-wrapper
+                            %i.showit
                   %div
                     %a{:href => '#', :class => 'titleBubble'}
                       %span{:style => ''}
                         = minute.name
+                      
+                  %div.hide{:id => div_content}
+                    = simple_format(truncate(minute.content, :length => 750))
+                    
                 %li
-                  %div#minute_text
+                  %div.minute_text
                     = truncate(minute.content, :length => 70)
-
+              
         - last_minute = minute
 
 //   <td><%= link_to 'Show', minute %></td>

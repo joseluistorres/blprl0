@@ -58,3 +58,8 @@ $(function() {
     });
 });
 
+function showMinuteContent(div_content){
+	$('#showContent').hide();
+	$('#showContent').fadeIn('slow');
+	$("#showContent").html($("#"+div_content).html());
+}

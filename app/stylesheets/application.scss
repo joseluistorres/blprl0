@@ -831,6 +831,10 @@ div#tools{
 	overflow:hidden;
 }
 
+div.actions {
+    float: right;
+}
+
 .headerMinuteList {
     background-color: #666666;
     border-radius: 3px 3px 3px 3px;
@@ -841,6 +845,12 @@ div#tools{
     margin-bottom: 5px !important;
     padding: 6px !important;
     width:97%;
+}
+
+h1.headerMinuteList {
+	display:inline-block; 
+	margin-top:5px;
+	float:left;
 }
 
 a.titleBubble{
@@ -857,11 +867,7 @@ a.titleBubble{
 		border-style: none none solid;
 		border_width: medium medium 1px;
 	}
-	&:hover {
-      /*.actions {
-        display: block;
-      }*/
-    }
+	
 }
 
 #minute_container {
@@ -876,11 +882,90 @@ a.titleBubble{
 }
 
 #data_minute {
-	width:300px;
+	width:90%;
 	display:block;
 	float:left;
 }
 
 ul.list_data{
-	padding-left:2px
+	padding-left:2px;
+	li {
+		div.actions {
+	        display: none;
+	    }
+
+		&:hover {
+		  div.actions {
+	        display: block;
+	      }
+	    }
+	}
+}
+
+a.showMinuteContent{
+    
+	
+}
+
+span.image-wrapper {
+  display: block;
+
+  i {
+    display: block;
+    height: 18px;
+    width: 18px;
+
+    &.showit {
+      background: url('/images/right_arrow.png') no-repeat scroll 0 0 transparent;
+	  &:hover {
+		background: url('/images/right_arrow_gray.png') no-repeat scroll 0 0 transparent;
+	  }
+    }
+    &.editit {
+      background: url('/images/edit_minute.png') no-repeat scroll 0 0 transparent;
+	  &:hover {
+		background: url('/images/edit_minute_hover.png') no-repeat scroll 0 0 transparent;
+	  }
+    }
+  }
+}
+
+ul.minute_actions {
+	display: inline;
+	list-style: none outside none;
+	list-style-type: none;
+	li {
+		display: inline-block;
+	}
+}
+
+div.task_number {
+	
+	float:right;
+	width:30px;
+	text-align:center;
+	font-size:25px;
+	a {
+		color: #FF6600;
+		text-decoration:none;
+	}
+	
+	a.add_task_minute {
+		color: #FF6600;
+		text-decoration:none;
+		font-size:12px;
+	}
+}
+
+div.minute_text {
+	border-bottom: 1px solid #EEEEEE;
+	padding-bottom:3px;
+}
+
+div#error_explanation {
+	background-color: #FFCC00;
+	border: 1px solid #FF0000;
+	color: #000000;
+	padding: 3px;
+	width: 390px;
 }
