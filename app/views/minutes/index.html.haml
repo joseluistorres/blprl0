@@ -5,7 +5,8 @@
     = link_to 'Create a new Minute', new_minute_path
   .clear
   %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:340px;height:400px;float:right;border:1px solid black;padding:10px;display:none;'}
-  %div{:style => 'float:left;width:60%;'}
+  - widthContainer = (@minutes.count==0) ? '100%' : '60%'
+  %div{:style => 'float:left;width:'+widthContainer+';'}
     - last_minute = nil
     %ul.list_data
       - @minutes.each do |minute|
@@ -51,7 +52,10 @@
                     = truncate(minute.content, :length => 70)
               
         - last_minute = minute
-
+      - if @minutes.count==0
+        = t('minute.no_minutes')
+        %div#arrow_sign{:style => 'display:inline;'}
+          = image_tag 'sign_arrow_right.png'
 //   <td><%= link_to 'Show', minute %></td>
 //    <td><%= link_to 'Edit', edit_minute_path(minute) %></td>
 //   <td><%= link_to 'Destroy', minute, :confirm => 'Are you sure?', :method => :delete %></td>

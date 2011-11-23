@@ -2,4 +2,21 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    models: 
+      minute: "Minute"
+    attributes:
+      minute:
+        name: "The title of the Minute"
+        content: "The content"
+    errors:
+      models:
+        minute:
+          attributes:
+            name:
+              blank: "can not be empty"
+            content:
+              blank: "can not be empty"
+  minute:
+    no_minutes: "You haven't add any minute yet"
+      
