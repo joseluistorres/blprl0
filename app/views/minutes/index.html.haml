@@ -4,7 +4,7 @@
   %div#tools{:style => 'float:right;padding-right:25px;'}
     = link_to 'Create a new Minute', new_minute_path
   .clear
-  %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:340px;height:400px;float:right;border:1px solid black;padding:10px;display:none;'}
+  %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:340px;height:400px;float:right;border:1px solid black;padding:10px;display:none;overflow:hidden;'}
   - widthContainer = (@minutes.count==0) ? '100%' : '60%'
   %div{:style => 'float:left;width:'+widthContainer+';'}
     - last_minute = nil

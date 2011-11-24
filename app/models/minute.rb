@@ -35,7 +35,7 @@ class Minute < ActiveRecord::Base
       
       
         if !task_description.blank?
-          @tasks << Task.new(:minute_id => self.id,:description => task_description, :user_id => current_user, :assigned_name => person_assigned, :due_date => due_date)
+          @tasks << Task.create!(:minute_id => self.id,:description => task_description, :user_id => current_user, :assigned_name => person_assigned, :due_date => due_date, :preview_mode => 1)
         end
         #@task = Task.create!(:minute_id => @minute.id,:description => task_description, :user_id => current_user, :assigned_to => 0, :due_date => due_date)
       

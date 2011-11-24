@@ -69,6 +69,17 @@ class TasksController < ApplicationController
     end
   end
 
+  def create_multiple
+     logger.debug "============Testing1:#{params.inspect}================="
+     @tasks = Task.find(params[:task_ids])
+       @tasks.each do |task|
+         logger.debug "===============testing2:#{task.minute.inspect}"
+         task.update_attributes!(:preview_mode => false)
+         #task.update_attributes!(params[:product].reject { |k,v| v.blank? })
+       end
+       flash[:notice] = "Updated tareas!"
+       redirect_to minutes_path
+  end
   # PUT /tasks/1
   # PUT /tasks/1.xml
   def update
