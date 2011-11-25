@@ -1,0 +1,33 @@
+%div.previewMinute.content_inside_container
+  %h1.headerMinuteList
+    = 'Action Items for "' + @minute.name.to_s + '"'
+  %div#tools{:style => 'float:right;padding-right:25px;'}
+    = link_to 'Create a new Minute', new_minute_path
+  .clear
+  %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:340px;height:400px;float:right;border:1px solid black;padding:10px;display:none;overflow:hidden;'}
+  - widthContainer = '60%'
+  %div{:style => 'float:left;width:'+widthContainer+';'}
+    %ul.list_data
+      %li
+        %h1.headerMinute
+          Default
+      - @tasks.each do |task|
+        %li
+          %div#minute_container{:style => ''}
+            %div.tools_task
+              = check_box_tag 'todo'
+              %a{:href => '#', :style => 'padding-right:5px;'}
+                Edit
+              %a{:href => '#'}
+                Thrash
+            %div.data_task
+              %span
+                = task.description
+              %span{:style => 'display: inline-block;'}
+                %a{:href => '#', :class => 'titleDateBubble'}
+                  %span
+                    = task.due_date.strftime("%d %b %Y")
+    .clear
+    #frmContainer.mycontainer{:style => 'padding:15px;margin-left:5px;margin-top:20px;'}
+      - @task = Task.new
+      = render 'tasks/form', :object => @task

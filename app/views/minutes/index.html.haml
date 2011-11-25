@@ -23,9 +23,9 @@
               %ul.list_data_minute
                 %li
                   .task_number{:style => ''}
-                    - if minute.tasks.count!=0
-                      %a{:href => '#', :class => 'task_counter'}
-                        = minute.tasks.count
+                    - if minute.tasks.that_are_available.count!=0
+                      %a{:href => minute_tasks_path(minute), :class => 'task_counter'}
+                        = minute.tasks.that_are_available.count
                     - else
                       %a{:href => new_minute_task_path(minute), :class => 'add_task_minute'}
                         Add Task

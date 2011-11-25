@@ -4,7 +4,8 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.xml
   def index
-    @tasks = Task.all
+    @minute =  Minute.find(params[:minute_id])
+    @tasks = @minute.tasks.that_are_available
 
     respond_to do |format|
       format.html # index.html.erb
@@ -55,9 +56,7 @@ class TasksController < ApplicationController
       arr2 << task.gsub(/@[\w-]+/, '')
       arr3 << task.scan(/\[(.*)\]+/)
     end
-    logger.debug "=================tester: #{arr3[0].inspect} ==================="
-    logger.debug "=================testing1: #{arr.inspect}==testing2:#{arr1.inspect}==testing3:#{arr2.inspect}==testing4:#{arr3.inspect}============"
-
+    
     respond_to do |format|
       if @task.save
         format.html { redirect_to(@task, :notice => 'Task was successfully created.') }
@@ -70,12 +69,10 @@ class TasksController < ApplicationController
   end
 
   def create_multiple
-     logger.debug "============Testing1:#{params.inspect}================="
+     
      @tasks = Task.find(params[:task_ids])
        @tasks.each do |task|
-         logger.debug "===============testing2:#{task.minute.inspect}"
          task.update_attributes!(:preview_mode => false)
-         #task.update_attributes!(params[:product].reject { |k,v| v.blank? })
        end
        flash[:notice] = "Updated tareas!"
        redirect_to minutes_path

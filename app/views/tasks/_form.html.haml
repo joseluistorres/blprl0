@@ -11,9 +11,17 @@
             = msg
       
 
-  .field
-    %br
-    = f.text_area :description, :class => 'todoDescription', :style => 'height:300px;width:100%;'
-    
-  .actions
+  .task_div
+    = f.text_area :description, :class => 'taskDescription'
+    .div_dates
+      = f.text_field :due_date, :class => 'date_input'
+    .div_people
+      %a{:href => '#'}
+        %span
+          %b
+            JoseLuis
+      %span
+        %a.action_add_people{:href => '#'}
+          Attach people
+  .actions_buttons{:style => 'float:right;height:50px;'}
     = f.submit :class => 'submitSaveIt', :value => ''

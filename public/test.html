@@ -29,61 +29,98 @@ ul {
 ul.list_data{
 	padding-left:2px
 }
+
+/********************** tasks **********************/
+.taskDescription {
+	border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    margin-bottom: 5px;
+	padding: 6px 3px;
+    resize: none;
+ 	font-size: 13px;
+	overflow: hidden;
+	margin-bottom: 5px;
+    width: 892px;
+ 	height: 32px;
+	 letter-spacing: 0.8px;
+    overflow-x: hidden;
+}
+
+.task_div {
+	overflow: hidden !important;
+	padding: 4px 0;
+}
+
+.mycontainer {
+	 background-color: #EFEFEF;
+    box-shadow: 0 1px 3px #AAAAAA;
+    padding: 5px;
+	width:900px;
+}
+
+.div_people {
+	background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    cursor: text;
+    margin-bottom: 8px;
+    padding: 6px;
+    resize: none;
+    text-align: left;
+	width:48%;
+	float:left;
+	
+}
+
+.div_dates {
+  cursor: pointer;
+  float:right;  
+  width:50%;
+  
+}
+
+.date_input {
+	border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    margin-bottom: 5px;
+    padding: 4px 6px;
+    resize: none;
+	width: 436px;
+	height: 23px;
+}
 -->
 </style>
 </head>
 
 <body>
-<ul>
-  <li>
-    <h1>
-      Jueves 17
-    </h1>
-  </li>
-  <li>
-    <div id="minute_container">
-      <div id="image_minute">
-        <img src="images/minute_pic.png" />
-      </div>
-      <div id="data_minute">
-        <ul class="list_data">
-          <li>
-            <div>
-              Titulo de la minuta
-            </div>
-          </li>
-          <li>
-            <div id="minute_text">
-              Texto bla bla bla bla bla
-            </div>
-          </li>
-         </ul>
-       </div>
-       <!-- ends data-minute -->
-     </div>
-  </li>
-  <li>
-    <div id="minute_container">
-      <div id="image_minute">
-        <img src="images/minute_pic.png" />
-      </div>
-      <div id="data_minute">
-        <ul class="list_data">
-          <li>
-            <div>
-              Titulo de la minuta 2
-            </div>
-          </li>
-          <li>
-            <div id="minute_text">
-              Texto bla bla bla bla bla 22
-            </div>
-          </li>
-         </ul>
-       </div>
-       <!-- ends data-minute -->
-     </div>
-  </li>
-</ul>
+
+<!-- start tasks --->
+<div class="mycontainer" style="">
+<form>
+  <div class="task_div">
+    <textarea class="taskDescription" name="content" tabindex="1" style=""></textarea>
+    <div class="div_dates">
+    	<input class="date_input" tabindex="2" name="due_date" type="text">
+    </div>
+    <div class="div_people">
+      <a class="amibubble citem tag" href="#" tabindex="1000" name="JoseLuis_T">
+      	<span class="inner">
+        	<span>
+              <b>
+                JoseLuis_T <img width="9" height="9" src="https://d15adz0nmpvlgr.cloudfront.net/76084e29cb2cf72b320e888edc583dfb.gif" class="cmp_12_small_x">
+              </b>
+             </span>
+          </span>
+	  <span id="amicomplete_token" class="token compact" href="#">
+      <a class="action_link" href="#" style="">Attach people or labels</a>
+    </div>
+    <br />
+    <div class="actions" style="float:left;clear:both;">
+    	<input type="submit" id="add_item_button_17335653" value="Add this item">
+    </div>
+   <div>
+  </form>
+   
+</div>
 </body>
 </html>
