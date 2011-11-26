@@ -84,7 +84,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.update_attributes(params[:task])
-        format.html { redirect_to(@task, :notice => 'Task was successfully updated.') }
+        format.html { redirect_to(minute_tasks_path(@task.minute), :notice => 'Task was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

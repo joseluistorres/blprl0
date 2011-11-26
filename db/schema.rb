@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111123202452) do
+ActiveRecord::Schema.define(:version => 20111126152018) do
 
   create_table "labels", :force => true do |t|
     t.string   "name"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20111123202452) do
     t.datetime "updated_at"
     t.string   "assigned_name"
     t.boolean  "preview_mode"
+    t.boolean  "status",        :default => false, :null => false
   end
 
   create_table "users", :force => true do |t|

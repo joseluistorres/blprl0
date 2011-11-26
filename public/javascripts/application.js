@@ -109,4 +109,21 @@ $(document).ready(function() {
 	    
 	    return true;
 	  });
+	
+	$('a.edit_task_link').live('click', function(e) {
+	    e.preventDefault();
+	    var link = $(this);
+        $('div#minute_editor_'+link.attr('data_link')).show();
+		$('div#minute_container_'+link.attr('data_link')).hide();
+
+	    return true;
+	  });
+	$('a.cancel_action').live('click', function(e) {
+	    e.preventDefault();
+	    var link = $(this);
+        $('div#minute_editor_'+link.attr('data_link')).hide();
+		$('div#minute_container_'+link.attr('data_link')).show();
+
+	    return true;
+	  });
 });

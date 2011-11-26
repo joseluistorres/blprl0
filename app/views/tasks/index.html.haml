@@ -5,7 +5,7 @@
     = link_to 'Create a new Minute', new_minute_path
   .clear
   %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:340px;height:400px;float:right;border:1px solid black;padding:10px;display:none;overflow:hidden;'}
-  - widthContainer = '60%'
+  - widthContainer = '70%'
   %div{:style => 'float:left;width:'+widthContainer+';'}
     %ul.list_data
       %li
@@ -13,20 +13,26 @@
           Default
       - @tasks.each do |task|
         %li
-          %div#minute_container{:style => ''}
+          %div.minute_container{:id => "minute_container_#{task.id.to_s}"}
             %div.tools_task
-              = check_box_tag 'todo'
-              %a{:href => '#', :style => 'padding-right:5px;'}
+              = check_box_tag 'status_task', nil, task.status
+              %a.edit_task_link{:href => '#',:data_link =>task.id.to_s, :style => 'padding-right:5px;'}
                 Edit
               %a{:href => '#'}
-                Thrash
+                Trash
             %div.data_task
-              %span
+              - style_for_description = (task.status) ? 'text-decoration: line-through;' : ''
+              %span{:style => style_for_description}
                 = task.description
               %span{:style => 'display: inline-block;'}
                 %a{:href => '#', :class => 'titleDateBubble'}
                   %span
                     = task.due_date.strftime("%d %b %Y")
+          .clear
+          %div.hide.mycontainer{:id => "minute_editor_#{task.id.to_s}",:style => 'width:600px;height:130px;margin-bottom:20px;padding:15px;margin-left:5px;'}
+            - @task = task
+            = render 'tasks/form', :object => @task
+          
     .clear
     #frmContainer.mycontainer{:style => 'padding:15px;margin-left:5px;margin-top:20px;'}
       - @task = Task.new

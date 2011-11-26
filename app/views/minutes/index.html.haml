@@ -1,3 +1,4 @@
+-########################## List of Minutes #################################
 %div.previewMinute.content_inside_container
   %h1.headerMinuteList
     = 'Your Minutes:'
@@ -11,6 +12,9 @@
     %ul.list_data
       - @minutes.each do |minute|
         - div_content = "hide_content_#{minute.id.to_s}"
+        - tasks_available = minute.tasks.that_are_available.count
+        - tasks_completed = minute.tasks.that_are_available_and_done.count
+        - tasks_pending = tasks_available - tasks_completed
         - if last_minute.blank? or (minute.created_at.to_date!=last_minute.created_at.to_date)
           %li
             %h1.headerMinute
@@ -23,9 +27,12 @@
               %ul.list_data_minute
                 %li
                   .task_number{:style => ''}
-                    - if minute.tasks.that_are_available.count!=0
+                    - if tasks_available!=0
                       %a{:href => minute_tasks_path(minute), :class => 'task_counter'}
-                        = minute.tasks.that_are_available.count
+                        .pendingTasks
+                          =  tasks_completed.to_s + ' of ' + tasks_available.to_s
+                        .percentageTasks
+                          = number_to_percentage((tasks_completed * 100)/tasks_available, :precision => 0)
                     - else
                       %a{:href => new_minute_task_path(minute), :class => 'add_task_minute'}
                         Add Task
