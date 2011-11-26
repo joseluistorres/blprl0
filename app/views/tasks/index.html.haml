@@ -18,8 +18,7 @@
               = check_box_tag 'status_task', nil, task.status
               %a.edit_task_link{:href => '#',:data_link =>task.id.to_s, :style => 'padding-right:5px;'}
                 Edit
-              %a{:href => '#'}
-                Trash
+              = link_to 'Trash', task, :confirm => 'Are you sure you want to delete this action item?', :method => :delete 
             %div.data_task
               - style_for_description = (task.status) ? 'text-decoration: line-through;' : ''
               %span{:style => style_for_description}

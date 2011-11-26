@@ -43,23 +43,14 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.xml
   def create
-    @task = Task.new()#params[:task])
-    description = params[:task][:description]
-    arr = []
-    arr1 = []
-    arr2 = []
-    arr3 = []
-    alltasks = description.split(/\r\n/)
-    alltasks.each do |task|
-      arr << task.scan(/@[\w-]+/)
-      arr1 << task.scan(/#[\w-]+/)
-      arr2 << task.gsub(/@[\w-]+/, '')
-      arr3 << task.scan(/\[(.*)\]+/)
-    end
+    @task = Task.new(params[:task])
+    @task.minute_id = params[:minute_id]
+    @task.preview_mode = false
     
+        
     respond_to do |format|
       if @task.save
-        format.html { redirect_to(@task, :notice => 'Task was successfully created.') }
+        format.html { redirect_to(minute_tasks_path(@task.minute), :notice => 'Task was successfully created.') }
         format.xml  { render :xml => @task, :status => :created, :location => @task }
       else
         format.html { render :action => "new" }
@@ -100,7 +91,7 @@ class TasksController < ApplicationController
     @task.destroy
 
     respond_to do |format|
-      format.html { redirect_to(tasks_url) }
+      format.html { redirect_to(minute_tasks_path(@task.minute)) }
       format.xml  { head :ok }
     end
   end
