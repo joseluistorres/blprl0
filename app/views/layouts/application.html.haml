@@ -4,7 +4,6 @@
     %title
       vulcanik - Beta
     %meta{:charset => 'utf-8'}
-    -#= javascript_include_tag 'http://code.jquery.com/jquery-1.6.2.min.js'
     = stylesheet_link_tag "reset.css", :media => "screen"
     = stylesheet_link_tag 'application.css', :media => 'screen'
     = stylesheet_link_tag "grid.css", :media => "screen"
@@ -80,6 +79,15 @@
       -#-------------------content ------------------
       %section#content
         - if user_signed_in?
+          #nav_tabs{:style => 'width:100%;margin-left:200px'}
+            %ul#top_menu{:style => 'width:100%;'}
+              %li
+                %a{:href => minutes_path}
+                  Minutes
+              %li
+                %a{:href => new_minute_path}
+                  Create a minute
+              
           = yield
         - unless user_signed_in?
           .indent-bottom

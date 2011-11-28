@@ -909,6 +909,22 @@ a.titleDateBubble{
 	
 }
 
+div#nav_tabs li{
+	border: medium none;
+	display: inline;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	a {
+		background-color: #000066;
+		margin: 0 1px;
+		padding: 5px 9px 7px;
+		text-decoration:none;
+		&:hover {
+			background-color: #0000CC;
+		}
+	}
+}
 
 /******************************** MINUTES **********************************/
 .previewMinute{
