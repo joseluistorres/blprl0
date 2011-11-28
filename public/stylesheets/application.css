@@ -1729,51 +1729,59 @@ span.image-wrapper i.showit:hover {
   background: url("/images/right_arrow_gray.png") no-repeat scroll 0 0 transparent;
 }
 /* line 1034, ../../app/stylesheets/application.scss */
+span.image-wrapper i.trashit {
+  background: url("/images/trash_it.png") no-repeat scroll 0 0 transparent;
+}
+/* line 1036, ../../app/stylesheets/application.scss */
+span.image-wrapper i.trashit:hover {
+  background: url("/images/trash_it_hover.png") no-repeat scroll 0 0 transparent;
+}
+/* line 1040, ../../app/stylesheets/application.scss */
 span.image-wrapper i.editit {
   background: url("/images/edit_minute.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1036, ../../app/stylesheets/application.scss */
+/* line 1042, ../../app/stylesheets/application.scss */
 span.image-wrapper i.editit:hover {
   background: url("/images/edit_minute_hover.png") no-repeat scroll 0 0 transparent;
 }
 
-/* line 1043, ../../app/stylesheets/application.scss */
+/* line 1049, ../../app/stylesheets/application.scss */
 ul.minute_actions {
   display: inline;
   list-style: none outside none;
   list-style-type: none;
 }
-/* line 1047, ../../app/stylesheets/application.scss */
+/* line 1053, ../../app/stylesheets/application.scss */
 ul.minute_actions li {
   display: inline-block;
 }
 
-/* line 1052, ../../app/stylesheets/application.scss */
+/* line 1058, ../../app/stylesheets/application.scss */
 div.task_number {
   float: right;
   width: 60px;
   text-align: center;
   font-size: 1em;
 }
-/* line 1058, ../../app/stylesheets/application.scss */
+/* line 1064, ../../app/stylesheets/application.scss */
 div.task_number a {
   color: #FF6600;
   text-decoration: none;
 }
-/* line 1063, ../../app/stylesheets/application.scss */
+/* line 1069, ../../app/stylesheets/application.scss */
 div.task_number a.add_task_minute {
   color: #FF6600;
   text-decoration: none;
   font-size: 12px;
 }
 
-/* line 1070, ../../app/stylesheets/application.scss */
+/* line 1076, ../../app/stylesheets/application.scss */
 div.minute_text {
   border-bottom: 1px solid #EEEEEE;
   padding-bottom: 3px;
 }
 
-/* line 1075, ../../app/stylesheets/application.scss */
+/* line 1081, ../../app/stylesheets/application.scss */
 div#error_explanation {
   background-color: #FFCC00;
   border: 1px solid #FF0000;
@@ -1782,19 +1790,19 @@ div#error_explanation {
   width: 390px;
 }
 
-/* line 1084, ../../app/stylesheets/application.scss */
+/* line 1090, ../../app/stylesheets/application.scss */
 a.task_counter div.pendingTasks {
   display: block;
 }
-/* line 1087, ../../app/stylesheets/application.scss */
+/* line 1093, ../../app/stylesheets/application.scss */
 a.task_counter div.percentageTasks {
   display: none;
 }
-/* line 1091, ../../app/stylesheets/application.scss */
+/* line 1097, ../../app/stylesheets/application.scss */
 a.task_counter:hover div.pendingTasks {
   display: none;
 }
-/* line 1094, ../../app/stylesheets/application.scss */
+/* line 1100, ../../app/stylesheets/application.scss */
 a.task_counter:hover div.percentageTasks {
   display: block;
 }

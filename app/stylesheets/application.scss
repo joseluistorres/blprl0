@@ -1031,6 +1031,12 @@ span.image-wrapper {
 		background: url('/images/right_arrow_gray.png') no-repeat scroll 0 0 transparent;
 	  }
     }
+	&.trashit {
+      background: url('/images/trash_it.png') no-repeat scroll 0 0 transparent;
+	  &:hover {
+		background: url('/images/trash_it_hover.png') no-repeat scroll 0 0 transparent;
+	  }
+    }
     &.editit {
       background: url('/images/edit_minute.png') no-repeat scroll 0 0 transparent;
 	  &:hover {
