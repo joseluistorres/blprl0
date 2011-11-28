@@ -126,4 +126,21 @@ $(document).ready(function() {
 
 	    return true;
 	  });
+	
+	$('.check_text_expand').keyup(function(){
+		var this_text = $(this);
+		if (this_text.val().length<=140){
+			this_text.css("height", '32px');
+		}
+		if (this_text.val().length>=141 && this_text.val().length<=280){
+			this_text.css("height", '64px');
+		}
+		if (this_text.val().length>=281 && this_text.val().length<=420){
+			this_text.css("height", '96px');
+		}
+		if (this_text.val().length>=421){
+			this_text.css("height", '96px');
+		}
+		
+	});
 });

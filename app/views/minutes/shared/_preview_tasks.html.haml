@@ -1,5 +1,6 @@
 %div.previewTask{:style => ''}
-  
+  %h1{:style => 'color:#000;font-size:1.5em;'}
+    Please uncheck the action items that will be created from the minute.
   %h1.headerMinute
     = @minute.name
     %div#tools
@@ -23,5 +24,4 @@
                     = task.assigned_name
               %div.task_content
                 = truncate(task.description, :length => 70) 
-                
-      = submit_tag
+      = submit_tag 'Save Changes', :style => 'margin-top:10px;'
