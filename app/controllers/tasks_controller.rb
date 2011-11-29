@@ -72,9 +72,15 @@ class TasksController < ApplicationController
   # PUT /tasks/1.xml
   def update
     @task = Task.find(params[:id])
-
+    if params[:status]=='1'
+      @task.status = (@task.status) ? 0 : 1
+      @task.save!
+      logger.debug "========Testing==========="
+    end
+    
     respond_to do |format|
       if @task.update_attributes(params[:task])
+        format.js
         format.html { redirect_to(minute_tasks_path(@task.minute), :notice => 'Task was successfully updated.') }
         format.xml  { head :ok }
       else

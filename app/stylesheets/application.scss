@@ -889,7 +889,7 @@ div#tools{
 	display: inline-block;
 	float: right;
 	width: 82%;
-	span {
+	div {
 		font-size:0.8em;
 	}
 }
@@ -902,6 +902,21 @@ a.titleDateBubble{
 	span{
 		padding:3px;
 		background-color: #F7CBCB;
+		border-radius:2px 2px 2px 2px;
+		border-style: none none solid;
+		border_width: medium medium 1px;
+	}
+	
+}
+
+a.titleDateBubble_done{
+	color: #FFF;
+	font-size: 12px;
+	text-decoration:none;
+	
+	span{
+		padding:3px;
+		background-color: #999;
 		border-radius:2px 2px 2px 2px;
 		border-style: none none solid;
 		border_width: medium medium 1px;

@@ -143,4 +143,19 @@ $(document).ready(function() {
 		}
 		
 	});
+	
+	$('.check_task').live('click', function(e) {
+	    //e.preventDefault();
+	    var link = $(this);
+        task_id = link.attr('data_task');
+		minute_id = link.attr('data_minute');
+
+		$.ajax({
+	        url: '/minutes/' + minute_id + '/tasks/' + task_id + '?status=1',
+	        type: 'put',
+	        dataType: 'script'
+	      });
+
+	    return true;
+	  });
 });

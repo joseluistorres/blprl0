@@ -1,0 +1,9 @@
+if @task.status
+  page["div#text_task_span_#{@task.id.to_s}"].css('text-decoration', 'line-through');
+  page["a#link_due_date_#{@task.id.to_s}"].addClass('titleDateBubble_done');
+  page["a#link_due_date_#{@task.id.to_s}"].removeClass('titleDateBubble');
+else
+  page["div#text_task_span_#{@task.id.to_s}"].css('text-decoration', 'none');
+  page["a#link_due_date_#{@task.id.to_s}"].removeClass('titleDateBubble_done');
+  page["a#link_due_date_#{@task.id.to_s}"].addClass('titleDateBubble');
+end
