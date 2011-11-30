@@ -37,3 +37,9 @@
     #frmContainer.mycontainer{:style => 'padding:15px;margin-left:5px;margin-top:20px;'}
       - @task = Task.new
       = render 'tasks/form', :object => @task
+    = text_field_tag 'prueba_fecha', nil, :class => 'pr_fe'
+    :javascript
+      $(function(){
+        $(".pr_fe").datepicker();
+
+      });

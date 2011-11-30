@@ -75,8 +75,11 @@ class TasksController < ApplicationController
     if params[:status]=='1'
       @task.status = (@task.status) ? 0 : 1
       @task.save!
-      logger.debug "========Testing==========="
     end
+    if params['due_date_' + @task.id.to_s]
+      params[:task][:due_date] = params['due_date_' + @task.id.to_s]
+    end
+    logger.debug "==============testing123:#{params.inspect}==========="
     
     respond_to do |format|
       if @task.update_attributes(params[:task])

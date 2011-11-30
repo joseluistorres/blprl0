@@ -15,7 +15,11 @@
   .task_div
     = f.text_area :description, :class => 'taskDescription check_text_expand'
     .div_dates
-      = f.text_field :due_date, :class => 'date_input'
+      - if @task.new_record?
+        = f.text_field :due_date, :class => "date_input"
+      - else
+        - my_id = 'due_date_' + @task.id.to_s
+        = text_field_tag my_id, @task.due_date.strftime("%d %b %Y"), :class => "new_date_#{@task.id}"
     .div_people
       %a{:href => '#'}
         %span
@@ -32,3 +36,10 @@
       or
       %a{:href => '#', :class => 'cancel_action', :data_link =>@task.id.to_s, :style => 'color:#CC3300;font-size:0.8em;'}
         Cancel
+        
+:javascript
+  $(function(){
+    #{"$(\"#task_due_date\").datepicker({ dateFormat: 'd M yy' });" if @task.new_record?}
+    #{"$(\"#due_date_#{@task.id}\").datepicker({ dateFormat: 'd M yy' });" if !@task.new_record?}
+
+  });
