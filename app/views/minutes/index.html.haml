@@ -25,7 +25,9 @@
                 %li
                   .task_number{:style => ''}
                     - if tasks_available!=0
-                      %a{:href => minute_tasks_path(minute), :class => 'task_counter'}
+                      - other_color = (tasks_completed == tasks_available) ? ' with_gray' : ''
+                      %a{:href => minute_tasks_path(minute), :class => "task_counter#{other_color}"}
+                        
                         .pendingTasks
                           =  tasks_completed.to_s + ' of ' + tasks_available.to_s
                         .percentageTasks

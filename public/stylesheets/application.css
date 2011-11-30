@@ -1831,3 +1831,8 @@ a.task_counter:hover div.pendingTasks {
 a.task_counter:hover div.percentageTasks {
   display: block;
 }
+
+/* line 1129, ../../app/stylesheets/application.scss */
+.with_gray div {
+  color: #999;
+}
