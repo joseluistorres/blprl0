@@ -1579,7 +1579,7 @@ div#tools a {
 .data_task {
   display: inline-block;
   float: right;
-  width: 82%;
+  width: 90%;
 }
 /* line 892, ../../app/stylesheets/application.scss */
 .data_task div {
@@ -1636,8 +1636,18 @@ div#nav_tabs li a:hover {
   background-color: #0000CC;
 }
 
+/* line 944, ../../app/stylesheets/application.scss */
+a.edit_task_link {
+  font-size: 12px;
+  text-decoration: none;
+}
+/* line 947, ../../app/stylesheets/application.scss */
+a.edit_task_link:hover {
+  text-decoration: underline;
+}
+
 /******************************** MINUTES **********************************/
-/* line 945, ../../app/stylesheets/application.scss */
+/* line 952, ../../app/stylesheets/application.scss */
 .previewMinute {
   background-color: #FFF;
   padding-bottom: 20px;
@@ -1645,12 +1655,12 @@ div#nav_tabs li a:hover {
   overflow: hidden;
 }
 
-/* line 952, ../../app/stylesheets/application.scss */
+/* line 959, ../../app/stylesheets/application.scss */
 div.actions {
   float: right;
 }
 
-/* line 956, ../../app/stylesheets/application.scss */
+/* line 963, ../../app/stylesheets/application.scss */
 .headerMinuteList {
   background-color: #666666;
   border-radius: 3px 3px 3px 3px;
@@ -1663,20 +1673,20 @@ div.actions {
   width: 97%;
 }
 
-/* line 968, ../../app/stylesheets/application.scss */
+/* line 975, ../../app/stylesheets/application.scss */
 h1.headerMinuteList {
   display: inline-block;
   margin-top: 5px;
   float: left;
 }
 
-/* line 974, ../../app/stylesheets/application.scss */
+/* line 981, ../../app/stylesheets/application.scss */
 a.titleBubble {
   color: #FFF;
   font-size: 12px;
   text-decoration: none;
 }
-/* line 981, ../../app/stylesheets/application.scss */
+/* line 988, ../../app/stylesheets/application.scss */
 a.titleBubble span {
   padding: 3px;
   background-color: #00CCFF;
@@ -1685,19 +1695,19 @@ a.titleBubble span {
   border_width: medium medium 1px;
 }
 
-/* line 991, ../../app/stylesheets/application.scss */
+/* line 998, ../../app/stylesheets/application.scss */
 #minute_container {
   float: left;
   width: 100%;
 }
 
-/* line 997, ../../app/stylesheets/application.scss */
+/* line 1004, ../../app/stylesheets/application.scss */
 .minute_container {
   float: left;
   width: 100%;
 }
 
-/* line 1002, ../../app/stylesheets/application.scss */
+/* line 1009, ../../app/stylesheets/application.scss */
 #image_minute {
   width: 50px;
   display: block;
@@ -1705,98 +1715,98 @@ a.titleBubble span {
   float: left;
 }
 
-/* line 1009, ../../app/stylesheets/application.scss */
+/* line 1016, ../../app/stylesheets/application.scss */
 #data_minute {
   width: 90%;
   display: block;
   float: left;
 }
 
-/* line 1015, ../../app/stylesheets/application.scss */
+/* line 1022, ../../app/stylesheets/application.scss */
 ul.list_data {
   padding-left: 2px;
 }
-/* line 1018, ../../app/stylesheets/application.scss */
+/* line 1025, ../../app/stylesheets/application.scss */
 ul.list_data li div.actions {
   display: none;
 }
-/* line 1023, ../../app/stylesheets/application.scss */
+/* line 1030, ../../app/stylesheets/application.scss */
 ul.list_data li:hover div.actions {
   display: block;
 }
 
-/* line 1035, ../../app/stylesheets/application.scss */
+/* line 1042, ../../app/stylesheets/application.scss */
 span.image-wrapper {
   display: block;
 }
-/* line 1038, ../../app/stylesheets/application.scss */
+/* line 1045, ../../app/stylesheets/application.scss */
 span.image-wrapper i {
   display: block;
   height: 18px;
   width: 18px;
 }
-/* line 1043, ../../app/stylesheets/application.scss */
+/* line 1050, ../../app/stylesheets/application.scss */
 span.image-wrapper i.showit {
   background: url("/images/right_arrow.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1045, ../../app/stylesheets/application.scss */
+/* line 1052, ../../app/stylesheets/application.scss */
 span.image-wrapper i.showit:hover {
   background: url("/images/right_arrow_gray.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1049, ../../app/stylesheets/application.scss */
+/* line 1056, ../../app/stylesheets/application.scss */
 span.image-wrapper i.trashit {
   background: url("/images/trash_it.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1051, ../../app/stylesheets/application.scss */
+/* line 1058, ../../app/stylesheets/application.scss */
 span.image-wrapper i.trashit:hover {
   background: url("/images/trash_it_hover.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1055, ../../app/stylesheets/application.scss */
+/* line 1062, ../../app/stylesheets/application.scss */
 span.image-wrapper i.editit {
   background: url("/images/edit_minute.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1057, ../../app/stylesheets/application.scss */
+/* line 1064, ../../app/stylesheets/application.scss */
 span.image-wrapper i.editit:hover {
   background: url("/images/edit_minute_hover.png") no-repeat scroll 0 0 transparent;
 }
 
-/* line 1064, ../../app/stylesheets/application.scss */
+/* line 1071, ../../app/stylesheets/application.scss */
 ul.minute_actions {
   display: inline;
   list-style: none outside none;
   list-style-type: none;
 }
-/* line 1068, ../../app/stylesheets/application.scss */
+/* line 1075, ../../app/stylesheets/application.scss */
 ul.minute_actions li {
   display: inline-block;
 }
 
-/* line 1073, ../../app/stylesheets/application.scss */
+/* line 1080, ../../app/stylesheets/application.scss */
 div.task_number {
   float: right;
   width: 60px;
   text-align: center;
   font-size: 1em;
 }
-/* line 1079, ../../app/stylesheets/application.scss */
+/* line 1086, ../../app/stylesheets/application.scss */
 div.task_number a {
   color: #FF6600;
   text-decoration: none;
 }
-/* line 1084, ../../app/stylesheets/application.scss */
+/* line 1091, ../../app/stylesheets/application.scss */
 div.task_number a.add_task_minute {
   color: #FF6600;
   text-decoration: none;
   font-size: 12px;
 }
 
-/* line 1091, ../../app/stylesheets/application.scss */
+/* line 1098, ../../app/stylesheets/application.scss */
 div.minute_text {
   border-bottom: 1px solid #EEEEEE;
   padding-bottom: 3px;
 }
 
-/* line 1096, ../../app/stylesheets/application.scss */
+/* line 1103, ../../app/stylesheets/application.scss */
 div#error_explanation {
   background-color: #FFCC00;
   border: 1px solid #FF0000;
@@ -1805,19 +1815,19 @@ div#error_explanation {
   width: 390px;
 }
 
-/* line 1105, ../../app/stylesheets/application.scss */
+/* line 1112, ../../app/stylesheets/application.scss */
 a.task_counter div.pendingTasks {
   display: block;
 }
-/* line 1108, ../../app/stylesheets/application.scss */
+/* line 1115, ../../app/stylesheets/application.scss */
 a.task_counter div.percentageTasks {
   display: none;
 }
-/* line 1112, ../../app/stylesheets/application.scss */
+/* line 1119, ../../app/stylesheets/application.scss */
 a.task_counter:hover div.pendingTasks {
   display: none;
 }
-/* line 1115, ../../app/stylesheets/application.scss */
+/* line 1122, ../../app/stylesheets/application.scss */
 a.task_counter:hover div.percentageTasks {
   display: block;
 }

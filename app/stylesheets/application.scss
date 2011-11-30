@@ -888,7 +888,7 @@ div#tools{
 .data_task {
 	display: inline-block;
 	float: right;
-	width: 82%;
+	width: 90%;
 	div {
 		font-size:0.8em;
 	}
@@ -941,6 +941,13 @@ div#nav_tabs li{
 	}
 }
 
+a.edit_task_link{
+	font-size: 12px;
+	text-decoration:none;
+	&:hover {
+		text-decoration:underline;
+	}
+}
 /******************************** MINUTES **********************************/
 .previewMinute{
 	background-color:#FFF;
