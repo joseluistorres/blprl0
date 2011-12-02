@@ -79,6 +79,17 @@ class TasksController < ApplicationController
     if params['due_date_' + @task.id.to_s]
       params[:task][:due_date] = params['due_date_' + @task.id.to_s]
     end
+    if params[:r]=='1'
+      @task.assigned_name = ''
+      @task.save!
+      render :update do |page|
+      end
+      return
+    end
+    
+    if params[:text_person_to_be_assigned] and !params[:text_person_to_be_assigned].blank?
+      params[:task][:assigned_name] = params[:text_person_to_be_assigned]
+    end
     logger.debug "==============testing123:#{params.inspect}==========="
     
     respond_to do |format|

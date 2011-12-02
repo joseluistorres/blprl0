@@ -145,7 +145,6 @@ $(document).ready(function() {
 	});
 	
 	$('.check_task').live('click', function(e) {
-	    //e.preventDefault();
 	    var link = $(this);
         task_id = link.attr('data_task');
 		minute_id = link.attr('data_minute');
@@ -158,4 +157,43 @@ $(document).ready(function() {
 
 	    return true;
 	  });
+	
+	
+	$('.title_assigned').live('click', function(e) {
+	    var link = $(this);
+        task_id = link.attr('data_link');
+		
+		$.ajax({
+	        url: '/tasks/' + task_id + '?r=1',
+	        type: 'put',
+	        dataType: 'script'
+	      });
+        link.hide();
+	    return true;
+	  });
+	
+	$('a.action_add_people').live('click', function(e) {
+		var link = $(this);
+        task_id = link.attr('data_link');
+		link.hide();
+		if (task_id!=''){
+			$('#for_assigning' + task_id).show();
+			$('#for_assigning' + task_id).css('display','inline-block');
+		}else{
+			$('#for_assigning').show();
+			$('#for_assigning').css('display','inline-block');
+		}
+		
+	});
+	
+	$('a.cancel_assign').live('click', function(e) {
+	    e.preventDefault();
+	    var link = $(this);
+	    var task_id = link.attr('data_link')
+        $('a.action_add_people[data_link|="' + task_id + '"]').show();
+		$('#for_assigning' + task_id).hide();
+
+	    return true;
+	  });
+	
 });

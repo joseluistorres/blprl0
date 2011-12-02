@@ -19,15 +19,31 @@
         = f.text_field :due_date, :class => "date_input"
       - else
         - my_id = 'due_date_' + @task.id.to_s
-        = text_field_tag my_id, @task.due_date.strftime("%d %b %Y"), :class => "new_date_#{@task.id}"
+        = text_field_tag my_id, @task.due_date.strftime("%d %b %Y"), :class => "new_date_#{@task.id} date_input"
     .div_people
-      %a{:href => '#'}
-        %span
-          %b
-            JoseLuis
+      - if !@task.new_record? and !@task.assigned_name.empty?
+        %a.title_assigned{:href => '#', :style => 'padding-right:5px;', :data_link =>@task.id.to_s}
+          %span
+            %b
+              = @task.assigned_name
+            = image_tag 'remove_it.png' , :style => 'vertical-align:middle;'
       %span
-        %a.action_add_people{:href => '#'}
-          Attach people
+        - task_id = ''
+        - task_id = @task.id.to_s if !@task.new_record?
+        %a.action_add_people{:href => '#', :data_link => "#{task_id}"}
+          Assign person
+      %div.hide{:id => "for_assigning#{task_id}", :style => ''}
+        - assigned_people = false
+        - assigned_people = @task.minute.tasks.get_people_names_assigned.map(&:assigned_name) if @task.minute
+        - if assigned_people and assigned_people.length>=1
+          = select_tag 'person_to_be_assigned', options_for_select(assigned_people), :style => 'font-size: 11px;'
+          or
+        = text_field_tag 'text_person_to_be_assigned', nil, :style => 'width:80px;font-size: 11px;'
+        %br
+        = content_tag :button, 'Assign'
+        or
+        %a{:href => '#', :class => 'cancel_assign', :style => 'color: #CC3300;font-size: 0.8em;', :data_link => "#{task_id}"}
+          Cancel  
   .actions_buttons{:style => 'float:right;height:50px;padding-right:30px;'}
     - if f.object.new_record?
       = f.submit :class => 'submitSaveIt', :value => ''

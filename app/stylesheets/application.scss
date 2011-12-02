@@ -924,6 +924,24 @@ a.titleDateBubble_done{
 	
 }
 
+a.title_assigned{
+	color: #666666;
+	font-size: 12px;
+	text-decoration:none;
+	
+	span{
+		padding:3px;
+		background-color: #00CCFF;
+		border-radius:2px 2px 2px 2px;
+		border-style: none none solid;
+		border_width: medium medium 1px;
+		&:hover {
+			background-color: #0066FF;
+		}
+	}
+	
+}
+
 div#nav_tabs li{
 	border: medium none;
 	display: inline;
@@ -1065,6 +1083,7 @@ span.image-wrapper {
 		background: url('/images/edit_minute_hover.png') no-repeat scroll 0 0 transparent;
 	  }
     }
+
   }
 }
 
@@ -1132,3 +1151,6 @@ a.task_counter {
 	
 }
 
+.set_inline_block {
+	display:inline-block;
+}
