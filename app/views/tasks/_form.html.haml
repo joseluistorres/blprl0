@@ -19,9 +19,10 @@
         = f.text_field :due_date, :class => "date_input"
       - else
         - my_id = 'due_date_' + @task.id.to_s
-        = text_field_tag my_id, @task.due_date.strftime("%d %b %Y"), :class => "new_date_#{@task.id} date_input"
+        - due_date = @task.due_date.strftime("%d %b %Y") if @task.due_date
+        = text_field_tag my_id, due_date, :class => "new_date_#{@task.id} date_input"
     .div_people
-      - if !@task.new_record? and !@task.assigned_name.empty?
+      - if !@task.new_record? and !@task.assigned_name.blank?
         %a.title_assigned{:href => '#', :style => 'padding-right:5px;', :data_link =>@task.id.to_s}
           %span
             %b
@@ -34,7 +35,7 @@
           Assign person
       %div.hide{:id => "for_assigning#{task_id}", :style => ''}
         - assigned_people = false
-        - assigned_people = @task.minute.tasks.get_people_names_assigned.map(&:assigned_name) if @task.minute
+        - assigned_people = get_people_names_assigned
         - if assigned_people and assigned_people.length>=1
           = select_tag 'person_to_be_assigned', options_for_select(assigned_people), :style => 'font-size: 11px;'
           or

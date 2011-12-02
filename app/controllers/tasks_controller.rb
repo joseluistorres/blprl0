@@ -6,7 +6,8 @@ class TasksController < ApplicationController
   def index
     @minute =  Minute.find(params[:minute_id])
     @tasks = @minute.tasks.that_are_available
-
+    @get_people_names_assigned = @minute.tasks.get_people_names_assigned.map(&:assigned_name)
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @tasks }
@@ -46,7 +47,8 @@ class TasksController < ApplicationController
     @task = Task.new(params[:task])
     @task.minute_id = params[:minute_id]
     @task.preview_mode = false
-    
+    @task.user_id = current_user
+    @task.assigned_name = params[:text_person_to_be_assigned] || params[:person_to_be_assigned] || ''  if !params[:text_person_to_be_assigned].blank?
         
     respond_to do |format|
       if @task.save
@@ -87,9 +89,14 @@ class TasksController < ApplicationController
       return
     end
     
+    if params[:person_to_be_assigned] and !params[:person_to_be_assigned].blank?
+      params[:task][:assigned_name] = params[:person_to_be_assigned]
+    end
     if params[:text_person_to_be_assigned] and !params[:text_person_to_be_assigned].blank?
       params[:task][:assigned_name] = params[:text_person_to_be_assigned]
     end
+    
+    
     logger.debug "==============testing123:#{params.inspect}==========="
     
     respond_to do |format|

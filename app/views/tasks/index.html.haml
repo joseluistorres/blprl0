@@ -25,15 +25,18 @@
                 = task.description
               %span{:style => 'display: inline-block;'}
                 - class_for_due_date = (task.status) ? 'titleDateBubble_done' : 'titleDateBubble'
-                %a{:id => "link_due_date_#{task.id.to_s}", :href => '#', :class => class_for_due_date}
-                  %span
-                    = task.due_date.strftime("%d %b %Y")
+                - if task.due_date
+                  %a{:id => "link_due_date_#{task.id.to_s}", :href => '#', :class => class_for_due_date}
+                    %span
+                      = task.due_date.strftime("%d %b %Y")
           .clear
           %div.hide.mycontainer{:id => "minute_editor_#{task.id.to_s}",:style => 'width:600px;height:130px;margin-bottom:20px;padding:15px;margin-left:5px;'}
             - @task = task
-            = render 'tasks/form', :object => @task
+            = render 'tasks/form', :object => @task, :get_people_names_assigned => @get_people_names_assigned
           
     .clear
-    #frmContainer.mycontainer{:style => 'padding:15px;margin-left:5px;margin-top:20px;'}
+    #frmContainer.mycontainer{:style => 'height:153px;padding:15px;margin-left:5px;margin-top:20px;'}
+      %b
+        Add new Action Item
       - @task = Task.new
-      = render 'tasks/form', :object => @task
+      = render 'tasks/form', :object => @task , :get_people_names_assigned => @get_people_names_assigned

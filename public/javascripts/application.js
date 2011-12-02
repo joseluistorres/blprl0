@@ -177,13 +177,15 @@ $(document).ready(function() {
         task_id = link.attr('data_link');
 		link.hide();
 		if (task_id!=''){
-			$('#for_assigning' + task_id).show();
+			$('#for_assigning' + task_id).fadeIn("slow");
 			$('#for_assigning' + task_id).css('display','inline-block');
 		}else{
-			$('#for_assigning').show();
+			$('#for_assigning').fadeIn("slow");
 			$('#for_assigning').css('display','inline-block');
+			link.focus();
+			$('#for_assigning').focus();
 		}
-		
+		return false;
 	});
 	
 	$('a.cancel_assign').live('click', function(e) {
@@ -193,7 +195,7 @@ $(document).ready(function() {
         $('a.action_add_people[data_link|="' + task_id + '"]').show();
 		$('#for_assigning' + task_id).hide();
 
-	    return true;
+	    return false;
 	  });
 	
 });
