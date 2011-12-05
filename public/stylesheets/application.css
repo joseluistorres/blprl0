@@ -532,6 +532,7 @@ ul.sf-menu li li li.sfHover ul {
 .bg {
   background: url("/images/bg.jpg") center 0 no-repeat;
   min-height: 100%;
+  background-color: #000;
 }
 
 /* line 341, ../../app/stylesheets/application.scss */
@@ -1752,13 +1753,13 @@ h1.headerMinuteList {
 /* line 1046, ../../app/stylesheets/application.scss */
 a.titleBubble {
   color: #FFF;
-  font-size: 12px;
+  font-size: 16px;
   text-decoration: none;
 }
 /* line 1053, ../../app/stylesheets/application.scss */
 a.titleBubble span {
   padding: 3px;
-  background-color: #00CCFF;
+  background-color: #003366;
   border-radius: 2px 2px 2px 2px;
   border-style: none none solid;
   border_width: medium medium 1px;

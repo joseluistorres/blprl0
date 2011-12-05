@@ -3,7 +3,7 @@
   %h1.headerMinuteList
     = 'Current Action Items:'
   %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:328px;height:400px;float:right;border:1px solid black;padding:10px;display:none;overflow:hidden;'}
-  - widthContainer = (@minutes.count==0) ? '100%' : '60%'
+  - widthContainer = (@minutes.count==0) ? '100%' : '100%'
   %div{:style => 'float:left;width:'+widthContainer+';'}
     - last_minute = nil
     %ul.list_data
@@ -23,44 +23,12 @@
             %div#data_minute
               %ul.list_data_minute
                 %li
-                  .task_number{:style => ''}
-                    - if tasks_available!=0
-                      - other_color = (tasks_completed == tasks_available) ? ' with_gray' : ''
-                      %a{:href => minute_tasks_path(minute), :class => "task_counter#{other_color}", :title => 'Click to see the Action Items'}
-                        
-                        .pendingTasks
-                          =  tasks_completed.to_s + ' of ' + tasks_available.to_s
-                        .percentageTasks
-                          = number_to_percentage((tasks_completed * 100)/tasks_available, :precision => 0)
-                    - else
-                      %a{:href => minute_tasks_path(minute), :class => 'add_task_minute', :title => 'Add New Action Item'}
-                        Add New
-                  .actions{:style=>'width:65px;height:19px;'}
-                    %ul.minute_actions
-                      %li
-                        %a{:href => edit_minute_path(minute), :class => '', :title => 'Edit Minute'}
-                          %span.image-wrapper
-                            %i.editit
-                      %li
-                        %a{:href => minute_path(minute), :"data-method" => 'delete', :"data-confirm" => "Are you sure you want to delete this minute?", :rel => 'nofollow', :title => 'Delete Minute'}
-                          %span.image-wrapper
-                            %i.trashit
-                      %li
-                        %a{:href => "#",:data_minute =>"#{div_content}", :class => 'showMinuteContent', :title => 'View Minute'}
-                          %span.image-wrapper
-                            %i.showit
                   %div
                     %a{:href => '#', :class => 'titleBubble'}
                       %span{:style => ''}
                         = minute.name
-                      
-                  %div.hide{:id => div_content}
-                    = simple_format(truncate(minute.content, :length => 750))
-                    
                 %li
-                  %div.minute_text
-                    = truncate(minute.content, :length => 70)
-              
+                  = render 'tasks/shared/list_of_tasks', :minute => minute
         - last_minute = minute
       - if @minutes.count==0
         %span{:style => 'font-size:1.2em;'}

@@ -156,7 +156,7 @@ $(document).ready(function() {
 	        dataType: 'script'
 	      });
 
-	    return false;
+	    return true;
 	  });
 	
 	
@@ -203,7 +203,7 @@ $(document).ready(function() {
 	$('a.due_date_link').live('click', function(e) {
 	    e.preventDefault();
 	    var link = $(this);
-		var task_id = link.attr('data_link')
+		var task_id = link.attr('data_link');
 		$('a.edit_task_link[data_link|="' + task_id + '"]').trigger('click');
 		var due_date_input = $('input#due_date_' + task_id);
 		due_date_input.focus();
@@ -213,5 +213,11 @@ $(document).ready(function() {
 	    return false;
 	  });
 	
-	
+	$('a.open_form').live('click', function(e) {
+		var link = $(this);
+		var minute_id = link.attr('data_link');
+		link.hide();
+		$('div.minute_form_'+minute_id).show();
+		return false;
+	});
 }); /**************************** end of jquery ******************/

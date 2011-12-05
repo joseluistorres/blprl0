@@ -336,7 +336,7 @@ ul.sf-menu li li li.sfHover ul {
 .row2 {height:108px; position:relative; z-index:12;}
 .row3 {height:511px;}
 
-.bg {background:url('/images/bg.jpg') center 0 no-repeat; min-height:100%;}
+.bg {background:url('/images/bg.jpg') center 0 no-repeat; min-height:100%; background-color:#000;}
 
 .list {float:right; margin:1px 4px 0px 0px;}
 .list li {float:left; font-size:11px; line-height:30px; background:url('/images/list-bg.png') right 6px no-repeat; padding:0px 15px 0px 15px;}
@@ -1047,12 +1047,12 @@ a.titleBubble{
 	//float:left;
 	//padding-left:50px;
 	color: #FFF;
-	font-size: 12px;
+	font-size: 16px;
 	text-decoration:none;
 	
 	span{
 		padding:3px;
-		background-color: #00CCFF;
+		background-color: #003366;
 		border-radius:2px 2px 2px 2px;
 		border-style: none none solid;
 		border_width: medium medium 1px;
