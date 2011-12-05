@@ -1,6 +1,7 @@
 Blackpearl::Application.routes.draw do
   
   match "/create_tasks" => 'tasks#create_multiple'
+  match "/dashboard" => 'minutes#dashboard'
   resources :minutes do
     resources :tasks
   end

@@ -28,8 +28,9 @@ class TasksController < ApplicationController
   # GET /tasks/new
   # GET /tasks/new.xml
   def new
-    @task = Task.new
-
+    @minute =  Minute.find(params[:minute_id])
+    @task = Task.new(:minute_id => @minute.id)
+    @get_people_names_assigned = @minute.tasks.get_people_names_assigned.map(&:assigned_name)
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @task }

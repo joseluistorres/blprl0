@@ -38,7 +38,8 @@
         .row1
           .container_12
             .wrapper
-              = image_tag 'logo_small.png', :style => 'float:left;padding-top:2px;' if user_signed_in?
+              %a{:href => root_url}
+                = image_tag 'logo_small.png', :style => 'float:left;padding-top:2px;' if user_signed_in?
               %ul.list
                 - unless user_signed_in?
                   %li
@@ -82,13 +83,24 @@
         - if user_signed_in?
           #nav_tabs{:style => 'width:890px;margin-left:200px'}
             %ul#top_menu{:style => 'width:100%;'}
+              - minutes_active = ''
+              - create_minute_active = ''
+              - dashboard_active = ''
+              - if controller.controller_name=='minutes' and controller.action_name=='index'
+                - minutes_active = 'active'
+              - elsif controller.controller_name=='minutes' and controller.action_name=='new'
+                - create_minute_active = 'active'
+              - elsif controller.controller_name=='minutes' and controller.action_name=='dashboard'
+                - dashboard_active = 'active'
               %li
-                %a{:href => minutes_path}
+                %a{:href => minutes_path, :class => minutes_active}
                   Minutes
               %li
-                %a{:href => new_minute_path}
+                %a{:href => new_minute_path, :class => create_minute_active}
                   Create a minute
-              
+              %li
+                %a{:href => dashboard_path, :class => dashboard_active}
+                  Dashboard
           = yield
         - unless user_signed_in?
           .indent-bottom

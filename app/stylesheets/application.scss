@@ -720,6 +720,17 @@ input.submit_generate_tasks{
 	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 3px 6px rgba(131, 141, 148, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.57) inset, 0 0 7px 0 rgba(254, 179, 0, 0.75) inset;
 }
 
+input.add_this_item{
+	cursor:pointer;
+	background: transparent url('/images/add_this_item.png') no-repeat;
+	width:130px;
+	height:35px;
+	border-radius:30px 30px 30px 30px;
+	border-style: none none solid;
+	border_width: medium medium 1px;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 3px 6px rgba(131, 141, 148, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.57) inset, 0 0 7px 0 rgba(254, 179, 0, 0.75) inset;
+}
+
 .content_inside_container {
 	margin-left: auto;
 	margin-right: auto;
@@ -871,13 +882,13 @@ div#tools{
     resize: none;
     text-align: left;
 	width:48%;
-	float:left;
+	float:right;
 	
 }
 
 .div_dates {
   cursor: pointer;
-  float:right;  
+  float:left;  
   width:48%;
   
 }
@@ -967,6 +978,31 @@ div#nav_tabs li{
 		&:hover {
 			background-color: #0000CC;
 		}
+	}
+	
+	a.active {
+		color:#000;
+		font-weight:bold;
+		background-color: #FFF;
+		margin: 0 1px;
+		padding: 5px 9px 7px;
+		text-decoration:none;
+		&:hover {
+			background-color: #CC9900;
+		}
+	}
+	
+	a.dashboard_link {
+		color:#000;
+		background-color: #FFCC00;
+		margin: 0 1px;
+		padding: 5px 9px 7px;
+		text-decoration:none;
+		&:hover {
+			color:#FFF;
+			background-color: #CC9900;
+		}
+		
 	}
 }
 

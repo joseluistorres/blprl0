@@ -1,7 +1,7 @@
--########################## List of Minutes #################################
+-########################## Dashboard #################################
 %div.previewMinute.content_inside_container
   %h1.headerMinuteList
-    = 'Your Minutes:'
+    = 'Current Action Items:'
   %div#showContent{:style => 'margin-top:25px;margin-right:20px;width:328px;height:400px;float:right;border:1px solid black;padding:10px;display:none;overflow:hidden;'}
   - widthContainer = (@minutes.count==0) ? '100%' : '60%'
   %div{:style => 'float:left;width:'+widthContainer+';'}

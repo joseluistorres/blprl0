@@ -1,7 +1,15 @@
 class MinutesController < ApplicationController
   before_filter :authenticate_user!
-  # GET /minutes
-  # GET /minutes.xml
+ 
+  def dashboard
+    @minutes = Minute.find(:all, :conditions => {:user_id => current_user.id}, :order => 'minutes.id DESC')
+
+    respond_to do |format|
+      format.html 
+      format.xml  { render :xml => @minutes }
+    end
+  end
+  
   def index
     @minutes = Minute.find(:all, :conditions => {:user_id => current_user.id}, :order => 'minutes.id DESC')
 
