@@ -3,7 +3,7 @@ class MinutesController < ApplicationController
   # GET /minutes
   # GET /minutes.xml
   def index
-    @minutes = Minute.find(:all, :conditions => {:user_id => current_user}, :order => 'minutes.id DESC')
+    @minutes = Minute.find(:all, :conditions => {:user_id => current_user.id}, :order => 'minutes.id DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,14 +41,15 @@ class MinutesController < ApplicationController
   # POST /minutes
   # POST /minutes.xml
   def create
+    
     params[:minute][:content] = '' if params[:minute][:content]=="Enter the action items here, e.g: \r\nEvaluate tools for startups @Joseluis #Tools [19-Sep-2011]\r\nRun a few tests in staging @Rebecca #Tests [Tomorrow]"
     params[:minute][:name] = '' if params[:minute][:name]=="Untitled Minute"
-    @minute = Minute.new(params[:minute].merge!({:user_id => current_user}))
+    @minute = Minute.new(params[:minute].merge!({:user_id => current_user.id}))
 
     respond_to do |format|
       if @minute.save
         # once the minute it's saved then we'll create any tasks
-        @tasks = @minute.get_tasks_from_description(params[:minute][:content], current_user)
+        @tasks = @minute.get_tasks_from_description(params[:minute][:content], current_user.id)
         
         if @tasks.count>=1
           format.html { render :action => 'create'}
@@ -73,7 +74,7 @@ class MinutesController < ApplicationController
     respond_to do |format|
       if @minute.update_attributes(params[:minute])
         if params[:regenerateTasks]=="1"
-          @tasks = @minute.get_tasks_from_description(params[:minute][:content], current_user)
+          @tasks = @minute.get_tasks_from_description(params[:minute][:content], current_user.id)
         
           if @tasks.count>=1
             format.html { render :action => 'update', :notice => 'Minute was successfully updated.'}

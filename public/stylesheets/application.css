@@ -1356,7 +1356,7 @@ div#egDiv span {
 /* line 689, ../../app/stylesheets/application.scss */
 input.submitSaveIt {
   background: transparent url("/images/create_it.png") no-repeat;
-  width: 123px;
+  width: 345px;
   height: 35px;
   border-radius: 30px 30px 30px 30px;
   border-style: none none solid;
@@ -1379,25 +1379,37 @@ input.submitUpdateIt {
 }
 
 /* line 712, ../../app/stylesheets/application.scss */
+input.submit_generate_tasks {
+  cursor: pointer;
+  background: transparent url("/images/generate_actions.png") no-repeat;
+  width: 256px;
+  height: 35px;
+  border-radius: 30px 30px 30px 30px;
+  border-style: none none solid;
+  border_width: medium medium 1px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 3px 6px rgba(131, 141, 148, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.57) inset, 0 0 7px 0 rgba(254, 179, 0, 0.75) inset;
+}
+
+/* line 723, ../../app/stylesheets/application.scss */
 .content_inside_container {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 960px;
+  width: 940px;
 }
 
-/* line 718, ../../app/stylesheets/application.scss */
+/* line 729, ../../app/stylesheets/application.scss */
 .subheader {
   background: url("/images/bg5.jpg") no-repeat scroll 0 0 transparent;
 }
 
-/* line 722, ../../app/stylesheets/application.scss */
+/* line 733, ../../app/stylesheets/application.scss */
 .field_with_errors {
   display: inline;
 }
 
 /******************************** TASKS **********************************/
-/* line 727, ../../app/stylesheets/application.scss */
+/* line 738, ../../app/stylesheets/application.scss */
 .headerMinute {
   background-color: #F2F2F2;
   border-radius: 3px 3px 3px 3px;
@@ -1410,7 +1422,7 @@ input.submitUpdateIt {
   width: 97%;
 }
 
-/* line 739, ../../app/stylesheets/application.scss */
+/* line 750, ../../app/stylesheets/application.scss */
 .previewTask {
   background-color: #FFF;
   margin-left: auto;
@@ -1421,32 +1433,32 @@ input.submitUpdateIt {
   padding-left: 10px;
 }
 
-/* line 749, ../../app/stylesheets/application.scss */
+/* line 760, ../../app/stylesheets/application.scss */
 #innerDiv {
   overflow: hidden;
   border-bottom: 1px solid #EEEEEE;
 }
 
-/* line 754, ../../app/stylesheets/application.scss */
+/* line 765, ../../app/stylesheets/application.scss */
 #item_checkbox {
   float: left;
   width: 30px;
   display: inline;
 }
 
-/* line 760, ../../app/stylesheets/application.scss */
+/* line 771, ../../app/stylesheets/application.scss */
 #item_task {
   width: 800px;
 }
 
-/* line 764, ../../app/stylesheets/application.scss */
+/* line 775, ../../app/stylesheets/application.scss */
 a.dateBubble {
   float: right;
   color: #FFF;
   font-size: 12px;
   text-decoration: none;
 }
-/* line 770, ../../app/stylesheets/application.scss */
+/* line 781, ../../app/stylesheets/application.scss */
 a.dateBubble span {
   padding: 3px;
   background-color: #00CCFF;
@@ -1454,21 +1466,21 @@ a.dateBubble span {
   border-style: none none solid;
   border_width: medium medium 1px;
 }
-/* line 777, ../../app/stylesheets/application.scss */
+/* line 788, ../../app/stylesheets/application.scss */
 a.dateBubble:hover {
   /*.actions {
     display: block;
   }*/
 }
 
-/* line 784, ../../app/stylesheets/application.scss */
+/* line 795, ../../app/stylesheets/application.scss */
 a.personBubble {
   float: right;
   color: #000;
   font-size: 12px;
   text-decoration: none;
 }
-/* line 790, ../../app/stylesheets/application.scss */
+/* line 801, ../../app/stylesheets/application.scss */
 a.personBubble span {
   padding: 5px;
   background-color: #E0ECFF;
@@ -1477,27 +1489,27 @@ a.personBubble span {
   border_width: medium medium 1px;
   margin-right: 150px;
 }
-/* line 797, ../../app/stylesheets/application.scss */
+/* line 808, ../../app/stylesheets/application.scss */
 a.personBubble span:hover {
   background-color: #C3D9FF;
 }
-/* line 801, ../../app/stylesheets/application.scss */
+/* line 812, ../../app/stylesheets/application.scss */
 a.personBubble:hover {
   /*.actions {
     display: block;
   }*/
 }
 
-/* line 809, ../../app/stylesheets/application.scss */
+/* line 820, ../../app/stylesheets/application.scss */
 .task_content {
   width: 500px;
 }
 
-/* line 813, ../../app/stylesheets/application.scss */
+/* line 824, ../../app/stylesheets/application.scss */
 div#tools {
   display: inline;
 }
-/* line 815, ../../app/stylesheets/application.scss */
+/* line 826, ../../app/stylesheets/application.scss */
 div#tools a {
   background: none;
   height: 12px;
@@ -1507,7 +1519,7 @@ div#tools a {
   display: block;
 }
 
-/* line 826, ../../app/stylesheets/application.scss */
+/* line 837, ../../app/stylesheets/application.scss */
 .taskDescription {
   border: 1px solid #DDDDDD;
   border-radius: 3px 3px 3px 3px;
@@ -1522,13 +1534,13 @@ div#tools a {
   overflow-x: hidden;
 }
 
-/* line 840, ../../app/stylesheets/application.scss */
+/* line 851, ../../app/stylesheets/application.scss */
 .task_div {
   overflow: hidden !important;
   padding: 4px 0;
 }
 
-/* line 845, ../../app/stylesheets/application.scss */
+/* line 856, ../../app/stylesheets/application.scss */
 .mycontainer {
   background-color: #EFEFEF;
   box-shadow: 0 1px 3px #AAAAAA;
@@ -1537,7 +1549,7 @@ div#tools a {
   height: 133px;
 }
 
-/* line 853, ../../app/stylesheets/application.scss */
+/* line 864, ../../app/stylesheets/application.scss */
 .div_people {
   background-color: #FFFFFF;
   border: 1px solid #DDDDDD;
@@ -1551,14 +1563,14 @@ div#tools a {
   float: left;
 }
 
-/* line 867, ../../app/stylesheets/application.scss */
+/* line 878, ../../app/stylesheets/application.scss */
 .div_dates {
   cursor: pointer;
   float: right;
   width: 48%;
 }
 
-/* line 874, ../../app/stylesheets/application.scss */
+/* line 885, ../../app/stylesheets/application.scss */
 .date_input {
   border: 1px solid #DDDDDD;
   border-radius: 3px 3px 3px 3px;
@@ -1569,45 +1581,45 @@ div#tools a {
   height: 25px;
 }
 
-/* line 884, ../../app/stylesheets/application.scss */
+/* line 895, ../../app/stylesheets/application.scss */
 .tools_task {
   width: 55px;
   display: inline;
 }
 
-/* line 888, ../../app/stylesheets/application.scss */
+/* line 899, ../../app/stylesheets/application.scss */
 .data_task {
   display: inline-block;
   float: right;
   width: 90%;
 }
-/* line 892, ../../app/stylesheets/application.scss */
+/* line 903, ../../app/stylesheets/application.scss */
 .data_task div {
   font-size: 0.8em;
 }
 
-/* line 897, ../../app/stylesheets/application.scss */
+/* line 908, ../../app/stylesheets/application.scss */
 a.titleDateBubble {
-  color: #666666;
+  color: #FFF;
   font-size: 12px;
   text-decoration: none;
 }
-/* line 902, ../../app/stylesheets/application.scss */
+/* line 913, ../../app/stylesheets/application.scss */
 a.titleDateBubble span {
   padding: 3px;
-  background-color: #F7CBCB;
+  background-color: #00CCFF;
   border-radius: 2px 2px 2px 2px;
   border-style: none none solid;
   border_width: medium medium 1px;
 }
 
-/* line 912, ../../app/stylesheets/application.scss */
+/* line 923, ../../app/stylesheets/application.scss */
 a.titleDateBubble_done {
   color: #FFF;
   font-size: 12px;
   text-decoration: none;
 }
-/* line 917, ../../app/stylesheets/application.scss */
+/* line 928, ../../app/stylesheets/application.scss */
 a.titleDateBubble_done span {
   padding: 3px;
   background-color: #999;
@@ -1616,26 +1628,26 @@ a.titleDateBubble_done span {
   border_width: medium medium 1px;
 }
 
-/* line 927, ../../app/stylesheets/application.scss */
+/* line 938, ../../app/stylesheets/application.scss */
 a.title_assigned {
-  color: #666666;
+  color: #333;
   font-size: 12px;
   text-decoration: none;
 }
-/* line 932, ../../app/stylesheets/application.scss */
+/* line 943, ../../app/stylesheets/application.scss */
 a.title_assigned span {
   padding: 3px;
-  background-color: #00CCFF;
+  background-color: #E0ECFF;
   border-radius: 2px 2px 2px 2px;
   border-style: none none solid;
   border_width: medium medium 1px;
 }
-/* line 938, ../../app/stylesheets/application.scss */
+/* line 949, ../../app/stylesheets/application.scss */
 a.title_assigned span:hover {
   background-color: #0066FF;
 }
 
-/* line 945, ../../app/stylesheets/application.scss */
+/* line 956, ../../app/stylesheets/application.scss */
 div#nav_tabs li {
   border: medium none;
   display: inline;
@@ -1643,30 +1655,30 @@ div#nav_tabs li {
   margin: 0;
   padding: 0;
 }
-/* line 951, ../../app/stylesheets/application.scss */
+/* line 962, ../../app/stylesheets/application.scss */
 div#nav_tabs li a {
   background-color: #000066;
   margin: 0 1px;
   padding: 5px 9px 7px;
   text-decoration: none;
 }
-/* line 956, ../../app/stylesheets/application.scss */
+/* line 967, ../../app/stylesheets/application.scss */
 div#nav_tabs li a:hover {
   background-color: #0000CC;
 }
 
-/* line 962, ../../app/stylesheets/application.scss */
+/* line 973, ../../app/stylesheets/application.scss */
 a.edit_task_link {
   font-size: 12px;
   text-decoration: none;
 }
-/* line 965, ../../app/stylesheets/application.scss */
+/* line 976, ../../app/stylesheets/application.scss */
 a.edit_task_link:hover {
   text-decoration: underline;
 }
 
 /******************************** MINUTES **********************************/
-/* line 970, ../../app/stylesheets/application.scss */
+/* line 981, ../../app/stylesheets/application.scss */
 .previewMinute {
   background-color: #FFF;
   padding-bottom: 20px;
@@ -1674,12 +1686,12 @@ a.edit_task_link:hover {
   overflow: hidden;
 }
 
-/* line 977, ../../app/stylesheets/application.scss */
+/* line 988, ../../app/stylesheets/application.scss */
 div.actions {
   float: right;
 }
 
-/* line 981, ../../app/stylesheets/application.scss */
+/* line 992, ../../app/stylesheets/application.scss */
 .headerMinuteList {
   background-color: #666666;
   border-radius: 3px 3px 3px 3px;
@@ -1692,20 +1704,20 @@ div.actions {
   width: 97%;
 }
 
-/* line 993, ../../app/stylesheets/application.scss */
+/* line 1004, ../../app/stylesheets/application.scss */
 h1.headerMinuteList {
   display: inline-block;
   margin-top: 5px;
   float: left;
 }
 
-/* line 999, ../../app/stylesheets/application.scss */
+/* line 1010, ../../app/stylesheets/application.scss */
 a.titleBubble {
   color: #FFF;
   font-size: 12px;
   text-decoration: none;
 }
-/* line 1006, ../../app/stylesheets/application.scss */
+/* line 1017, ../../app/stylesheets/application.scss */
 a.titleBubble span {
   padding: 3px;
   background-color: #00CCFF;
@@ -1714,19 +1726,19 @@ a.titleBubble span {
   border_width: medium medium 1px;
 }
 
-/* line 1016, ../../app/stylesheets/application.scss */
+/* line 1027, ../../app/stylesheets/application.scss */
 #minute_container {
   float: left;
   width: 100%;
 }
 
-/* line 1022, ../../app/stylesheets/application.scss */
+/* line 1033, ../../app/stylesheets/application.scss */
 .minute_container {
   float: left;
   width: 100%;
 }
 
-/* line 1027, ../../app/stylesheets/application.scss */
+/* line 1038, ../../app/stylesheets/application.scss */
 #image_minute {
   width: 50px;
   display: block;
@@ -1734,98 +1746,98 @@ a.titleBubble span {
   float: left;
 }
 
-/* line 1034, ../../app/stylesheets/application.scss */
+/* line 1045, ../../app/stylesheets/application.scss */
 #data_minute {
   width: 90%;
   display: block;
   float: left;
 }
 
-/* line 1040, ../../app/stylesheets/application.scss */
+/* line 1051, ../../app/stylesheets/application.scss */
 ul.list_data {
   padding-left: 2px;
 }
-/* line 1043, ../../app/stylesheets/application.scss */
+/* line 1054, ../../app/stylesheets/application.scss */
 ul.list_data li div.actions {
   display: none;
 }
-/* line 1048, ../../app/stylesheets/application.scss */
+/* line 1059, ../../app/stylesheets/application.scss */
 ul.list_data li:hover div.actions {
   display: block;
 }
 
-/* line 1060, ../../app/stylesheets/application.scss */
+/* line 1071, ../../app/stylesheets/application.scss */
 span.image-wrapper {
   display: block;
 }
-/* line 1063, ../../app/stylesheets/application.scss */
+/* line 1074, ../../app/stylesheets/application.scss */
 span.image-wrapper i {
   display: block;
   height: 18px;
   width: 18px;
 }
-/* line 1068, ../../app/stylesheets/application.scss */
+/* line 1079, ../../app/stylesheets/application.scss */
 span.image-wrapper i.showit {
   background: url("/images/right_arrow.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1070, ../../app/stylesheets/application.scss */
+/* line 1081, ../../app/stylesheets/application.scss */
 span.image-wrapper i.showit:hover {
   background: url("/images/right_arrow_gray.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1074, ../../app/stylesheets/application.scss */
+/* line 1085, ../../app/stylesheets/application.scss */
 span.image-wrapper i.trashit {
   background: url("/images/trash_it.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1076, ../../app/stylesheets/application.scss */
+/* line 1087, ../../app/stylesheets/application.scss */
 span.image-wrapper i.trashit:hover {
   background: url("/images/trash_it_hover.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1080, ../../app/stylesheets/application.scss */
+/* line 1091, ../../app/stylesheets/application.scss */
 span.image-wrapper i.editit {
   background: url("/images/edit_minute.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1082, ../../app/stylesheets/application.scss */
+/* line 1093, ../../app/stylesheets/application.scss */
 span.image-wrapper i.editit:hover {
   background: url("/images/edit_minute_hover.png") no-repeat scroll 0 0 transparent;
 }
 
-/* line 1090, ../../app/stylesheets/application.scss */
+/* line 1101, ../../app/stylesheets/application.scss */
 ul.minute_actions {
   display: inline;
   list-style: none outside none;
   list-style-type: none;
 }
-/* line 1094, ../../app/stylesheets/application.scss */
+/* line 1105, ../../app/stylesheets/application.scss */
 ul.minute_actions li {
   display: inline-block;
 }
 
-/* line 1099, ../../app/stylesheets/application.scss */
+/* line 1110, ../../app/stylesheets/application.scss */
 div.task_number {
   float: right;
   width: 60px;
   text-align: center;
   font-size: 1em;
 }
-/* line 1105, ../../app/stylesheets/application.scss */
+/* line 1116, ../../app/stylesheets/application.scss */
 div.task_number a {
   color: #FF6600;
   text-decoration: none;
 }
-/* line 1110, ../../app/stylesheets/application.scss */
+/* line 1121, ../../app/stylesheets/application.scss */
 div.task_number a.add_task_minute {
   color: #FF6600;
   text-decoration: none;
   font-size: 12px;
 }
 
-/* line 1117, ../../app/stylesheets/application.scss */
+/* line 1128, ../../app/stylesheets/application.scss */
 div.minute_text {
   border-bottom: 1px solid #EEEEEE;
   padding-bottom: 3px;
 }
 
-/* line 1122, ../../app/stylesheets/application.scss */
+/* line 1133, ../../app/stylesheets/application.scss */
 div#error_explanation {
   background-color: #FFCC00;
   border: 1px solid #FF0000;
@@ -1834,29 +1846,29 @@ div#error_explanation {
   width: 390px;
 }
 
-/* line 1131, ../../app/stylesheets/application.scss */
+/* line 1142, ../../app/stylesheets/application.scss */
 a.task_counter div.pendingTasks {
   display: block;
 }
-/* line 1134, ../../app/stylesheets/application.scss */
+/* line 1145, ../../app/stylesheets/application.scss */
 a.task_counter div.percentageTasks {
   display: none;
 }
-/* line 1138, ../../app/stylesheets/application.scss */
+/* line 1149, ../../app/stylesheets/application.scss */
 a.task_counter:hover div.pendingTasks {
   display: none;
 }
-/* line 1141, ../../app/stylesheets/application.scss */
+/* line 1152, ../../app/stylesheets/application.scss */
 a.task_counter:hover div.percentageTasks {
   display: block;
 }
 
-/* line 1148, ../../app/stylesheets/application.scss */
+/* line 1159, ../../app/stylesheets/application.scss */
 .with_gray div {
   color: #999;
 }
 
-/* line 1154, ../../app/stylesheets/application.scss */
+/* line 1165, ../../app/stylesheets/application.scss */
 .set_inline_block {
   display: inline-block;
 }

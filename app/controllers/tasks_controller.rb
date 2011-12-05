@@ -47,7 +47,7 @@ class TasksController < ApplicationController
     @task = Task.new(params[:task])
     @task.minute_id = params[:minute_id]
     @task.preview_mode = false
-    @task.user_id = current_user
+    @task.user_id = current_user.id
     @task.assigned_name = params[:text_person_to_be_assigned] || params[:person_to_be_assigned] || ''  if !params[:text_person_to_be_assigned].blank?
         
     respond_to do |format|

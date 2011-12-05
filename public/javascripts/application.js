@@ -116,15 +116,16 @@ $(document).ready(function() {
         $('div#minute_editor_'+link.attr('data_link')).show();
 		$('div#minute_container_'+link.attr('data_link')).hide();
 
-	    return true;
+	    return false;
 	  });
+	
 	$('a.cancel_action').live('click', function(e) {
 	    e.preventDefault();
 	    var link = $(this);
         $('div#minute_editor_'+link.attr('data_link')).hide();
 		$('div#minute_container_'+link.attr('data_link')).show();
 
-	    return true;
+	    return false;
 	  });
 	
 	$('.check_text_expand').keyup(function(){
@@ -155,7 +156,7 @@ $(document).ready(function() {
 	        dataType: 'script'
 	      });
 
-	    return true;
+	    return false;
 	  });
 	
 	
@@ -169,7 +170,8 @@ $(document).ready(function() {
 	        dataType: 'script'
 	      });
         link.hide();
-	    return true;
+		$('a.title_assigned[data_link|="' + task_id + '"]').hide();
+	    return false;
 	  });
 	
 	$('a.action_add_people').live('click', function(e) {
@@ -191,11 +193,25 @@ $(document).ready(function() {
 	$('a.cancel_assign').live('click', function(e) {
 	    e.preventDefault();
 	    var link = $(this);
-	    var task_id = link.attr('data_link')
+	    var task_id = link.attr('data_link');
         $('a.action_add_people[data_link|="' + task_id + '"]').show();
 		$('#for_assigning' + task_id).hide();
 
 	    return false;
 	  });
 	
-});
+	$('a.due_date_link').live('click', function(e) {
+	    e.preventDefault();
+	    var link = $(this);
+		var task_id = link.attr('data_link')
+		$('a.edit_task_link[data_link|="' + task_id + '"]').trigger('click');
+		var due_date_input = $('input#due_date_' + task_id);
+		due_date_input.focus();
+		due_date_input.trigger('click');
+        
+
+	    return false;
+	  });
+	
+	
+}); /**************************** end of jquery ******************/

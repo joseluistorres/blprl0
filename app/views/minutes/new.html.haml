@@ -1,12 +1,7 @@
 %div.subheader.content_inside_container
-  %div#egDiv{:style => 'display:none;'}
-    Type your minute in this format to create tasks on the fly 
-    %br
-    %span
-      e.g. Evaluate tools for startups @Joseluis #Tools [19-Sep-2011]
-  %h1{:style => 'padding:15px;'}
+  %h1{:style => 'padding:15px;margin-top:0px;'}
     Type your minute here:
   %br
   .clear
-  #frmContainer{:style => 'padding:15px;'}
+  #frmContainer{:style => 'padding:15px;background-color:#000;overflow:hidden;'}
     = render 'form'

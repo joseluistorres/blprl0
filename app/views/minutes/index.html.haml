@@ -63,9 +63,12 @@
               
         - last_minute = minute
       - if @minutes.count==0
-        = t('minute.no_minutes')
+        %span{:style => 'font-size:1.2em;'}
+          = t('minute.no_minutes')
+          %br
+          Click on Create a Minute, yes there!
         %div#arrow_sign{:style => 'display:inline;'}
-          = image_tag 'sign_arrow_right.png'
+          = image_tag 'sign_left_arrow.png'
 //   <td><%= link_to 'Show', minute %></td>
 //    <td><%= link_to 'Edit', edit_minute_path(minute) %></td>
 //   <td><%= link_to 'Destroy', minute, :confirm => 'Are you sure?', :method => :delete %></td>

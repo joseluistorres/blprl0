@@ -20,15 +20,22 @@
                   %i.trashit
               
             %div.data_task
+              - if !task.assigned_name.blank?
+                %a{:id => "link_assigned_#{task.id.to_s}", :href => '#', :class => 'title_assigned', :style => 'margin-left:5px;', :data_link =>task.id.to_s}
+                  %span
+                    %b
+                      = task.assigned_name
+                    = image_tag 'remove_it.png' , :style => 'vertical-align:middle;'
               - style_for_description = (task.status) ? 'text-decoration: line-through;' : ''
-              %div{:id => "text_task_span_#{task.id.to_s}", :style => style_for_description}
+              %div{:id => "text_task_span_#{task.id.to_s}", :style => "display:inline;margin-left:5px;#{style_for_description}"}
                 = task.description
               %span{:style => 'display: inline-block;'}
                 - class_for_due_date = (task.status) ? 'titleDateBubble_done' : 'titleDateBubble'
                 - if task.due_date
-                  %a{:id => "link_due_date_#{task.id.to_s}", :href => '#', :class => class_for_due_date}
+                  %a{:id => "link_due_date_#{task.id.to_s}", :data_link => "#{task.id.to_s}", :href => '#', :class => "due_date_link #{class_for_due_date}"}
                     %span
                       = task.due_date.strftime("%d %b %Y")
+                
           .clear
           %div.hide.mycontainer{:id => "minute_editor_#{task.id.to_s}",:style => 'width:600px;height:130px;margin-bottom:20px;padding:15px;margin-left:5px;'}
             - @task = task
