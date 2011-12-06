@@ -1,5 +1,5 @@
 - url_for_form = @task.new_record? ? minute_tasks_path(@task.minute) : nil
-= form_for(@task, :url => url_for_form, :method => 'put') do |f|
+= form_for(@task, :url => url_for_form, :remote => true) do |f|
   - if @task.errors.any?
     #error_explanation
       %h2

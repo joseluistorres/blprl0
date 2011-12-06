@@ -1,4 +1,4 @@
-- @tasks = minute.tasks
+- @tasks = minute.tasks.that_are_available
 - widthContainer = '70%'
 %div{:style => 'float:left;width:'+widthContainer+';'}
   %ul.list_data
@@ -39,7 +39,7 @@
           = render 'tasks/form', :object => @task, :get_people_names_assigned => @get_people_names_assigned
           
   .clear
-  #actions_new_task
+  #actions_new_task{:style => 'background-color:#FFFF99;'}
     %a.open_form{:href => '#', :style => 'color:#FF0000;font-size:0.9em;', :data_link => "#{minute.id.to_s}"}
       Add new Action Item
   - minute_form = 'minute_form_' + minute.id.to_s

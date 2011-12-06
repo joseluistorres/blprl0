@@ -6,4 +6,7 @@ else
   page["div#text_task_span_#{@task.id.to_s}"].css('text-decoration', 'none');
   page["a#link_due_date_#{@task.id.to_s}"].removeClass('titleDateBubble_done');
   page["a#link_due_date_#{@task.id.to_s}"].addClass('titleDateBubble');
+  page["a.cancel_action[data_link|=#{@task.id.to_s}]"].trigger('click');
+  page["div#minute_container_#{@task.id.to_s}"].animate({backgroundColor: "#FFFF00"}, 500);
+  page["div#minute_container_#{@task.id.to_s}"].animate({backgroundColor: "#FFFFFF"}, 800);
 end
