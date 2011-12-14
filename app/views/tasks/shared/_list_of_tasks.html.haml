@@ -1,7 +1,7 @@
 - @tasks = minute.tasks.that_are_available
 - widthContainer = '70%'
 %div{:style => 'float:left;width:'+widthContainer+';'}
-  %ul.list_data
+  %ul.list_data{:data_link => minute.id.to_s}
     %li
       %h1.headerMinute
         Default
@@ -20,9 +20,9 @@
     %a.open_form{:href => '#', :style => 'color:#FF0000;font-size:0.9em;', :data_link => "#{minute.id.to_s}"}
       Add new Action Item
   - minute_form = 'minute_form_' + minute.id.to_s
-  #frmContainer.mycontainer.hide{:class => minute_form, :style => 'height:153px;padding:15px;margin-left:5px;margin-top:20px;margin-bottom:20px;'}
+  #frmContainer.mycontainer.hide{:class => minute_form, :style => 'height:123px;padding:15px;margin-left:5px;margin-top:20px;margin-bottom:20px;'}
     %b
-      Add new Action Item
+      Add New Action Item
     - @task = Task.new(:minute_id => minute.id)
-    = render 'tasks/form', :object => @task , :get_people_names_assigned => @get_people_names_assigned
+    = render 'tasks/new_task', :object => @task , :get_people_names_assigned => @get_people_names_assigned
   .clear{:style => 'margin-bottom:10px;'}

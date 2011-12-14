@@ -93,9 +93,6 @@
               - elsif controller.controller_name=='minutes' and controller.action_name=='dashboard'
                 - dashboard_active = 'active'
               %li
-                %a{:href => minutes_path, :class => minutes_active}
-                  Minutes
-              %li
                 %a{:href => new_minute_path, :class => create_minute_active}
                   Create a minute
               %li

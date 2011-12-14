@@ -45,15 +45,21 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.xml
   def create
-    @task = Task.new(params[:task])
-    @task.minute_id = params[:minute_id]
-    @task.preview_mode = false
-    @task.user_id = current_user.id
-    @task.assigned_name = params[:text_person_to_be_assigned] || params[:person_to_be_assigned] || ''  if !params[:text_person_to_be_assigned].blank?
-        
+    #@task = Task.new(params[:task])
+    #@task.minute_id = params[:minute_id]
+    #@task.preview_mode = false
+    #@task.user_id = current_user.id
+    #@task.assigned_name = params[:text_person_to_be_assigned] || params[:person_to_be_assigned] || ''  if !params[:text_person_to_be_assigned].blank?
+    @tasks = []
+    unless params[:task][:description].blank?
+      @minute = Minute.find_by_id(params[:minute_id])
+      @tasks = @minute.get_tasks_from_description(params[:task][:description], current_user.id)
+    end
+    
     respond_to do |format|
-      if @task.save
-        format.html { redirect_to(minute_tasks_path(@task.minute), :notice => 'Task was successfully created.') }
+      if @tasks.count>=1
+        format.js
+        #format.html { redirect_to(minute_tasks_path(@task.minute), :notice => 'Task was successfully created.') }
         format.xml  { render :xml => @task, :status => :created, :location => @task }
       else
         format.html { render :action => "new" }
@@ -69,7 +75,7 @@ class TasksController < ApplicationController
          task.update_attributes!(:preview_mode => false)
        end
        flash[:notice] = "Updated tareas!"
-       redirect_to minutes_path
+       redirect_to dashboard_path
   end
   # PUT /tasks/1
   # PUT /tasks/1.xml
@@ -97,8 +103,6 @@ class TasksController < ApplicationController
       params[:task][:assigned_name] = params[:text_person_to_be_assigned]
     end
     
-    
-    logger.debug "==============testing123:#{params.inspect}==========="
     
     respond_to do |format|
       if @task.update_attributes(params[:task])

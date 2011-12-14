@@ -220,4 +220,12 @@ $(document).ready(function() {
 		$('div.minute_form_'+minute_id).show();
 		return false;
 	});
+	
+	$('a.cancel_action_task').live('click', function(e) {
+		var link = $(this);
+		var minute_id = link.attr('data_link');
+		$('a.open_form[data_link|="' + minute_id + '"]').show();
+		$('div.minute_form_'+minute_id).hide();
+		return false;
+	});
 }); /**************************** end of jquery ******************/

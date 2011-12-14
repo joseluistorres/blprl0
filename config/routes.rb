@@ -70,7 +70,7 @@ Blackpearl::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   #user_root_path :to => "tasks#index"
-  match "/minutes" => 'minutes#index', :as => :user_root
+  match "/dashboard" => 'minutes#dashboard', :as => :user_root
   root :to => "pages#home"
   
   # See how all your routes lay out with "rake routes"

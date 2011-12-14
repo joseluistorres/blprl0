@@ -1,4 +1,5 @@
 class Task < ActiveRecord::Base
+  validates :description, :presence => true, :allow_blank => false
   belongs_to :minute
   belongs_to :user
   
