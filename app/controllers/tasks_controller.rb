@@ -54,6 +54,9 @@ class TasksController < ApplicationController
     unless params[:task][:description].blank?
       @minute = Minute.find_by_id(params[:minute_id])
       @tasks = @minute.get_tasks_from_description(params[:task][:description], current_user.id)
+    else
+      @minute = Minute.find_by_id(params[:minute_id])
+      @task = Task.create(:description => params[:task][:description])
     end
     
     respond_to do |format|
@@ -62,7 +65,9 @@ class TasksController < ApplicationController
         #format.html { redirect_to(minute_tasks_path(@task.minute), :notice => 'Task was successfully created.') }
         format.xml  { render :xml => @task, :status => :created, :location => @task }
       else
-        format.html { render :action => "new" }
+        #@task = Task.new(:minute_id => params[:minute_id])
+        format.js
+        #format.html { render :action => "new" }
         format.xml  { render :xml => @task.errors, :status => :unprocessable_entity }
       end
     end

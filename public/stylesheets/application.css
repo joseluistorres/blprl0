@@ -1885,29 +1885,38 @@ div#error_explanation {
   width: 390px;
 }
 
-/* line 1178, ../../app/stylesheets/application.scss */
+/* line 1177, ../../app/stylesheets/application.scss */
+.error_explanation_task {
+  background-color: #FFCC00;
+  border: 1px solid #FF0000;
+  color: #000000;
+  padding: 3px;
+  width: 390px;
+}
+
+/* line 1186, ../../app/stylesheets/application.scss */
 a.task_counter div.pendingTasks {
   display: block;
 }
-/* line 1181, ../../app/stylesheets/application.scss */
+/* line 1189, ../../app/stylesheets/application.scss */
 a.task_counter div.percentageTasks {
   display: none;
 }
-/* line 1185, ../../app/stylesheets/application.scss */
+/* line 1193, ../../app/stylesheets/application.scss */
 a.task_counter:hover div.pendingTasks {
   display: none;
 }
-/* line 1188, ../../app/stylesheets/application.scss */
+/* line 1196, ../../app/stylesheets/application.scss */
 a.task_counter:hover div.percentageTasks {
   display: block;
 }
 
-/* line 1195, ../../app/stylesheets/application.scss */
+/* line 1203, ../../app/stylesheets/application.scss */
 .with_gray div {
   color: #999;
 }
 
-/* line 1201, ../../app/stylesheets/application.scss */
+/* line 1209, ../../app/stylesheets/application.scss */
 .set_inline_block {
   display: inline-block;
 }
