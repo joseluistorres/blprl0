@@ -1,0 +1,7 @@
+%h2
+  = pluralize(task.errors.count, "error")
+
+%ul
+  - task.errors.full_messages.each do |msg|
+    %li
+      = msg

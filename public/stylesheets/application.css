@@ -1793,90 +1793,103 @@ a.titleBubble span {
 }
 
 /* line 1087, ../../app/stylesheets/application.scss */
+#items_menu {
+  position: static;
+}
+
+/* line 1091, ../../app/stylesheets/application.scss */
 ul.list_data {
   padding-left: 2px;
 }
-/* line 1090, ../../app/stylesheets/application.scss */
+/* line 1094, ../../app/stylesheets/application.scss */
 ul.list_data li div.actions {
   display: none;
 }
-/* line 1095, ../../app/stylesheets/application.scss */
+/* line 1099, ../../app/stylesheets/application.scss */
 ul.list_data li:hover div.actions {
   display: block;
 }
+/* line 1105, ../../app/stylesheets/application.scss */
+ul.list_data li div.minute_title_container div.actions_minute {
+  display: none;
+}
+/* line 1110, ../../app/stylesheets/application.scss */
+ul.list_data li div.minute_title_container:hover div.actions_minute {
+  display: block;
+}
 
-/* line 1107, ../../app/stylesheets/application.scss */
+/* line 1123, ../../app/stylesheets/application.scss */
 span.image-wrapper {
   display: block;
 }
-/* line 1110, ../../app/stylesheets/application.scss */
+/* line 1126, ../../app/stylesheets/application.scss */
 span.image-wrapper i {
   display: block;
   height: 18px;
   width: 18px;
 }
-/* line 1115, ../../app/stylesheets/application.scss */
+/* line 1131, ../../app/stylesheets/application.scss */
 span.image-wrapper i.showit {
   background: url("/images/right_arrow.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1117, ../../app/stylesheets/application.scss */
+/* line 1133, ../../app/stylesheets/application.scss */
 span.image-wrapper i.showit:hover {
   background: url("/images/right_arrow_gray.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1121, ../../app/stylesheets/application.scss */
+/* line 1137, ../../app/stylesheets/application.scss */
 span.image-wrapper i.trashit {
   background: url("/images/trash_it.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1123, ../../app/stylesheets/application.scss */
+/* line 1139, ../../app/stylesheets/application.scss */
 span.image-wrapper i.trashit:hover {
   background: url("/images/trash_it_hover.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1127, ../../app/stylesheets/application.scss */
+/* line 1143, ../../app/stylesheets/application.scss */
 span.image-wrapper i.editit {
   background: url("/images/edit_minute.png") no-repeat scroll 0 0 transparent;
 }
-/* line 1129, ../../app/stylesheets/application.scss */
+/* line 1145, ../../app/stylesheets/application.scss */
 span.image-wrapper i.editit:hover {
   background: url("/images/edit_minute_hover.png") no-repeat scroll 0 0 transparent;
 }
 
-/* line 1137, ../../app/stylesheets/application.scss */
+/* line 1153, ../../app/stylesheets/application.scss */
 ul.minute_actions {
   display: inline;
   list-style: none outside none;
   list-style-type: none;
 }
-/* line 1141, ../../app/stylesheets/application.scss */
+/* line 1157, ../../app/stylesheets/application.scss */
 ul.minute_actions li {
   display: inline-block;
 }
 
-/* line 1146, ../../app/stylesheets/application.scss */
+/* line 1162, ../../app/stylesheets/application.scss */
 div.task_number {
   float: right;
   width: 60px;
   text-align: center;
   font-size: 1em;
 }
-/* line 1152, ../../app/stylesheets/application.scss */
+/* line 1168, ../../app/stylesheets/application.scss */
 div.task_number a {
   color: #FF6600;
   text-decoration: none;
 }
-/* line 1157, ../../app/stylesheets/application.scss */
+/* line 1173, ../../app/stylesheets/application.scss */
 div.task_number a.add_task_minute {
   color: #FF6600;
   text-decoration: none;
   font-size: 12px;
 }
 
-/* line 1164, ../../app/stylesheets/application.scss */
+/* line 1180, ../../app/stylesheets/application.scss */
 div.minute_text {
   border-bottom: 1px solid #EEEEEE;
   padding-bottom: 3px;
 }
 
-/* line 1169, ../../app/stylesheets/application.scss */
+/* line 1185, ../../app/stylesheets/application.scss */
 div#error_explanation {
   background-color: #FFCC00;
   border: 1px solid #FF0000;
@@ -1885,7 +1898,7 @@ div#error_explanation {
   width: 390px;
 }
 
-/* line 1177, ../../app/stylesheets/application.scss */
+/* line 1193, ../../app/stylesheets/application.scss */
 .error_explanation_task {
   background-color: #FFCC00;
   border: 1px solid #FF0000;
@@ -1894,29 +1907,29 @@ div#error_explanation {
   width: 390px;
 }
 
-/* line 1186, ../../app/stylesheets/application.scss */
+/* line 1202, ../../app/stylesheets/application.scss */
 a.task_counter div.pendingTasks {
   display: block;
 }
-/* line 1189, ../../app/stylesheets/application.scss */
+/* line 1205, ../../app/stylesheets/application.scss */
 a.task_counter div.percentageTasks {
   display: none;
 }
-/* line 1193, ../../app/stylesheets/application.scss */
+/* line 1209, ../../app/stylesheets/application.scss */
 a.task_counter:hover div.pendingTasks {
   display: none;
 }
-/* line 1196, ../../app/stylesheets/application.scss */
+/* line 1212, ../../app/stylesheets/application.scss */
 a.task_counter:hover div.percentageTasks {
   display: block;
 }
 
-/* line 1203, ../../app/stylesheets/application.scss */
+/* line 1219, ../../app/stylesheets/application.scss */
 .with_gray div {
   color: #999;
 }
 
-/* line 1209, ../../app/stylesheets/application.scss */
+/* line 1225, ../../app/stylesheets/application.scss */
 .set_inline_block {
   display: inline-block;
 }

@@ -1,0 +1,12 @@
+- url_for_form = @task.new_record? ? minute_tasks_path(@task.minute) : nil
+= form_for(@task, :url => url_for_form, :remote => true) do |f|
+  %div.hide.error_explanation_task{:id => "error_explanation_#{@task.minute.id.to_s}"}
+  .task_div
+    = f.text_area :description, :class => 'taskDescription check_text_expand', :tabindex => 1
+  .actions_buttons{:style => 'float:right;height:50px;padding-right:30px;'}
+    - if f.object.new_record?
+      = f.submit :class => 'add_this_item', :value => ''
+      or
+      %a{:href => '#', :class => 'cancel_action_task', :data_link =>@task.minute.id.to_s, :style => 'color:#CC3300;font-size:0.8em;'}
+        Cancel
+        

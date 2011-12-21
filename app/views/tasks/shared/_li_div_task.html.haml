@@ -1,0 +1,8 @@
+%li
+  %div.minute_container{:id => "minute_container_#{task.id.to_s}"}
+    = render 'tasks/shared/task_row', :task => task
+            
+  .clear
+  %div.hide.mycontainer{:id => "minute_editor_#{task.id.to_s}",:style => 'width:600px;height:130px;margin-bottom:20px;padding:15px;margin-left:5px;'}
+    - @task = task
+    = render 'tasks/form', :object => @task, :get_people_names_assigned => get_people_names_assigned

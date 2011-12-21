@@ -1084,6 +1084,10 @@ a.titleBubble{
 	float:left;
 }
 
+#items_menu {
+	position: static;
+}
+
 ul.list_data{
 	padding-left:2px;
 	li {
@@ -1096,6 +1100,18 @@ ul.list_data{
 	        display: block;
 	      }
 	    }
+	
+	   div.minute_title_container {
+	     div.actions_minute {
+	        display: none;
+	     }
+
+		 &:hover {
+		   div.actions_minute {
+	         display: block;
+	       }
+	     }
+	   }
 	}
 }
 

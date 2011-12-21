@@ -23,10 +23,22 @@
             %div#data_minute
               %ul.list_data_minute
                 %li
-                  %div
+                  %div.minute_title_container
                     %a{:href => '#', :class => 'titleBubble'}
                       %span{:style => ''}
                         = minute.name
+                    .actions_minute{:style=>'float:right;padding-right:540px;width:65px;height:19px;'}
+                      %ul.minute_actions
+                        %li
+                          %a{:href => edit_minute_path(minute), :class => '', :title => 'Edit Minute'}
+                            %span.image-wrapper
+                              %i.editit
+                        %li
+                          %a{:href => minute_path(minute), :"data-method" => 'delete', :"data-confirm" => "Are you sure you want to delete this minute?", :rel => 'nofollow', :title => 'Delete Minute'}
+                            %span.image-wrapper
+                              %i.trashit
+                      
+                  -#---------------------------------------------------
                 %li
                   = render 'tasks/shared/list_of_tasks', :minute => minute
         - last_minute = minute
