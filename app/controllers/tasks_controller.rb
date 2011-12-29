@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  uses_tiny_mce
+  #uses_tiny_mce
   before_filter :authenticate_user!
   # GET /tasks
   # GET /tasks.xml

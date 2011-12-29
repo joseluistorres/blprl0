@@ -1,5 +1,7 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
+//= require jquery
+//= require jquery_ujs
 $(document).ready(function() {
 	var descriptionOptions = {
 	    watermarkText: "Enter the action items here, e.g: \nEvaluate tools for startups @Joseluis #Tools [19-Sep-2011]\nRun a few tests in staging @Rebecca #Tests [Tomorrow]",
@@ -101,6 +103,27 @@ $(document).ready(function() {
 	    }
 	  return false;
 	});
+	
+	$('select#filter_label_or_person').live('change', function(e) {
+	    e.preventDefault();
+	    var link = $(this);
+        var r = confirm("Please click OK to vote for this feature");
+        if (r){
+	      	$.ajax({
+		        url: '/users/?id=0aa0c37b59077d3f8b0d43c4d5faf86d40949f5f',
+		        type: 'put',
+				headers: {
+				      'X-Transaction': 'POST Example',
+				      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+				    },
+		
+		        dataType: 'script'
+		      });
+        }
+		
+	    return true;
+	  });
+	
 	// showContent
    	$('a.showMinuteContent').live('click', function(e) {
 	    e.preventDefault();
@@ -153,6 +176,10 @@ $(document).ready(function() {
 		$.ajax({
 	        url: '/minutes/' + minute_id + '/tasks/' + task_id + '?status=1',
 	        type: 'put',
+			headers: {
+			      'X-Transaction': 'POST Example',
+			      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+			    },
 	        dataType: 'script'
 	      });
 
@@ -167,6 +194,10 @@ $(document).ready(function() {
 		$.ajax({
 	        url: '/tasks/' + task_id + '?r=1',
 	        type: 'put',
+			headers: {
+			      'X-Transaction': 'POST Example',
+			      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+			    },
 	        dataType: 'script'
 	      });
         link.hide();

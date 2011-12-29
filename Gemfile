@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -24,7 +24,7 @@ gem 'unicorn'
 # gem 'aws-s3', :require => 'aws/s3'
 gem 'haml'
 gem 'compass', ">= 0.11.5"
-gem 'tiny_mce'
+#gem 'tiny_mce'
 gem 'jquery-rails'
 #gem 'authlogic'
 gem 'rails3-generators'

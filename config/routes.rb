@@ -1,5 +1,7 @@
 Blackpearl::Application.routes.draw do
   
+  match "/users" => "feedbacks#index"
+
   match "/create_tasks" => 'tasks#create_multiple'
   match "/dashboard" => 'minutes#dashboard'
   resources :minutes do
