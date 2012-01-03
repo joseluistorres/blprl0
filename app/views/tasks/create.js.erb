@@ -1,0 +1,24 @@
+<%- if @tasks.count>=1  
+  # close the form that is open
+ %>
+$('a.cancel_action_task[data_link|="<%= @minute.id.to_s %>"]').trigger('click');
+$('textarea.taskDescription.check_text_expand').val('');
+<%- get_people_names_assigned = []
+  @tasks.each do |task|
+    task.update_attributes!(:preview_mode => false)
+    task_row = escape_javascript(render(:partial => 'tasks/shared/li_div_task', :locals => { :task => task, :get_people_names_assigned => get_people_names_assigned}))
+    %>
+$('ul.list_data[data_link|="<%= @minute.id.to_s %>"]').append("<%= task_row %>");
+$("div#minute_container_<%= task.id.to_s %>").animate({backgroundColor: "#FFFF00"}, 500);
+$("div#minute_container_<%= task.id.to_s %>").animate({backgroundColor: "#FFFFFF"}, 800);
+<%- end 
+  
+else
+  if @task.errors.any?
+%>
+$("div#error_explanation_<%= @minute.id.to_s %>").fadeIn();
+$("div#error_explanation_<%= @minute.id.to_s %>").html("<%= escape_javascript(render(:partial => 'tasks/shared/error_new_task', :locals => { :task => @task })) %>");
+<%-     
+  end
+end
+%>
