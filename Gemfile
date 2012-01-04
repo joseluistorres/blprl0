@@ -11,7 +11,7 @@ gem 'mysql'
 gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
@@ -24,9 +24,7 @@ gem 'unicorn'
 # gem 'aws-s3', :require => 'aws/s3'
 gem 'haml'
 gem 'compass', ">= 0.11.5"
-#gem 'tiny_mce'
 gem 'jquery-rails'
-#gem 'authlogic'
 gem 'rails3-generators'
 gem 'devise'
 gem 'chronic'
