@@ -31,4 +31,4 @@ production:
     pool: 5
     username: root
     password: rebecca
-    socket: /tmp/mysql.sock
+    socket: /var/lib/mysql/mysql.sock
