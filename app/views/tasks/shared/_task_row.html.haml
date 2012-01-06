@@ -1,4 +1,4 @@
-%div.tools_task
+%div.tools_task#tools_task_container
   = check_box_tag 'status_task', nil, task.status, :class => 'check_task', :data_task => task.id, :data_minute => task.minute.id
   %a.edit_task_link{:href => '#',:data_link =>task.id.to_s, :style => 'padding-right:1px;'}
     Edit

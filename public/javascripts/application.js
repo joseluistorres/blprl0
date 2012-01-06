@@ -168,10 +168,11 @@ $(document).ready(function() {
 		
 	});
 	
-	$('.check_task').live('click', function(e) {
+	$('div#tools_task_container.tools_task').delegate('input#status_task.check_task', 'click', function(e) {
 	    var link = $(this);
         task_id = link.attr('data_task');
 		minute_id = link.attr('data_minute');
+		console.log('--------------test1----------------');
 
 		$.ajax({
 	        url: '/minutes/' + minute_id + '/tasks/' + task_id + '?status=1',
