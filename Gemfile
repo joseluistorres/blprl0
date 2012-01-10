@@ -33,6 +33,7 @@ gem 'sendgrid'
 
 #group :assets do
 gem 'execjs'
+gem 'therubyracer'
 gem 'sass-rails', '~> 3.1.0'
 gem 'coffee-rails', '~> 3.1.0'
 gem 'uglifier'
