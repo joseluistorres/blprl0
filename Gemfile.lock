@@ -173,6 +173,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.0)
   compass (~> 0.12.alpha)
   devise
+  execjs
   haml
   jquery-rails
   mysql
