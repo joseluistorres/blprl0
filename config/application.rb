@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
+if defined?(Bundler)
+  Bundler.require *Rails.groups(:assets => %w(development test))
+end
+
 module Blackpearl
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -38,5 +42,12 @@ module Blackpearl
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+  
+
+    config.assets.precompile << /(^[^_]|\/[^_])[^\/]*/
+    config.assets.enabled = true
+    #config.sass.load_paths << Compass::Frameworks['compass'].stylesheets_directory
+    # if you prefer `.sass` over `.scss`.
+    #config.sass.preferred_syntax = :sass
   end
 end

@@ -10,7 +10,8 @@
     = stylesheet_link_tag "jquery.fancybox-1.3.4.css", :media => "screen"
     = stylesheet_link_tag "css/ui-lightness/jquery-ui-1.8.14.custom.css"
     
-    = javascript_include_tag :defaults
+    = javascript_include_tag 'application'
+    -#= javascript_include_tag :defaults
     
     = javascript_include_tag "js/html5.js"
     -#= javascript_include_tag "js/jquery-1.6.min.js"
@@ -25,7 +26,7 @@
     = javascript_include_tag 'js/requiredfield.js'
     
     = javascript_include_tag "js/fancybox/jquery.fancybox-1.3.4.pack.js"
-    -#= javascript_include_tag 'application'
+    
     = javascript_include_tag "js/blackpearl.js"
     = render :partial => '/layouts/all_metrics'
     = csrf_meta_tag

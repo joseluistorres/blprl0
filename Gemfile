@@ -23,13 +23,22 @@ gem 'capistrano'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 gem 'haml'
-gem 'compass', ">= 0.11.5"
+#gem 'compass', ">= 0.11.5"
 gem 'jquery-rails'
 gem 'rails3-generators'
 gem 'devise'
 gem 'chronic'
 gem "will_paginate", "~> 3.0.pre2"
 gem 'sendgrid'
+
+#group :assets do
+gem 'sass-rails', '~> 3.1.0'
+gem 'coffee-rails', '~> 3.1.0'
+gem 'uglifier'
+gem 'compass', '~> 0.12.alpha'
+  # include other compass plugins here. E.g.:
+#  gem 'compass-susy-plugin', :require => 'susy'
+#end
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
