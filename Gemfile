@@ -32,6 +32,7 @@ gem "will_paginate", "~> 3.0.pre2"
 gem 'sendgrid'
 
 #group :assets do
+gem 'execjs'
 gem 'sass-rails', '~> 3.1.0'
 gem 'coffee-rails', '~> 3.1.0'
 gem 'uglifier'
