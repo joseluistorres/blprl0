@@ -111,7 +111,7 @@
                   %div{:style => 'display:block;background-color:#FC0;padding:20px;'}
                     #register.popup
                       #contact_form
-                        - form_tag('register.php') do
+                        = form_tag('/register_email', :id => 'register') do
                           %fieldset
                             %span.beta
                               Looking for a better way to organize tasks?  Join our beta by entering your email below.

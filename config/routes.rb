@@ -16,6 +16,7 @@ Blackpearl::Application.routes.draw do
   match "/features" => 'pages#features'
   match "/pricing" => 'pages#pricing'
   match "/about" => 'pages#about'
+  match "/register_email" => 'pages#register'
   
   resources :tasks
 

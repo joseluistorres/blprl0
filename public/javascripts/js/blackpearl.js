@@ -1,7 +1,7 @@
 $(function() {
   $('.error').hide();
   
-/*
+
   $(".buttonSubmit").click(function() {
 		// validate and process form
 		// first hide any error messages
@@ -22,7 +22,7 @@ $(function() {
 		
 		$.ajax({
       type: "POST",
-      url: "bin/process.php",
+      url: "/register_email",
       data: dataString,
       success: function() {
         $('#contact_form').html("<div id='message'></div>");
@@ -35,7 +35,7 @@ $(function() {
       }
      });
     return false;
-	});*/
+	});
 	
 	$('a.submit').live('click', function() {
       var form = $(this).parents('form:first');
@@ -57,6 +57,8 @@ $(function() {
       return false;
     });
 });
+
+
 
 function showMinuteContent(div_content){
 	$('#showContent').hide();

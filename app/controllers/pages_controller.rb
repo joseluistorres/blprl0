@@ -13,4 +13,11 @@ class PagesController < ApplicationController
 
   def about
   end
+  
+  def register
+    if !params[:email].blank?
+      @register = Register.create!(:email => params[:email])
+      UserMailer.registration_notification(@register).deliver
+    end
+  end
 end

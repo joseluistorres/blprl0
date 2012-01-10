@@ -260,4 +260,22 @@ $(document).ready(function() {
 		$('div.minute_form_'+minute_id).hide();
 		return false;
 	});
+	
+	$('input#email.watermark').live('keyup', function(event){
+		if(event.keyCode == '13'){
+		    var user_email = $(this);
+
+		    if (user_email.val()!=''){
+				$(".buttonSubmit").trigger('click');
+		    }
+
+	    }
+	    return false;
+	  });
+	
+	$('form#register').submit(function(event){
+		console.log('----------------testing----------------' + event);
+		$(".buttonSubmit").trigger('click');
+		return false;
+	});
 }); /**************************** end of jquery ******************/
