@@ -5,3 +5,5 @@ tmp/
 db/sphinx/*
 log/mailerNotifier.log
 .bundle\n
+vendor/bundle
+vendor/bundle/*
